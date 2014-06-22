@@ -38,16 +38,17 @@ html(lang='en')
       block content
     #fb-root
   script.
+
+    if document.location.hash == '#tab' {
+      document.locaiton = '#{facebook.appurl}'
+    }
+
     window.fbAsyncInit = function() {
 
       FB.init({
         appId      : '#{facebook.id}',
         xfbml      : false,
         version    : 'v2.0'
-      });
-
-      FB.Canvas.getPageInfo(function(response) {
-        console.log(response);
       });
 
     };

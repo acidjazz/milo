@@ -122,16 +122,16 @@
     <div id="fb-root"></div>
   </body>
   <script>
+    if document.location.hash == '#tab' {
+      document.locaiton = 'https://apps.facebook.com/milostreattruck/'
+    }
+    
     window.fbAsyncInit = function() {
     
       FB.init({
         appId      : '912577452101337',
         xfbml      : false,
         version    : 'v2.0'
-      });
-      
-      FB.Canvas.getPageInfo(function(response) {
-        console.log(response);
       });
       
     };
