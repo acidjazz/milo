@@ -16,5 +16,12 @@ event = {
     }, function(response) {
       return console.log(response);
     });
+  },
+  login: function() {
+    return FB.login(function(response) {
+      return console.log(response);
+    }, {
+      scope: 'rsvp_event'
+    });
   }
 };

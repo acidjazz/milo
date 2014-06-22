@@ -14,4 +14,9 @@ event =
     FB.api('/' + id + '/invited/me', 'post', {uids: ['me']}, (response) ->
       console.log response
     )
+  login: ->
+    FB.login( (response) ->
+      console.log response
+    scope: 'rsvp_event'
+    )
 
