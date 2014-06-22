@@ -39,8 +39,9 @@ html(lang='en')
     #fb-root
   script.
 
-    if document.location.hash == '#tab' {
-      document.locaiton = '#{facebook.appurl}'
+    // detect we are in a tab and redirect
+    if (document.location.hash == '#tab') {
+      window.top.location.href = '#{facebook.appurl}'
     }
 
     window.fbAsyncInit = function() {

@@ -122,8 +122,9 @@
     <div id="fb-root"></div>
   </body>
   <script>
-    if document.location.hash == '#tab' {
-      document.locaiton = 'https://apps.facebook.com/milostreattruck/'
+    // detect we are in a tab and redirect
+    if (document.location.hash == '#tab') {
+      window.top.location.href = 'https://apps.facebook.com/milostreattruck/'
     }
     
     window.fbAsyncInit = function() {
