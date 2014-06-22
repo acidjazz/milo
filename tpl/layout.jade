@@ -39,11 +39,17 @@ html(lang='en')
     #fb-root
   script.
     window.fbAsyncInit = function() {
+
       FB.init({
         appId      : '#{facebook.id}',
         xfbml      : false,
         version    : 'v2.0'
       });
+
+      FB.Canvas.getPageInfo(function(response) {
+        alert(response);
+      });
+
     };
 
     (function(d, s, id){
