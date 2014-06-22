@@ -11,7 +11,7 @@ event =
   click: ->
     t = $ this
     id = t.data 'event-id'
-    FB.api(id + '/invited/me', 'post', [], (response) ->
+    FB.api('/' + id + '/invited/me', 'post', {uids: ['me']}, (response) ->
       console.log response
     )
 
