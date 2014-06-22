@@ -12,6 +12,6 @@ event =
     t = $ this
     id = t.data 'event-id'
     FB.api(id + '/invited/me', 'post', {}, (response) ->
-      alert response
+      console.log response
     )
 
