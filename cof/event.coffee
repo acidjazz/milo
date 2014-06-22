@@ -1,5 +1,6 @@
 
 event =
+  id: false
   i: ->
     #https://graph.facebook.com/EVENT_ID/invited/USER_ID
     event.handlers()
@@ -10,13 +11,21 @@ event =
 
   click: ->
     t = $ this
-    id = t.data 'event-id'
-    FB.api('/' + id + '/invited/me', 'post', {uids: ['me']}, (response) ->
-      console.log response
-    )
-  login: ->
+    event.id = t.data 'event-id'
+    event.login (response) ->
+      event.invite() if response
+
+  login: (callback) ->
     FB.login( (response) ->
-      console.log response
+      if response.authResponse
+        callback(true)
+      else
+        callback(false)
     scope: 'rsvp_event'
     )
+  invite: ->
+    FB.api('/' + event.id + '/attending/me', 'post', {}, (response) ->
+      console.log response
+    )
+
 

@@ -1,6 +1,7 @@
 var event;
 
 event = {
+  id: false,
   i: function() {
     return event.handlers();
   },
@@ -8,20 +9,29 @@ event = {
     return $('.event').on('click', event.click);
   },
   click: function() {
-    var id, t;
+    var t;
     t = $(this);
-    id = t.data('event-id');
-    return FB.api('/' + id + '/invited/me', 'post', {
-      uids: ['me']
-    }, function(response) {
-      return console.log(response);
+    event.id = t.data('event-id');
+    return event.login(function(response) {
+      if (response) {
+        return event.invite();
+      }
     });
   },
-  login: function() {
+  login: function(callback) {
     return FB.login(function(response) {
-      return console.log(response);
+      if (response.authResponse) {
+        return callback(true);
+      } else {
+        return callback(false);
+      }
     }, {
       scope: 'rsvp_event'
+    });
+  },
+  invite: function() {
+    return FB.api('/' + event.id + '/attending/me', 'post', {}, function(response) {
+      return console.log(response);
     });
   }
 };
