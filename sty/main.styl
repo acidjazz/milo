@@ -1,0 +1,166 @@
+
+/*
+stylus -w main.styl -o ../css/.  
+*/
+
+@import _vars
+@import _fonts
+@import _mixins
+
+body
+  background-color c_beige
+  font-family CenturySchoolbookBold
+  font-weight bold
+  color c_blue
+  font-size 16pt
+
+.clear
+  clearfix()
+
+.dots
+  width 7em
+  &.left
+    float left
+  &.right
+    float right
+  > .dot
+    display inline-block
+    width 0.2em
+    height 0.2em
+    background-color c_blue
+    line-height 1.5em
+    margin 0 0.2em
+
+.container
+  width 45em
+  margin auto
+
+  > .header
+    padding 3em 0 0 0
+    > .truck
+      float left
+      background-image url('../img/truck.png')
+      background-size contain
+      background-repeat no-repeat
+      width 24em
+      height 11em
+    > .logo
+      float right
+      background-image url('../img/logo.png')
+      background-size contain
+      background-repeat no-repeat
+      width 17em
+      height 10em
+      margin -1em 3em 0 0
+  > .body
+    background-image url('../img/purty_wood.png')
+    margin-top -2em
+    padding 3em 0
+    min-height 30em
+    > .title
+      text-align center
+      font-size 1.2em
+      width 36em
+      margin auto
+      > .copy
+        width 17em
+        margin auto
+        text-align center
+        font-size 1.2em
+        white-space nowrap
+
+    > .copy
+      font-size 1.2em
+      margin 1em auto
+      width 33em
+
+    > ul.list
+      margin 0 0 2em 9em
+      > li
+        float left
+        width 16em
+        padding 0.2em 0
+    > .schedule
+      background-color c_beige
+      width 40em
+      margin auto
+      padding 1em 0
+      margin 1em auto
+      border 0.1em solid c_brown
+      box-shadow 0.2em 0.2em 1em rgba(black, 0.5)
+      > .title
+        color c_brown
+        text-align center
+        font-size 1.5em
+        font-style italic
+      > .subtitle
+        color c_brown
+        width 36em
+        margin auto
+        > .copy
+          font-size 1.3em
+          width 11em
+          margin auto
+        > .dots > .dot
+          background-color c_brown
+      > .seeall
+        float left
+        width 19em
+        height 2em
+        font-size 0.8em
+        margin 1em 0 0.2em 6em
+        > .paw
+          background-image url('../img/paw.png')
+          background-size cover
+          background-repeat no-repeat
+          width 1em
+          height 1em
+          float left
+          margin 0.5em
+        > .copy
+          float left
+          margin 0.4em 0
+      > .map
+        float left
+        width 23em
+        height 12em
+        background-image url('../img/map.png')
+        background-size cover
+        background-repeat no-repeat
+      > .events
+        float right
+        width 16em
+        height 10em
+        margin -2.5em 0 0 0
+        > .location
+          padding 0.5em 0
+          text-transform uppercase
+        > .event
+          font-size 0.8em
+          > span.title
+            font-weight normal
+            padding-left 0.5em
+    > .rsvp
+      margin -1.4em auto 0em auto
+      width 12em
+      height 2em
+      font-size 1.2em
+      border 0.1em solid c_beige
+      > .reminder
+        background-image url('../img/reminder.png')
+        background-size cover
+        background-repeat no-repeat
+        width 1.2em
+        height 1em
+        float left
+        margin 0.6em 0.6em 0 0.6em
+      > .copy
+        float left
+        margin 0.4em 0
+
+
+.cta
+  background-color c_blue
+  color c_beige
+  cursor pointer
+  box-shadow 0.1em 0.2em 0.1em rgba(0, 0, 0, 0.5)

@@ -1,0 +1,55 @@
+{
+  "facebook": {
+    "id": "912577452101337"
+  },
+  "meta": {
+    "title": "Milo's Kitchen &reg; | Home-Style Dog Treats",
+    "description": "Our home-style dog treats include Beef Sausage Slices With Rice, Beef Jerky Recipe, Chicken Meatballs and Steak Grillers Recipe. Discover them all today!",
+    "keywords": "milo's, kitchen, treat, truck, dogs",
+    "image": "/img/share.jpg"
+  },
+  "events": [
+    {
+      "date": "2014-06-26",
+      "title": "Training center",
+      "location": "San Francisco, CA"
+    },
+    {
+      "date": "2014-06-27",
+      "title": "Point Isabel Dog Park",
+      "location": "San Francisco, CA"
+    },
+    {
+      "date": "2014-06-28",
+      "title": "Downtown BigPark",
+      "location": "San Francisco, CA"
+    },
+    {
+      "date": "2014-07-05",
+      "title": "Huntington Beach Dog Park",
+      "location": "Los Angeles, CA"
+    },
+    {
+      "date": "2014-07-06",
+      "title": "Downtown Dog Park",
+      "location": "Los Angeles, CA"
+    },
+    {
+      "date": "2014-07-04",
+      "title": "Balboa Dog Park",
+      "location": "San Diego, CA"
+    },
+    {
+      "date": "2014-07-05",
+      "title": "Ocean Beach Dog Park",
+      "location": "San Diego, CA"
+    },
+    {
+      "date": "2014-07-06",
+      "title": "Annual Doggie Street Festival",
+      "location": "San Diego, CA"
+    }
+
+  ]
+}
+

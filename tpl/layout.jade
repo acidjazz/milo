@@ -1,0 +1,55 @@
+include _mixins
+doctype
+
+html(lang='en')
+  head
+    title !{meta.title}
+
+    // google
+    meta(name='title' content=meta.title)
+    meta(name='description' content=meta.desc)
+    meta(name='keywords' content=meta.keywords)
+
+    // facebook
+    meta(property='og:title' content=meta.title)
+    meta(property='og:type' content='website')
+    meta(property='og:image' content=meta.image)
+    meta(property='og:description' content=meta.desc)
+
+    // twitter
+    meta(name='twitter:card' content='summary')
+    meta(name='twitter:title' content=meta.title)
+    meta(name='twitter:description' content=meta.desc)
+    meta(name='twitter:image' content=meta.image)
+
+
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(http-equiv="X-UA-Compatible",content="IE=Edge")
+
+    meta(name='format-detection', content='telephone=no')
+    meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
+
+    link(rel='stylesheet',href='./css/main.css',type='text/css',media='all')
+
+    script(type='text/javascript', src='./jst/lib/jquery.min.js')
+
+  body
+    .container
+      block content
+    #fb-root
+  script.
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '#{facebook.id}',
+        xfbml      : false,
+        version    : 'v2.0'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "http://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));

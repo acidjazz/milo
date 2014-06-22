@@ -1,0 +1,55 @@
+
+// jade -w index.jade -o ../
+
+extends layout
+
+block content
+
+  .header
+    .truck
+    .logo
+    .clear
+  .body
+
+    .title
+      +dots('left')
+      +dots('right')
+      .copy A Treat Truck Just For Dogs!
+
+    .copy This summer, we're taking our kitchen on the road and bringing our 100% real, home-style treats to dogs across America. We think all dogs deserve the same goodness as the rest of the family; that's why every one of our wholesome treats is made in the USA. Come visit the treat Truck for:
+
+    ul.list
+      li Free samples
+      li Family portraits
+      li Personalized giveaways
+      li Enjoy our lounge
+      .clear
+
+    .schedule
+      .title COME SEE US WHEN WE'RE IN YOUR TOWN!
+      .subtitle
+        +dots('left')
+        +dots('right')
+        .copy 2014 Tour Schedule
+      .seeall.cta
+        .paw
+        .copy SEE ALL UPCOMING DATES
+      .clear
+      .map
+      .events
+        - var current_location = ''
+        - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        each event, index in events
+          if event.location != current_location
+            .location #{event.location}
+          - var current_location = event.location
+          .event
+            - var parsed = event.date.split('-');
+            - var date = new Date(parsed[0], parsed[1], parsed[2])
+            span.date #{months[date.getMonth()-1]} #{date.getDate()}:
+            span.title #{event.title}
+      .clear
+    .rsvp.cta
+      .reminder
+      .copy RSVP &amp; SHARE
+    .clear
