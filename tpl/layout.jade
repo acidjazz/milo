@@ -33,7 +33,7 @@ html(lang='en')
 
     script(type='text/javascript', src='./jst/lib/jquery.min.js')
 
-    each script in ['main','event']
+    each script in ['main','fbevent']
       script(type='text/javascript', src='./jst/' + script + '.js')
 
   body
@@ -48,7 +48,7 @@ html(lang='en')
       return true;
     }
 
-    event.i();
+    fbevent.i();
 
     window.fbAsyncInit = function() {
 
