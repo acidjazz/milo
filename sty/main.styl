@@ -133,10 +133,16 @@ body
         height 10em
         margin -2.5em 0 0 0
         > .location
-          padding 0.5em 0
+          padding 0.3em 0
           text-transform uppercase
         > .event
-          font-size 0.8em
+          font-size 0.7em
+          cursor pointer
+          padding 0.2em 0.3em
+          transition background-color 0.1s linear, color 0.1s linear
+          &:hover
+            background-color c_blue
+            color c_beige
           > span.title
             font-weight normal
             padding-left 0.5em

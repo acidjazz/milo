@@ -183,11 +183,18 @@ body {
   margin: -2.5em 0 0 0;
 }
 .container > .body > .schedule > .events > .location {
-  padding: 0.5em 0;
+  padding: 0.3em 0;
   text-transform: uppercase;
 }
 .container > .body > .schedule > .events > .event {
-  font-size: 0.8em;
+  font-size: 0.7em;
+  cursor: pointer;
+  padding: 0.2em 0.3em;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+.container > .body > .schedule > .events > .event:hover {
+  background-color: #092e6e;
+  color: #f4e9d8;
 }
 .container > .body > .schedule > .events > .event > span.title {
   font-weight: normal;
