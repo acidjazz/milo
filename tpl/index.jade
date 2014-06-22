@@ -43,7 +43,7 @@ block content
           if event.location != current_location
             .location #{event.location}
           - var current_location = event.location
-          .event
+          .event(data-event-id=event.id)
             - var parsed = event.date.split('-');
             - var date = new Date(parsed[0], parsed[1], parsed[2])
             span.date #{months[date.getMonth()-1]} #{date.getDate()}:

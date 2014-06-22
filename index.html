@@ -22,6 +22,8 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
     <link rel="stylesheet" href="./css/main.css" type="text/css" media="all">
     <script type="text/javascript" src="./jst/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="./jst/main.js"></script>
+    <script type="text/javascript" src="./jst/event.js"></script>
   </head>
   <body>
     <div class="container">
@@ -91,23 +93,23 @@
           <div class="map"></div>
           <div class="events">
             <div class="location">San Francisco, CA</div>
-            <div class="event"><span class="date">June 26:</span><span class="title">Training center</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">June 26:</span><span class="title">Training center</span>
             </div>
-            <div class="event"><span class="date">June 27:</span><span class="title">Point Isabel Dog Park</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">June 27:</span><span class="title">Point Isabel Dog Park</span>
             </div>
-            <div class="event"><span class="date">June 28:</span><span class="title">Downtown BigPark</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">June 28:</span><span class="title">Downtown BigPark</span>
             </div>
             <div class="location">Los Angeles, CA</div>
-            <div class="event"><span class="date">July 5:</span><span class="title">Huntington Beach Dog Park</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">July 5:</span><span class="title">Huntington Beach Dog Park</span>
             </div>
-            <div class="event"><span class="date">July 6:</span><span class="title">Downtown Dog Park</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">July 6:</span><span class="title">Downtown Dog Park</span>
             </div>
             <div class="location">San Diego, CA</div>
-            <div class="event"><span class="date">July 4:</span><span class="title">Balboa Dog Park</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">July 4:</span><span class="title">Balboa Dog Park</span>
             </div>
-            <div class="event"><span class="date">July 5:</span><span class="title">Ocean Beach Dog Park</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">July 5:</span><span class="title">Ocean Beach Dog Park</span>
             </div>
-            <div class="event"><span class="date">July 6:</span><span class="title">Annual Doggie Street Festival</span>
+            <div data-event-id="1452568204990980" class="event"><span class="date">July 6:</span><span class="title">Annual Doggie Street Festival</span>
             </div>
           </div>
           <div class="clear"></div>
@@ -124,8 +126,11 @@
   <script>
     // detect we are in a tab and redirect
     if (document.location.hash == '#tab') {
-      window.top.location.href = 'https://apps.facebook.com/milostreattruck/'
+      window.top.location.href = 'https://apps.facebook.com/milostreattruck/';
+      return true;
     }
+    
+    event.i();
     
     window.fbAsyncInit = function() {
     
@@ -136,6 +141,7 @@
       });
       
     };
+    
     
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];

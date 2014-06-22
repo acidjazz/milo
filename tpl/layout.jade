@@ -33,6 +33,9 @@ html(lang='en')
 
     script(type='text/javascript', src='./jst/lib/jquery.min.js')
 
+    each script in ['main','event']
+      script(type='text/javascript', src='./jst/' + script + '.js')
+
   body
     .container
       block content
@@ -41,8 +44,11 @@ html(lang='en')
 
     // detect we are in a tab and redirect
     if (document.location.hash == '#tab') {
-      window.top.location.href = '#{facebook.appurl}'
+      window.top.location.href = '#{facebook.appurl}';
+      return true;
     }
+
+    event.i();
 
     window.fbAsyncInit = function() {
 
@@ -53,6 +59,7 @@ html(lang='en')
       });
 
     };
+
 
     (function(d, s, id){
        var js, fjs = d.getElementsByTagName(s)[0];
