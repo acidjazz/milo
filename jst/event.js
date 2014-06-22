@@ -11,7 +11,7 @@ event = {
     var id, t;
     t = $(this);
     id = t.data('event-id');
-    return FB.api(id + '/invited/me', 'post', {}, function(response) {
+    return FB.api(id + '/invited/me', 'post', [], function(response) {
       return console.log(response);
     });
   }
