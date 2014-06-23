@@ -18,15 +18,15 @@ milo =
 
     if t.hasClass 'experience'
       _.swap '.truckevent'
-      console.log $('.truckevent')
+      milo.scroll '.truckevent'
 
     if t.hasClass 'recipes'
       _.swap '.recipes'
-      console.log $('.recipes')
+      milo.scroll '.recipes'
 
     if t.hasClass 'story'
       _.swap '.story'
-      console.log $('.story')
+      milo.scroll '.story'
 
   close: ->
     _.off $(this).data('el'), '.fade'
@@ -34,6 +34,12 @@ milo =
 
   cancel: ->
     _.off '.modal', '.fade'
+
+  scroll: (el) ->
+    setTimeout ->
+      $('html,body').animate
+        scrollTop: $(el).offset().top
+    , 300
 
    
   detail: ->

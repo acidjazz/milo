@@ -16,15 +16,15 @@ milo = {
     _.off('.truckevent', '.recipes', '.story');
     if (t.hasClass('experience')) {
       _.swap('.truckevent');
-      console.log($('.truckevent'));
+      milo.scroll('.truckevent');
     }
     if (t.hasClass('recipes')) {
       _.swap('.recipes');
-      console.log($('.recipes'));
+      milo.scroll('.recipes');
     }
     if (t.hasClass('story')) {
       _.swap('.story');
-      return console.log($('.story'));
+      return milo.scroll('.story');
     }
   },
   close: function() {
@@ -32,6 +32,13 @@ milo = {
   },
   cancel: function() {
     return _.off('.modal', '.fade');
+  },
+  scroll: function(el) {
+    return setTimeout(function() {
+      return $('html,body').animate({
+        scrollTop: $(el).offset().top
+      });
+    }, 300);
   },
   detail: function() {
     var evt, t;
