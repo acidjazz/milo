@@ -42,7 +42,7 @@ block content
           if event.location != current_location
             .location #{event.location}
           - var current_location = event.location
-          .event(data-event-id=event.id)
+          .event(data-event=JSON.stringify(event))
             - var parsed = event.date.split('-');
             - var date = new Date(parsed[0], parsed[1], parsed[2])
             span.date #{months[date.getMonth()-1]} #{date.getDate()}:
@@ -74,6 +74,40 @@ block content
           .arrow
             img(src='./img/arrow-right.png')
 
+    .clear
+  .truckevent.off
+    .close(data-el='.truckevent')
+      .line.one
+      .line.two
+
+  .recipes.off
+    .inner
+      .close(data-el='.recipes')
+        .line.one
+        .line.two
+      each recipe, index in recipes
+        .recipe
+          .image
+            img(src='./img/' + recipe.img)
+          .title !{recipe.name}
+    .clear
+  .story.off
+    .topbar
+    .close(data-el='.story')
+      .line.one
+      .line.two
+    .dog
+      img(src='./img/dog_story.png')
+    .title We are pet parents, too.
+    .copy
+      p That's why all our home-style dog treats are 100% real and made in the USA.
+      p Our dogs share our lives. Those first eager greetings in the morning. That last curl-up-and-cuddle at the end of the day. Our dogs aren't just the four-legged members of our family. They're family.
+      p So don't they deserve a treat that lives up to the high standards we set for the rest of our loved ones?
+      p That's why we created Milo's Kitchen&reg; dog treats. Because in our kitchen, our dogs deserve only the best. That means treats with 100% real chicken or beef as the #1 ingredient. Each one made totally free of artificial flavors or colors and each one made right here in the USA. We believe they deserve treats made with the same quality of ingredients and care that you want for your food.
+      p Because, after all, our dogs are family. And they deserve to be treated like family.
+    .clear
+
+  .wood
     .extras
       .extra.experience
         .inner
@@ -99,5 +133,14 @@ block content
       .copy Visit our website to learn more about Milo's Kitchen&reg;.
       .link
         a(href='http://www.miloskitchen.com',target='_new') www.miloskitchen.com
-
-
+  .fade.off
+  .modal.off
+    .close(data-el='.modal')
+      .line.one
+      .line.two
+    .body 
+      p Date: <span class="event_date">event.date</span>
+      p Title: <span class="event_title">event.title</span>
+      p Location: <span class="event_location">event.location</span>
+      .cta RSVP
+      .cta SHARE

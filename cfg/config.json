@@ -80,6 +80,34 @@
     { "img": "./img/dog1.jpg" },
     { "img": "./img/dog1.jpg" },
     { "img": "./img/dog1.jpg" }
+  ],
+
+  "recipes": [
+    { 
+      "name": "Milo's Kitchen&reg; Chicken Grillers Recipe",
+      "img": "chicken-grillers-recipe.png"
+    },
+    { 
+      "name": "Milo's Kitchen&reg; Grilled Burger Bites",
+      "img": "grilled-burger-bites.png"
+    },
+    { 
+      "name": "Milo's Kitchen&reg; Steak Grillers Recipe",
+      "img": "steak-grillers-recipe.png"
+    },
+    { 
+      "name": "Milo's Kitchen&reg; Chicken Jerky Strips",
+      "img": "chicken-jerky-strips.png"
+    },
+    { 
+      "name": "Milo's Kitchen&reg; Chicken Meatballs",
+      "img": "chicken-meatballs.png"
+    },
+    { 
+      "name": "Milo's Kitchen&reg; Beef Sausage Slices",
+      "img": "beef-sausage-slices.png"
+    }
+
   ]
 
 }

@@ -3,9 +3,12 @@
 stylus -w main.styl -o ../css/.  
 */
 
+vendor-prefixes ?= webkit moz o ms official
+
 @import _vars
 @import _fonts
 @import _mixins
+@import vendor
 
 body
   background-color c_beige
@@ -13,6 +16,8 @@ body
   font-weight bold
   color c_blue
   font-size 16pt
+  padding 0
+  margin 0
 
 .clear
   clearfix()
@@ -32,11 +37,10 @@ body
     margin 0 0.2em
 
 .container
-  width 45em
-  margin auto
-
   > .header
     padding 3em 0 0 0
+    width 45em
+    margin auto
     > .truck
       float left
       background-image url('../img/truck.png')
@@ -53,9 +57,10 @@ body
       height 10em
       margin -1em 3em 0 0
   > .wood
+    width 45em
+    margin -2em auto 0 auto
     background-image url('../img/wood.jpg')
-    margin-top -2em
-    padding 3em 0
+    padding 3em 0 0 0
     min-height 30em
     > .title
       text-align center
@@ -147,7 +152,7 @@ body
             font-weight normal
             padding-left 0.5em
     > .rsvp
-      margin -1.4em auto 0em auto
+      margin -1.4em auto 2em auto
       width 12em
       height 2em
       font-size 1.2em
@@ -164,10 +169,8 @@ body
         float left
         margin 0.4em 0
     > .gallery
-      margin 1em 0
-      padding 2em 0
+      padding 2em 0 4em 0
       background-color c_beige
-      box-shadow inset  0  0.5em 0.5em -0.5em rgba(black, 0.5), inset 0 -0.5em 0.5em -0.5em rgba(black, 0.5);
       > .title
         color c_brown
         width 36em
@@ -287,11 +290,161 @@ body
       a
         color c_brown
 
+  > .truckevent
+    width 100%
+    box-shadow inset 0 0.5em 0.5em -0.5em rgba(black, 0.5), inset 0 -0.5em 0.5em -0.5em rgba(black, 0.5);
+    background-image url('../img/event.jpg')
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+    transition height 0.2s 
+    &.on
+      height 25em
+      > .close
+        display block
+    &.off
+      height 0em
+      box-shadow none
+      background none
+      padding 0
+      > .close
+        display none
+
+  > .recipes
+    width 45em
+    background-image url('../img/wood.jpg')
+    margin 1em auto 2em auto
+    padding 1em 0
+    box-shadow inset 0 0.5em 0.5em -0.5em rgba(black, 0.5), inset 0 -0.5em 0.5em -0.5em rgba(black, 0.5);
+    padding 1em 0
+    overflow hidden
+    transition height 0.2s 
+    &.on 
+      height 30em
+      > .close
+        display block
+    &.off
+      height 0em
+      box-shadow none
+      background none
+      padding 0
+      > .close
+        display none
+
+    > .inner
+      margin-left 5em
+      > .recipe
+        width 10em
+        float left
+        display inline-block
+        margin 1em
+        text-align center
+        > .title
+          color c_brown
+          border 0.1em solid c_brown
+          background-color c_beige
+          font-size 0.6em
+          margin auto
+          padding 0.5em
+  > .story
+    width 45em
+    margin 1em auto 3em auto
+    color c_brown
+    padding 1em
+    transition height 0.2s 
+    &.on 
+      height 20em
+      > .close
+        display block
+    &.off
+      height 0em
+      > .close
+        display none
 
 
+    > .title
+      padding 1em 1em 0 1em
+    > .copy
+      font-size 0.6em
+      padding 1em 25em 1em 2em
+    > .dog
+      float right
+    &.off
+      display none
+
+.fade
+  position fixed
+  background-color rgba(black, 0.8)
+  top 0
+  left 0
+  width 100%
+  height 100%
+  &.off
+    opacity 0
+    transform translate(100%, 0)
+    transition opacity 0.2s linear 0, transform 0.2s linear 0.2s
+  &.on
+    opacity 1
+    transform translate(0, 0)
+    transition opacity 0.2s linear 0s, transform 0s linear 0s
+
+.modal
+  position fixed
+  top 10em
+  width 40em
+  left 50%
+  margin-left -20em
+  background-color c_beige
+  > .header
+    background-color c_blue
+    color c_beige
+    padding 0.5em
+  > .body
+    background-color c_beige
+    padding 1em
+    > .cta
+      float left
+      padding 0.5em 1em
+      cursor pointer
+      margin 1em 
+  &.off
+    opacity 0
+    transition opacity 0.2s linear, transform 0.2s ease-out
+    transform perspective(1000px) rotateX(90deg)
+  &.on
+    opacity 1
+    transform perspective(1000px) rotateX(0deg)
+    transition opacity 0.2s linear, transform 0.2s ease-out
+
+
+
+
+.topbar
+  background-image url('../img/wood.jpg')
+  height 2em
+  box-shadow 0 0.5em 0.5em -0.5em rgba(black, 0.5), 0 -0.5em 0.5em -0.5em rgba(black, 0.5);
+  
 .cta
   background-color c_blue
   color c_beige
   cursor pointer
   box-shadow 0.1em 0.2em 0.1em rgba(0, 0, 0, 0.5)
+
+.close
+  cursor pointer
+  float right
+  font-size 0.5em
+  margin 1em 2em
+  width 3em
+  height 2.5em
+  > .line
+    background-color c_blue
+    width 3em
+    height 0.5em
+    margin 0.5em 0 0 0
+    &.one
+      transform rotate(45deg) translate(0.5em, 0.5em)
+    &.two
+      transform rotate(-45deg) translate(0.15em, -0.15em)
+
 

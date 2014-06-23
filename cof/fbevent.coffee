@@ -2,7 +2,6 @@
 fbevent =
   id: false
   i: ->
-    #https://graph.facebook.com/EVENT_ID/invited/USER_ID
     fbevent.handlers()
 
   handlers: ->
@@ -22,6 +21,6 @@ fbevent =
         )
     scope: 'rsvp_event'
     )
-  invite: ->
 
+  invite: ->
 

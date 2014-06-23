@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css" media="all">
     <script type="text/javascript" src="./jst/lib/jquery.min.js"></script>
     <script type="text/javascript" src="./jst/main.js"></script>
-    <script type="text/javascript" src="./jst/fbevent.js"></script>
+    <script type="text/javascript" src="./jst/milo.js"></script>
   </head>
   <body>
     <div class="container">
@@ -93,23 +93,23 @@
           <div class="map"></div>
           <div class="events">
             <div class="location">San Francisco, CA</div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">June 26:</span><span class="title">Training center</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-06-26&quot;,&quot;title&quot;:&quot;Training center&quot;,&quot;location&quot;:&quot;San Francisco, CA&quot;}" class="event"><span class="date">June 26:</span><span class="title">Training center</span>
             </div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">June 27:</span><span class="title">Point Isabel Dog Park</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-06-27&quot;,&quot;title&quot;:&quot;Point Isabel Dog Park&quot;,&quot;location&quot;:&quot;San Francisco, CA&quot;}" class="event"><span class="date">June 27:</span><span class="title">Point Isabel Dog Park</span>
             </div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">June 28:</span><span class="title">Downtown BigPark</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-06-28&quot;,&quot;title&quot;:&quot;Downtown BigPark&quot;,&quot;location&quot;:&quot;San Francisco, CA&quot;}" class="event"><span class="date">June 28:</span><span class="title">Downtown BigPark</span>
             </div>
             <div class="location">Los Angeles, CA</div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">July 5:</span><span class="title">Huntington Beach Dog Park</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-07-05&quot;,&quot;title&quot;:&quot;Huntington Beach Dog Park&quot;,&quot;location&quot;:&quot;Los Angeles, CA&quot;}" class="event"><span class="date">July 5:</span><span class="title">Huntington Beach Dog Park</span>
             </div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">July 6:</span><span class="title">Downtown Dog Park</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-07-06&quot;,&quot;title&quot;:&quot;Downtown Dog Park&quot;,&quot;location&quot;:&quot;Los Angeles, CA&quot;}" class="event"><span class="date">July 6:</span><span class="title">Downtown Dog Park</span>
             </div>
             <div class="location">San Diego, CA</div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">July 4:</span><span class="title">Balboa Dog Park</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-07-04&quot;,&quot;title&quot;:&quot;Balboa Dog Park&quot;,&quot;location&quot;:&quot;San Diego, CA&quot;}" class="event"><span class="date">July 4:</span><span class="title">Balboa Dog Park</span>
             </div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">July 5:</span><span class="title">Ocean Beach Dog Park</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-07-05&quot;,&quot;title&quot;:&quot;Ocean Beach Dog Park&quot;,&quot;location&quot;:&quot;San Diego, CA&quot;}" class="event"><span class="date">July 5:</span><span class="title">Ocean Beach Dog Park</span>
             </div>
-            <div data-event-id="1452568204990980" class="event"><span class="date">July 6:</span><span class="title">Annual Doggie Street Festival</span>
+            <div data-event="{&quot;id&quot;:&quot;1452568204990980&quot;,&quot;date&quot;:&quot;2014-07-06&quot;,&quot;title&quot;:&quot;Annual Doggie Street Festival&quot;,&quot;location&quot;:&quot;San Diego, CA&quot;}" class="event"><span class="date">July 6:</span><span class="title">Annual Doggie Street Festival</span>
             </div>
           </div>
           <div class="clear"></div>
@@ -175,6 +175,65 @@
             </div>
           </div>
         </div>
+        <div class="clear"></div>
+      </div>
+      <div class="truckevent off">
+        <div data-el=".truckevent" class="close">
+          <div class="line one"></div>
+          <div class="line two"></div>
+        </div>
+      </div>
+      <div class="recipes off">
+        <div class="inner">
+          <div data-el=".recipes" class="close">
+            <div class="line one"></div>
+            <div class="line two"></div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/chicken-grillers-recipe.png"></div>
+            <div class="title">Milo's Kitchen&reg; Chicken Grillers Recipe</div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/grilled-burger-bites.png"></div>
+            <div class="title">Milo's Kitchen&reg; Grilled Burger Bites</div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/steak-grillers-recipe.png"></div>
+            <div class="title">Milo's Kitchen&reg; Steak Grillers Recipe</div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/chicken-jerky-strips.png"></div>
+            <div class="title">Milo's Kitchen&reg; Chicken Jerky Strips</div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/chicken-meatballs.png"></div>
+            <div class="title">Milo's Kitchen&reg; Chicken Meatballs</div>
+          </div>
+          <div class="recipe">
+            <div class="image"><img src="./img/beef-sausage-slices.png"></div>
+            <div class="title">Milo's Kitchen&reg; Beef Sausage Slices</div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="story off">
+        <div class="topbar"></div>
+        <div data-el=".story" class="close">
+          <div class="line one"></div>
+          <div class="line two"></div>
+        </div>
+        <div class="dog"><img src="./img/dog_story.png"></div>
+        <div class="title">We are pet parents, too.</div>
+        <div class="copy">
+          <p>That's why all our home-style dog treats are 100% real and made in the USA.</p>
+          <p>Our dogs share our lives. Those first eager greetings in the morning. That last curl-up-and-cuddle at the end of the day. Our dogs aren't just the four-legged members of our family. They're family.</p>
+          <p>So don't they deserve a treat that lives up to the high standards we set for the rest of our loved ones?</p>
+          <p>That's why we created Milo's Kitchen&reg; dog treats. Because in our kitchen, our dogs deserve only the best. That means treats with 100% real chicken or beef as the #1 ingredient. Each one made totally free of artificial flavors or colors and each one made right here in the USA. We believe they deserve treats made with the same quality of ingredients and care that you want for your food.</p>
+          <p>Because, after all, our dogs are family. And they deserve to be treated like family.</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="wood">
         <div class="extras">
           <div class="extra experience">
             <div class="inner"><img src="./img/extra_experience.jpg">
@@ -206,6 +265,20 @@
           <div class="link"><a href="http://www.miloskitchen.com" target="_new">www.miloskitchen.com</a></div>
         </div>
       </div>
+      <div class="fade off"></div>
+      <div class="modal off">
+        <div data-el=".modal" class="close">
+          <div class="line one"></div>
+          <div class="line two"></div>
+        </div>
+        <div class="body">
+          <p>Date: <span class="event_date">event.date</span></p>
+          <p>Title: <span class="event_title">event.title</span></p>
+          <p>Location: <span class="event_location">event.location</span></p>
+          <div class="cta">RSVP</div>
+          <div class="cta">SHARE</div>
+        </div>
+      </div>
     </div>
     <div id="fb-root"></div>
   </body>
@@ -216,7 +289,7 @@
       return true;
     }
     
-    fbevent.i();
+    milo.i();
     
     window.fbAsyncInit = function() {
     
