@@ -88,39 +88,39 @@ body {
   height: 10em;
   margin: -1em 3em 0 0;
 }
-.container > .body {
-  background-image: url("../img/purty_wood.png");
+.container > .wood {
+  background-image: url("../img/wood.jpg");
   margin-top: -2em;
   padding: 3em 0;
   min-height: 30em;
 }
-.container > .body > .title {
+.container > .wood > .title {
   text-align: center;
   font-size: 1.2em;
   width: 36em;
   margin: auto;
 }
-.container > .body > .title > .copy {
+.container > .wood > .title > .copy {
   width: 17em;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
   white-space: nowrap;
 }
-.container > .body > .copy {
+.container > .wood > .copy {
   font-size: 1.2em;
   margin: 1em auto;
   width: 33em;
 }
-.container > .body > ul.list {
+.container > .wood > ul.list {
   margin: 0 0 2em 9em;
 }
-.container > .body > ul.list > li {
+.container > .wood > ul.list > li {
   float: left;
   width: 16em;
   padding: 0.2em 0;
 }
-.container > .body > .schedule {
+.container > .wood > .schedule {
   background-color: #f4e9d8;
   width: 40em;
   margin: auto;
@@ -129,33 +129,33 @@ body {
   border: 0.1em solid #9a5107;
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
 }
-.container > .body > .schedule > .title {
+.container > .wood > .schedule > .title {
   color: #9a5107;
   text-align: center;
   font-size: 1.5em;
   font-style: italic;
 }
-.container > .body > .schedule > .subtitle {
+.container > .wood > .schedule > .subtitle {
   color: #9a5107;
   width: 36em;
   margin: auto;
 }
-.container > .body > .schedule > .subtitle > .copy {
+.container > .wood > .schedule > .subtitle > .copy {
   font-size: 1.3em;
   width: 11em;
   margin: auto;
 }
-.container > .body > .schedule > .subtitle > .dots > .dot {
+.container > .wood > .schedule > .subtitle > .dots > .dot {
   background-color: #9a5107;
 }
-.container > .body > .schedule > .seeall {
+.container > .wood > .schedule > .seeall {
   float: left;
   width: 19em;
   height: 2em;
   font-size: 0.8em;
   margin: 1em 0 0.2em 6em;
 }
-.container > .body > .schedule > .seeall > .paw {
+.container > .wood > .schedule > .seeall > .paw {
   background-image: url("../img/paw.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,11 +164,11 @@ body {
   float: left;
   margin: 0.5em;
 }
-.container > .body > .schedule > .seeall > .copy {
+.container > .wood > .schedule > .seeall > .copy {
   float: left;
   margin: 0.4em 0;
 }
-.container > .body > .schedule > .map {
+.container > .wood > .schedule > .map {
   float: left;
   width: 23em;
   height: 12em;
@@ -176,38 +176,38 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.container > .body > .schedule > .events {
+.container > .wood > .schedule > .events {
   float: right;
   width: 16em;
   height: 10em;
   margin: -2.5em 0 0 0;
 }
-.container > .body > .schedule > .events > .location {
+.container > .wood > .schedule > .events > .location {
   padding: 0.3em 0;
   text-transform: uppercase;
 }
-.container > .body > .schedule > .events > .event {
+.container > .wood > .schedule > .events > .event {
   font-size: 0.7em;
   cursor: pointer;
   padding: 0.2em 0.3em;
   transition: background-color 0.1s linear, color 0.1s linear;
 }
-.container > .body > .schedule > .events > .event:hover {
+.container > .wood > .schedule > .events > .event:hover {
   background-color: #092e6e;
   color: #f4e9d8;
 }
-.container > .body > .schedule > .events > .event > span.title {
+.container > .wood > .schedule > .events > .event > span.title {
   font-weight: normal;
   padding-left: 0.5em;
 }
-.container > .body > .rsvp {
+.container > .wood > .rsvp {
   margin: -1.4em auto 0em auto;
   width: 12em;
   height: 2em;
   font-size: 1.2em;
   border: 0.1em solid #f4e9d8;
 }
-.container > .body > .rsvp > .reminder {
+.container > .wood > .rsvp > .reminder {
   background-image: url("../img/reminder.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -216,9 +216,159 @@ body {
   float: left;
   margin: 0.6em 0.6em 0 0.6em;
 }
-.container > .body > .rsvp > .copy {
+.container > .wood > .rsvp > .copy {
   float: left;
   margin: 0.4em 0;
+}
+.container > .wood > .gallery {
+  margin: 1em 0;
+  padding: 2em 0;
+  background-color: #f4e9d8;
+  box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
+}
+.container > .wood > .gallery > .title {
+  color: #9a5107;
+  width: 36em;
+  margin: auto;
+}
+.container > .wood > .gallery > .title > .copy {
+  font-size: 1.3em;
+  width: 13.5em;
+  margin: auto;
+}
+.container > .wood > .gallery > .title > .dots > .dot {
+  background-color: #9a5107;
+}
+.container > .wood > .gallery > .description {
+  color: #9a5107;
+  width: 44em;
+  font-size: 0.8em;
+  margin: 1em auto;
+}
+.container > .wood > .gallery > .description > .hashtag {
+  color: #092e6e;
+}
+.container > .wood > .gallery > .pictures {
+  width: 45em;
+  height: 16em;
+  overflow: hidden;
+}
+.container > .wood > .gallery > .pictures > .inner {
+  width: 100em;
+}
+.container > .wood > .gallery > .pictures > .inner > .picture {
+  cursor: pointer;
+  display: inline-block;
+  width: 8.5em;
+  height: 5.5em;
+  margin: 1em;
+  background-color: #fff;
+  padding: 0.2em;
+  box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
+}
+.container > .wood > .gallery > .pictures > .inner > .picture > img {
+  width: 100%;
+  height: 100%;
+}
+.container > .wood > .gallery > .nav > .prev {
+  float: left;
+  margin: 0 0 0 0.5em;
+}
+.container > .wood > .gallery > .nav > .prev > .arrow {
+  float: left;
+}
+.container > .wood > .gallery > .nav > .prev > .copy {
+  float: left;
+  margin: 0 0 0 0.5em;
+}
+.container > .wood > .gallery > .nav > .next {
+  float: right;
+  margin: 0 0.5em 0 0;
+}
+.container > .wood > .gallery > .nav > .next > .arrow {
+  float: right;
+}
+.container > .wood > .gallery > .nav > .next > .copy {
+  float: left;
+  margin: 0 0.5em 0 0;
+}
+.container > .wood > .extras {
+  width: 40em;
+  margin: auto;
+}
+.container > .wood > .extras > .extra {
+  width: 11em;
+  height: 11em;
+  float: left;
+  background-color: #fff;
+  margin: 1em;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+.container > .wood > .extras > .extra:hover > .inner > .copy {
+  background-color: rgba(255,255,255,0.8);
+}
+.container > .wood > .extras > .extra > .inner {
+  position: relative;
+  background-size: cover;
+  margin: 0.2em;
+  width: 10.6em;
+  height: 10.6em;
+}
+.container > .wood > .extras > .extra > .inner > img {
+  width: 100%;
+  height: 100%;
+}
+.container > .wood > .extras > .extra > .inner > .copy {
+  font-size: 0.8em;
+  position: absolute;
+  background-color: rgba(255,255,255,0.5);
+  transition: background-color 0.2s linear;
+  color: #9a5107;
+  padding: 1em;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 11.3em;
+}
+.container > .wood > .rsvp2 {
+  background-color: #092e6e;
+  border: 0.2em solid #f4e9d8;
+  width: 23em;
+  margin: 2em auto;
+  color: #f4e9d8;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.container > .wood > .rsvp2 > .left {
+  float: left;
+  font-size: 0.7em;
+  width: 20em;
+  margin: 0.5em 0 0 0;
+}
+.container > .wood > .rsvp2 > .right {
+  float: right;
+}
+.container > .wood > .rsvp2 > .right > .reminder {
+  background-image: url("../img/reminder.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1.8em;
+  height: 1.5em;
+  float: left;
+  margin: 0.6em 0.6em 0 0.6em;
+}
+.container > .wood > .visit {
+  background-color: #f4e9d8;
+  border-top: 0.2em solid #9a5107;
+  border-bottom: 0.2em solid #9a5107;
+  box-shadow: 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
+  text-align: center;
+  padding: 1em;
+  color: #9a5107;
+}
+.container > .wood > .visit a {
+  color: #9a5107;
 }
 .cta {
   background-color: #092e6e;

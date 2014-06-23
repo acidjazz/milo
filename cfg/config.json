@@ -59,6 +59,28 @@
       "location": "San Diego, CA"
     }
 
+  ],
+
+  "gallery": [
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" },
+    { "img": "./img/dog1.jpg" }
   ]
+
 }
 

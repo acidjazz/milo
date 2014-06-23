@@ -9,8 +9,7 @@ block content
     .truck
     .logo
     .clear
-  .body
-
+  .wood
     .title
       +dots('left')
       +dots('right')
@@ -53,3 +52,52 @@ block content
       .reminder
       .copy RSVP &amp; SHARE
     .clear
+    .gallery
+      .title
+        +dots('left')
+        +dots('right')
+        .copy Treat Truck Family Fun
+      .description See how dog are enjoying the Milo's Kitchen Treat Truck with their parents. Upload your own picture and tag it <span class="hashtag">#MKTreatTruck</span> to get it on the fun!
+      .pictures
+        .inner
+          each picture in gallery
+            .picture
+              img(src=picture.img)
+      .nav
+        .prev
+          .arrow
+            img(src='./img/arrow-left.png')
+          .copy PREVIOUS
+         
+        .next 
+          .copy NEXT
+          .arrow
+            img(src='./img/arrow-right.png')
+
+    .extras
+      .extra.experience
+        .inner
+          img(src='./img/extra_experience.jpg')
+          .copy The Treat Truck Experience
+      .extra.recipes
+        .inner
+          img(src='./img/extra_recipes.jpg')
+          .copy The Recipes
+      .extra.story
+        .inner
+          img(src='./img/extra_story.jpg')
+          .copy Our Story
+    .clear
+    
+    .rsvp2
+      .left Now that you've learned about the Treat Truck, click to:
+      .right
+        .reminder
+        .copy RSVP &amp; SHARE
+      .clear
+    .visit
+      .copy Visit our website to learn more about Milo's Kitchen&reg;.
+      .link
+        a(href='http://www.miloskitchen.com',target='_new') www.miloskitchen.com
+
+
