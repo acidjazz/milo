@@ -834,7 +834,7 @@ body {
   -ms-transform: rotate(-45deg) translate(0.15em, -0.15em);
   transform: rotate(-45deg) translate(0.15em, -0.15em);
 }
-@media all and (min-width: 1px) and (max-width: 640px) {
+@media all and (min-width: 1px) and (max-width: 800px) {
   body {
     font-size: 8pt;
   }
