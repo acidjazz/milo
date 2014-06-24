@@ -9,6 +9,7 @@ milo =
     $('.close').on 'click', milo.close
     $('.event').on 'click', milo.detail
     $('.fade').on 'click', milo.cancel
+    $('.nav > div').on 'click', milo.nav
 
   extra: ->
 
@@ -31,7 +32,6 @@ milo =
   close: ->
     _.off $(this).data('el'), '.fade'
 
-
   cancel: ->
     _.off '.modal', '.fade'
 
@@ -41,12 +41,16 @@ milo =
         scrollTop: $(el).offset().top
     , 300
 
-   
   detail: ->
     t = $ this
     evt = t.data 'event'
-    $('.event_date').html evt.date
-    $('.event_title').html evt.title
-    $('.event_location').html evt.location
+    $('#' + key).html value for key, value of evt
     _.on '.fade', '.modal'
 
+  nav: ->
+    t = $ this
+    p = t.data 'page'
+    i = $ '.pictures > .inner'
+    pages = 3
+
+    i.removeClass('one').addClass('two')

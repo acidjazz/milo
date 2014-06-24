@@ -9,56 +9,37 @@
     "keywords": "milo's, kitchen, treat, truck, dogs",
     "image": "/img/share.jpg"
   },
-  "events": [
-    {
-      "id": "1452568204990980",
-      "date": "2014-06-26",
-      "title": "Training center",
-      "location": "San Francisco, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-06-27",
-      "title": "Point Isabel Dog Park",
-      "location": "San Francisco, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-06-28",
-      "title": "Downtown BigPark",
-      "location": "San Francisco, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-07-05",
-      "title": "Huntington Beach Dog Park",
-      "location": "Los Angeles, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-07-06",
-      "title": "Downtown Dog Park",
-      "location": "Los Angeles, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-07-04",
-      "title": "Balboa Dog Park",
-      "location": "San Diego, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-07-05",
-      "title": "Ocean Beach Dog Park",
-      "location": "San Diego, CA"
-    },
-    {
-      "id": "1452568204990980",
-      "date": "2014-07-06",
-      "title": "Annual Doggie Street Festival",
-      "location": "San Diego, CA"
-    }
 
+  "events": [
+    {"Market":"San Francisco","Day":"Friday","Date":"6/27","Event":"Marina Green ","Type":"Permitted ","Time":"5:00pm-8pm","Address":"Marina Green ","City":"San Francisco","State":"CA","Zip":94123},
+    {"Market":"San Francisco","Day":"Saturday","Date":"6/28","Event":"Point Isabel Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"2701 Isabel Street","City":"Richmond","State":"CA","Zip":94808},
+    {"Market":"Los Angeles","Day":"Thursday","Date":"7/3","Event":"Airport Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"3201 Airport Ave","City":"Santa Monica","State":"CA","Zip":90405},
+    {"Market":"Los Angeles","Day":"Saturday","Date":"7/5","Event":"Redondo Beach Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"190 Flagler Ln.","City":"Redondo Beach","State":"CA","Zip":90278},
+    {"Market":"Los Angeles","Day":"Sunday","Date":"7/6","Event":"Huntington Dog Beach","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"100 Goldenwest St.","City":"Huntington Beach","State":"CA","Zip":92648},
+    {"Market":"San Diego","Day":"Thursday","Date":"7/10","Event":"Balboa Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"1549 El Prado","City":"San Diego","State":"CA","Zip":92101},
+    {"Market":"San Diego","Day":"Friday","Date":"7/11","Event":"Cadman Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"4280 Avati Dr","City":"San Diego","State":"CA","Zip":92117},
+    {"Market":"San Diego","Day":"Saturday","Date":"7/12","Event":"6th Annual Doggie Street Festival","Type":"Anchor","Time":"9:00am - 4:00pm","Address":"Liberty Station\nFarragut Rd.","City":"San Diego","State":"CA","Zip":92106},
+    {"Market":"Phoenix","Day":"Sunday","Date":"7/13","Event":"Echo Mountain Dog Park","Type":"Permitted","Time":"2:00pm - 4:00pm","Address":"17447 North 20th Street","City":"Phoenix","State":"AZ","Zip":85022},
+    {"Market":"Chicago","Day":"Saturday","Date":"7/19","Event":"Windy City Pet Expo","Type":"Anchor","Time":"10:00am - 6:00pm","Address":"1033 North Villa Ave","City":"Chicago","State":"IL","Zip":60181},
+    {"Market":"Detorit","Day":"Saturday","Date":"7/26","Event":"Balduck Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"Balduck Park\nChandler Park Drive","City":"Detroit","State":"MI","Zip":48224},
+    {"Market":"Detorit","Day":"Sunday","Date":"7/27","Event":"Canton Dog Park (Preservation Park)","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"N Roosevelt St","City":"Canton","State":"MI","Zip":48187},
+    {"Market":"Carolina's","Day":"Thursday","Date":"7/31","Event":"Pelham Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"2770 E Phillips Rd","City":"Greer","State":"SC","Zip":29615},
+    {"Market":"Carolina's","Day":"Saturday","Date":"8/2","Event":"Eastover Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"2730 Randolph Road","City":"Charlotte","State":"NC","Zip":28207},
+    {"Market":"Carolina's","Day":"Sunday","Date":"8/3","Event":"Lucky Dog Training Center","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"19607 Statesville Road","City":"Cornelius","State":"NC","Zip":28031},
+    {"Market":"Pittsburg","Day":"Tuesday","Date":"8/5","Event":"Pittburgh Bark At The Park","Type":"Anchor","Time":"7:05pm Game (5:00pm activation)","Address":"115 Federal St.","City":"Pittsburgh","State":"PA","Zip":15212},
+    {"Market":"Minneapolis","Day":"Saturday","Date":"8/9","Event":"Bryant Lake","Type":"Permitted","Time":"7:30am - 9:30am","Address":"6800 Rowland Road","City":"Eden Prairie","State":"MN","Zip":55344},
+    {"Market":"Minneapolis","Day":"Sunday","Date":"8/10","Event":"Elm Creek reserve Dog Park","Type":"Permitted","Time":"7:30am - 9:30am","Address":"12400 James Deane Parkway","City":"Maple Grove","State":"MN","Zip":55369},
+    {"Market":"Georgia","Day":"Saturday","Date":"8/16","Event":"Lenora Park","Type":"Permitted","Time":"7:30am - 9:30am","Address":" 4515 Lenora Church Rd","City":"Snellville","State":"GA","Zip":30058},
+    {"Market":"Georgia","Day":"Sunday","Date":"8/17","Event":"Atlanta Braves - Bark in the Park","Type":"Anchor","Time":"1:35pm Game (11:00am activation)","Address":"755 Hank Aaron Dr SE","City":"Atlanta","State":"GA","Zip":30315},
+    {"Market":"Ohio","Day":"Friday","Date":"8/22","Event":"Otto Armleder Dog Park","Type":"Permitted","Time":"7:30am - 9:30am","Address":"5059 Wooster Pike","City":"Cincinnati","State":"OH","Zip":45226},
+    {"Market":"Ohio","Event":"Mt. Airy Forest Dog Park","Type":"Guerrilla","Time":"2:00pm - 4:00pm","Address":"Westwood Northern Blvd and Wardall Ave","City":"Cincinnati","State":"OH","Zip":45211},
+    {"Market":"Ohio","Day":"Saturday","Date":"8/23","Event":"Wag Festival","Type":"Anchor","Time":"10:00am - 5:00pm","Address":"Prairie Oaks Metro Park","City":"Hilliard","State":"OH","Zip":43162},
+    {"Market":"Ohio","Day":"Sunday","Date":"8/24","Event":"Wheeler Memorial Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"725 Thurber Dr W","City":"Columbus","State":"OH","Zip":43215},
+    {"Market":"Bentonville","Day":"Friday","Date":"8/29","Event":"Lake Wilson","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"S Lake Wilson Rd","City":"Fayetteville,","State":"AR","Zip":72701},
+    {"Market":"Bentonville","Day":"Saturday","Date":"8/30","Event":"Bentonville Bark Park","Type":"Permitted","Time":"7:30am - 9:30am","Address":"2400 N. Walton Blv.","City":"Bentonville","State":"AR","Zip":72712},
+    {"Market":"Bentonville","Day":"Sunday","Date":"8/31","Event":"Murray Park Off-Leash Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"4301 Rebsamen Park Road","City":"Little Rock","State":"AR","Zip":72202},
+    {"Market":"NYC","Day":"Saturday","Date":"9/6","Event":"Washington Square Park Dog Park","Type":"Guerrilla","Time":"7:30am - 9:30am","Address":"7 East 8th Street","City":"New York","State":"NY","Zip":10003},
+    {"Market":"NYC ","Day":"Sunday","Date":"9/7","Event":"Adoptapalooza","Type":"Anchor","Time":"12:00pm - 5:00pm","Address":"Union Square Park","City":"New York","State":"NY","Zip":10003}
   ],
 
   "gallery": [

@@ -36,17 +36,17 @@ block content
       .clear
       .map
       .events
-        - var current_location = ''
+        - var current_market = ''
         - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         each event, index in events
-          if event.location != current_location
-            .location #{event.location}
-          - var current_location = event.location
+          if event.Market != current_market
+            .location #{event.Market}
+          - var current_market = event.Market
           .event(data-event=JSON.stringify(event))
-            - var parsed = event.date.split('-');
-            - var date = new Date(parsed[0], parsed[1], parsed[2])
-            span.date #{months[date.getMonth()-1]} #{date.getDate()}:
-            span.title #{event.title}
+            //- var parsed = event['Date'].split('/');
+            //- var date = new Date(parsed[0], parsed[1], parsed[2])
+            span.date #{event.Date}:
+            span.title #{event.Event}
       .clear
     .rsvp.cta
       .reminder
@@ -59,7 +59,7 @@ block content
         .copy Treat Truck Family Fun
       .description See how dog are enjoying the Milo's Kitchen Treat Truck with their parents. Upload your own picture and tag it <span class="hashtag">#MKTreatTruck</span> to get it on the fun!
       .pictures
-        .inner
+        .inner.one
           each picture in gallery
             .picture
               img(src=picture.img)
@@ -79,6 +79,14 @@ block content
     .close(data-el='.truckevent')
       .line.one
       .line.two
+    .clear
+    .bullets
+      .label AT THE EVENT:
+      ul.list
+        li Free samples
+        li Family portraits
+        li Enjoy our lounge
+        li Personalized giveaways
 
   .recipes.off
     .inner
@@ -135,12 +143,29 @@ block content
         a(href='http://www.miloskitchen.com',target='_new') www.miloskitchen.com
   .fade.off
   .modal.off
-    .close(data-el='.modal')
-      .line.one
-      .line.two
+    .header
+      .close.beige(data-el='.modal')
+        .line.one
+        .line.two
+      span#Event
     .body 
-      p Date: <span class="event_date">event.date</span>
-      p Title: <span class="event_title">event.title</span>
-      p Location: <span class="event_location">event.location</span>
-      .cta RSVP
-      .cta SHARE
+      p 
+        span#Address
+        span , 
+        span#City
+        span &nbsp;
+        span#State
+      p 
+        span#Date
+        span , 
+        span#Day
+        span &nbsp;
+        span#Time
+      .input
+        input(type='text',placeholder='Email Address')
+        input(type='checkbox',checked=true)
+        span Opt In
+    .header
+      .button RSVP
+      .button SHARE
+      .clear

@@ -189,8 +189,9 @@ body {
 .container > .wood > .schedule > .events {
   float: right;
   width: 16em;
-  height: 10em;
+  height: 13em;
   margin: -2.5em 0 0 0;
+  overflow-y: scroll;
 }
 .container > .wood > .schedule > .events > .location {
   padding: 0.3em 0;
@@ -269,6 +270,32 @@ body {
 }
 .container > .wood > .gallery > .pictures > .inner {
   width: 100em;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -moz-transition: -moz-transform 0.5s ease-in-out;
+  -o-transition: -o-transform 0.5s ease-in-out;
+  -ms-transition: -ms-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+.container > .wood > .gallery > .pictures > .inner.page1 {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page2 {
+  -webkit-transform: translate(-45em, 0);
+  -moz-transform: translate(-45em, 0);
+  -o-transform: translate(-45em, 0);
+  -ms-transform: translate(-45em, 0);
+  transform: translate(-45em, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page3 {
+  -webkit-transform: translate(-90em, 0);
+  -moz-transform: translate(-90em, 0);
+  -o-transform: translate(-90em, 0);
+  -ms-transform: translate(-90em, 0);
+  transform: translate(-90em, 0);
 }
 .container > .wood > .gallery > .pictures > .inner > .picture {
   cursor: pointer;
@@ -284,6 +311,9 @@ body {
 .container > .wood > .gallery > .pictures > .inner > .picture > img {
   width: 100%;
   height: 100%;
+}
+.container > .wood > .gallery > .nav > div {
+  cursor: pointer;
 }
 .container > .wood > .gallery > .nav > .prev {
   float: left;
@@ -410,6 +440,24 @@ body {
   -o-transition: height 0.2s;
   -ms-transition: height 0.2s;
   transition: height 0.2s;
+  overflow: hidden;
+}
+.container > .truckevent > .bullets {
+  width: 30em;
+  margin: auto;
+  color: #9a5107;
+  font-size: 0.8em;
+  margin-top: 23em;
+}
+.container > .truckevent > .bullets > ul.list {
+  padding: 0;
+  margin: 0 0 0 1.5em;
+}
+.container > .truckevent > .bullets > .list > li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 14em;
 }
 .container > .truckevent.on {
   height: 25em;
@@ -448,6 +496,111 @@ body {
 .container > .recipes.on > .close {
   display: block;
 }
+.container > .recipes.on > .inner > .recipe:nth-child(1) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.1s, -webkit-transform 0.2s linear 0.1s;
+  -moz-transition: 0.2s linear 0.1s, -moz-transform 0.2s linear 0.1s;
+  -o-transition: 0.2s linear 0.1s, -o-transform 0.2s linear 0.1s;
+  -ms-transition: 0.2s linear 0.1s, -ms-transform 0.2s linear 0.1s;
+  transition: 0.2s linear 0.1s, transform 0.2s linear 0.1s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(2) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
+  -moz-transition: 0.2s linear 0.2s, -moz-transform 0.2s linear 0.2s;
+  -o-transition: 0.2s linear 0.2s, -o-transform 0.2s linear 0.2s;
+  -ms-transition: 0.2s linear 0.2s, -ms-transform 0.2s linear 0.2s;
+  transition: 0.2s linear 0.2s, transform 0.2s linear 0.2s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(3) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.3s, -webkit-transform 0.2s linear 0.3s;
+  -moz-transition: 0.2s linear 0.3s, -moz-transform 0.2s linear 0.3s;
+  -o-transition: 0.2s linear 0.3s, -o-transform 0.2s linear 0.3s;
+  -ms-transition: 0.2s linear 0.3s, -ms-transform 0.2s linear 0.3s;
+  transition: 0.2s linear 0.3s, transform 0.2s linear 0.3s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(4) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.4s, -webkit-transform 0.2s linear 0.4s;
+  -moz-transition: 0.2s linear 0.4s, -moz-transform 0.2s linear 0.4s;
+  -o-transition: 0.2s linear 0.4s, -o-transform 0.2s linear 0.4s;
+  -ms-transition: 0.2s linear 0.4s, -ms-transform 0.2s linear 0.4s;
+  transition: 0.2s linear 0.4s, transform 0.2s linear 0.4s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(5) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.5s, -webkit-transform 0.2s linear 0.5s;
+  -moz-transition: 0.2s linear 0.5s, -moz-transform 0.2s linear 0.5s;
+  -o-transition: 0.2s linear 0.5s, -o-transform 0.2s linear 0.5s;
+  -ms-transition: 0.2s linear 0.5s, -ms-transform 0.2s linear 0.5s;
+  transition: 0.2s linear 0.5s, transform 0.2s linear 0.5s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(6) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.6s, -webkit-transform 0.2s linear 0.6s;
+  -moz-transition: 0.2s linear 0.6s, -moz-transform 0.2s linear 0.6s;
+  -o-transition: 0.2s linear 0.6s, -o-transform 0.2s linear 0.6s;
+  -ms-transition: 0.2s linear 0.6s, -ms-transform 0.2s linear 0.6s;
+  transition: 0.2s linear 0.6s, transform 0.2s linear 0.6s;
+}
+.container > .recipes.on > .inner > .recipe:nth-child(7) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.7s, -webkit-transform 0.2s linear 0.7s;
+  -moz-transition: 0.2s linear 0.7s, -moz-transform 0.2s linear 0.7s;
+  -o-transition: 0.2s linear 0.7s, -o-transform 0.2s linear 0.7s;
+  -ms-transition: 0.2s linear 0.7s, -ms-transform 0.2s linear 0.7s;
+  transition: 0.2s linear 0.7s, transform 0.2s linear 0.7s;
+}
 .container > .recipes.off {
   height: 0em;
   -webkit-box-shadow: none;
@@ -467,6 +620,14 @@ body {
   display: inline-block;
   margin: 1em;
   text-align: center;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transform: translate(-1em, 0);
+  -moz-transform: translate(-1em, 0);
+  -o-transform: translate(-1em, 0);
+  -ms-transform: translate(-1em, 0);
+  transform: translate(-1em, 0);
 }
 .container > .recipes > .inner > .recipe > .title {
   color: #9a5107;
@@ -553,9 +714,9 @@ body {
 .modal {
   position: fixed;
   top: 10em;
-  width: 40em;
+  width: 25em;
   left: 50%;
-  margin-left: -20em;
+  margin-left: -12.5em;
   background-color: #f4e9d8;
 }
 .modal > .header {
@@ -563,15 +724,28 @@ body {
   color: #f4e9d8;
   padding: 0.5em;
 }
+.modal > .header > .close {
+  margin: 0;
+}
+.modal > .header > .button {
+  float: left;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin: 0.2em;
+  background-color: #f4e9d8;
+  color: #092e6e;
+}
 .modal > .body {
   background-color: #f4e9d8;
   padding: 1em;
 }
-.modal > .body > .cta {
-  float: left;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  margin: 1em;
+.modal > .body > .input input {
+  margin: 0.2em 0.5em 0 0.5em;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 0.1em solid #092e6e;
+  background-color: #f4e9d8;
+  color: #092e6e;
 }
 .modal.off {
   opacity: 0;
@@ -623,6 +797,9 @@ body {
   margin: 1em 2em;
   width: 3em;
   height: 2.5em;
+}
+.close.beige > .line {
+  background-color: #f4e9d8;
 }
 .close > .line {
   background-color: #092e6e;

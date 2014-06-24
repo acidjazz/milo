@@ -8,7 +8,8 @@ milo = {
     $('.extras > .extra').on('click', milo.extra);
     $('.close').on('click', milo.close);
     $('.event').on('click', milo.detail);
-    return $('.fade').on('click', milo.cancel);
+    $('.fade').on('click', milo.cancel);
+    return $('.nav > div').on('click', milo.nav);
   },
   extra: function() {
     var t;
@@ -41,12 +42,21 @@ milo = {
     }, 300);
   },
   detail: function() {
-    var evt, t;
+    var evt, key, t, value;
     t = $(this);
     evt = t.data('event');
-    $('.event_date').html(evt.date);
-    $('.event_title').html(evt.title);
-    $('.event_location').html(evt.location);
+    for (key in evt) {
+      value = evt[key];
+      $('#' + key).html(value);
+    }
     return _.on('.fade', '.modal');
+  },
+  nav: function() {
+    var i, p, pages, t;
+    t = $(this);
+    p = t.data('page');
+    i = $('.pictures > .inner');
+    pages = 3;
+    return i.removeClass('one').addClass('two');
   }
 };

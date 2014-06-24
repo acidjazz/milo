@@ -135,8 +135,9 @@ body
       > .events
         float right
         width 16em
-        height 10em
+        height 13em
         margin -2.5em 0 0 0
+        overflow-y scroll
         > .location
           padding 0.3em 0
           text-transform uppercase
@@ -194,6 +195,13 @@ body
         overflow hidden
         > .inner
           width 100em
+          transition transform 0.5s ease-in-out
+          &.page1
+            transform translate(0, 0)
+          &.page2
+            transform translate(-45em, 0)
+          &.page3
+            transform translate(-90em, 0)
           > .picture
             cursor pointer
             display inline-block
@@ -207,6 +215,8 @@ body
               width 100%
               height 100%
       > .nav
+        > div
+          cursor pointer
         > .prev
           float left
           margin 0 0 0 0.5em
@@ -298,6 +308,21 @@ body
     background-repeat no-repeat
     background-position center
     transition height 0.2s 
+    overflow hidden
+    > .bullets
+      width 30em
+      margin auto
+      color c_brown
+      font-size 0.8em
+      margin-top 23em
+      > ul.list 
+        padding 0
+        margin 0 0 0 1.5em
+      > .list > li
+        padding 0
+        margin 0
+        float left
+        width 14em
     &.on
       height 25em
       > .close
@@ -323,6 +348,11 @@ body
       height 30em
       > .close
         display block
+      for i in 1 2 3 4 5 6 7
+        > .inner > .recipe:nth-child({i})
+          opacity 1
+          transform translate(0, 0)
+          transition 0.2s linear unit(i*0.1, 's'), transform 0.2s linear unit(i*0.1, 's')
     &.off
       height 0em
       box-shadow none
@@ -339,6 +369,8 @@ body
         display inline-block
         margin 1em
         text-align center
+        opacity 0
+        transform translate(-1em, 0)
         > .title
           color c_brown
           border 0.1em solid c_brown
@@ -391,22 +423,37 @@ body
 .modal
   position fixed
   top 10em
-  width 40em
+  width 25em
   left 50%
-  margin-left -20em
+  margin-left -12.5em
   background-color c_beige
   > .header
     background-color c_blue
     color c_beige
     padding 0.5em
-  > .body
-    background-color c_beige
-    padding 1em
-    > .cta
+    > .close
+      margin 0
+
+    > .button
       float left
       padding 0.5em 1em
       cursor pointer
-      margin 1em 
+      margin 0.2em 
+      background-color c_beige
+      color c_blue
+   
+
+  > .body
+    background-color c_beige
+    padding 1em
+    > .input
+      input
+        margin 0.2em 0.5em 0 0.5em
+        font-size 1em
+        padding 0.5em
+        border 0.1em solid c_blue
+        background-color c_beige
+        color c_blue
   &.off
     opacity 0
     transition opacity 0.2s linear, transform 0.2s ease-out
@@ -415,9 +462,6 @@ body
     opacity 1
     transform perspective(1000px) rotateX(0deg)
     transition opacity 0.2s linear, transform 0.2s ease-out
-
-
-
 
 .topbar
   background-image url('../img/wood.jpg')
@@ -437,6 +481,8 @@ body
   margin 1em 2em
   width 3em
   height 2.5em
+  &.beige > .line
+    background-color c_beige
   > .line
     background-color c_blue
     width 3em
