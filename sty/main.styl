@@ -152,7 +152,7 @@ body
           padding 0.3em 0
           text-transform uppercase
         > .event
-          font-size 0.7em
+          font-size 0.8em
           cursor pointer
           padding 0.2em 0.3em
           transition background-color 0.1s linear, color 0.1s linear
@@ -440,7 +440,7 @@ body
   top 10em
   width 100%
   min-height 20em
-  background-color rgba(pink, 0.8)
+  background-color rgba(c_beige, 1)
   &.off
     opacity 0
     transition opacity 0.2s linear, transform 0.2s ease-out
@@ -471,6 +471,32 @@ body
       margin 0.2em 
       background-color c_beige
       color c_blue
+    > .addthisevent-drop
+      font-family CenturySchoolbookBold
+      color c_blue !important
+      font-size 1em
+      background none
+      background-color c_beige
+      margin 0.2em
+      padding 0.5em 1em
+      &:after
+        color c_blue !important
+      > .addthisevent_dropdown
+        background-color c_beige
+        color c_blue
+        font-family CenturySchoolbookBold
+        > span
+          background-color c_beige
+          color c_blue
+          font-family CenturySchoolbookBold
+          font-size 0.8em
+          &:hover
+            color c_beige
+            background-color c_blue
+        > em
+          display none
+
+
    
 
   > .body
@@ -535,5 +561,4 @@ body
 // 320px.. iphone vert
 @media all and (min-width: 1px) and (max-width: 800px)
   @import _mobile
-
 

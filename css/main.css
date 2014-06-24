@@ -210,7 +210,7 @@ body {
   text-transform: uppercase;
 }
 .container > .wood > .schedule > .events > .event {
-  font-size: 0.7em;
+  font-size: 0.8em;
   cursor: pointer;
   padding: 0.2em 0.3em;
   -webkit-transition: background-color 0.1s linear, color 0.1s linear;
@@ -768,7 +768,7 @@ body {
   top: 10em;
   width: 100%;
   min-height: 20em;
-  background-color: rgba(255,192,203,0.8);
+  background-color: #f4e9d8;
 }
 .zoom.off {
   opacity: 0;
@@ -823,6 +823,36 @@ body {
   margin: 0.2em;
   background-color: #f4e9d8;
   color: #092e6e;
+}
+.modal > .header > .addthisevent-drop {
+  font-family: CenturySchoolbookBold;
+  color: #092e6e !important;
+  font-size: 1em;
+  background: none;
+  background-color: #f4e9d8;
+  margin: 0.2em;
+  padding: 0.5em 1em;
+}
+.modal > .header > .addthisevent-drop:after {
+  color: #092e6e !important;
+}
+.modal > .header > .addthisevent-drop > .addthisevent_dropdown {
+  background-color: #f4e9d8;
+  color: #092e6e;
+  font-family: CenturySchoolbookBold;
+}
+.modal > .header > .addthisevent-drop > .addthisevent_dropdown > span {
+  background-color: #f4e9d8;
+  color: #092e6e;
+  font-family: CenturySchoolbookBold;
+  font-size: 0.8em;
+}
+.modal > .header > .addthisevent-drop > .addthisevent_dropdown > span:hover {
+  color: #f4e9d8;
+  background-color: #092e6e;
+}
+.modal > .header > .addthisevent-drop > .addthisevent_dropdown > em {
+  display: none;
 }
 .modal > .body {
   background-color: #f4e9d8;
@@ -983,6 +1013,13 @@ body {
     width: 90%;
     height: 13em;
     margin: auto;
+  }
+  .container > .wood > .schedule > .asterisk {
+    float: none;
+    font-size: 1em;
+    margin: 1em 0.2em;
+    width: 90%;
+    text-align: center;
   }
   .container > .wood > .schedule > .events {
     float: none;

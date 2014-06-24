@@ -145,7 +145,7 @@ block content
         a(href='http://www.miloskitchen.com',target='_new') www.miloskitchen.com
   .fade.off
   .zoom.off
-    .close.beige(data-el='.modal')
+    .close(data-el='.zoom')
       .line.one
       .line.two
     .image
@@ -175,6 +175,19 @@ block content
         .button SIGN UP
         span Opt In
     .header
-      .button RSVP
+      a.addthisevent(href="http://example.com/link-to-your-event",title="Add to Calendar") RSVP
+        span._start 10-05-2014 11:38:46
+        span._end 11-05-2014 11:38:46
+        span._zonecode 6
+        span._summary Summary of the event
+        span._description Description of the event
+        span._location Location of the event
+        //span._organizer Organizer
+        //span._organizer_email Organizer e-mail
+        span._facebook_event http://www.facebook.com/events/160427380695693
+        span._all_day_event true
+        span._date_format DD/MM/YYYY
       .button SHARE
+
+
       .clear

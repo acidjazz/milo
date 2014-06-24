@@ -49,6 +49,12 @@ milo =
     t = $ this
     evt = t.data 'event'
     $('#' + key).html value for key, value of evt
+    $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 00:00:00'
+    $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 23:00:00'
+    $('._summary').html evt.Event
+    $('._description').html evt.Event + 'in ' + evt.Market
+    $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
+    addthisevent.refresh()
     _.on '.fade', '.modal'
 
   nav: ->
