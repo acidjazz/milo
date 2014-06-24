@@ -12,6 +12,7 @@ milo =
     $('.fade').on 'click', milo.cancel
     $('.nav > div').on 'click', milo.nav
     $('.container').on 'click', '.modal > .button', milo.rsvpshare
+    $('.rsvp.cta').on 'click', milo.share
 
   picture: ->
     _.on '.zoom', '.fade'
@@ -83,3 +84,13 @@ milo =
     i.addClass 'page' + page
     t.data 'page', page
 
+  share: ->
+    FB.ui(
+      method: 'share',
+      href: 'https://milo.256.sh/',
+    , (response) ->
+
+      alert(response)
+
+    )
+  

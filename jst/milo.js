@@ -11,7 +11,8 @@ milo = {
     $('.event').on('click', milo.detail);
     $('.fade').on('click', milo.cancel);
     $('.nav > div').on('click', milo.nav);
-    return $('.container').on('click', '.modal > .button', milo.rsvpshare);
+    $('.container').on('click', '.modal > .button', milo.rsvpshare);
+    return $('.rsvp.cta').on('click', milo.share);
   },
   picture: function() {
     return _.on('.zoom', '.fade');
@@ -85,5 +86,13 @@ milo = {
     }
     i.addClass('page' + page);
     return t.data('page', page);
+  },
+  share: function() {
+    return FB.ui({
+      method: 'share',
+      href: 'https://milo.256.sh/'
+    }, function(response) {
+      return alert(response);
+    });
   }
 };
