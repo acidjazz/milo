@@ -1102,6 +1102,27 @@ sup {
     width: 70%;
     margin: auto;
   }
+  .container > .wood > .gallery > .pictures > .inner.page1 {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .container > .wood > .gallery > .pictures > .inner.page2 {
+    -webkit-transform: translate(-22em, 0);
+    -moz-transform: translate(-22em, 0);
+    -o-transform: translate(-22em, 0);
+    -ms-transform: translate(-22em, 0);
+    transform: translate(-22em, 0);
+  }
+  .container > .wood > .gallery > .pictures > .inner.page3 {
+    -webkit-transform: translate(-44em, 0);
+    -moz-transform: translate(-44em, 0);
+    -o-transform: translate(-44em, 0);
+    -ms-transform: translate(-44em, 0);
+    transform: translate(-44em, 0);
+  }
   .container > .wood > .gallery > .nav {
     font-size: 2em;
   }
