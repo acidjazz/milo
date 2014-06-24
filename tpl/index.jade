@@ -67,7 +67,7 @@ block content
         .inner.page1(data-page=1)
           each picture in gallery
             .picture
-              img(src=picture.img)
+              .image(style="background-image: url(#{picture.img})", data-img=picture.img)
       .nav
         .prev
           .arrow
@@ -153,13 +153,13 @@ block content
       .clear
       .copyright &copy; 2014 Big Heart Pet Brands. All rights reserved.
 
-
   .fade.off
   .zoom.off
     .close(data-el='.zoom')
       .line.one
       .line.two
-    .image
+    .clear
+    .image(style="background-image: url(./img/gallery/Sam1.jpg)")
 
   .modal.off
     .header

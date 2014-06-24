@@ -15,7 +15,10 @@ milo = {
     return $('.rsvp.cta').on('click', milo.share);
   },
   picture: function() {
-    return _.on('.zoom', '.fade');
+    var image;
+    _.on('.zoom', '.fade');
+    image = $(this).find('.image').data('img');
+    return $('.zoom .image').css('background-image', 'url( ' + image + ')');
   },
   extra: function() {
     var t;
@@ -72,11 +75,11 @@ milo = {
   nav: function() {
     var currentpage, i, p, page, pages, t, _i;
     t = $(this);
-    currentpage = t.data('page');
     i = $('.pictures > .inner');
+    currentpage = i.data('page');
     pages = 3;
     for (p = _i = 1; _i <= 3; p = ++_i) {
-      t.removeClass('page' + p);
+      i.removeClass('page' + p);
     }
     if (t.hasClass('next')) {
       page = currentpage === 3 ? 1 : currentpage + 1;
@@ -85,7 +88,7 @@ milo = {
       page = currentpage === 1 ? 3 : currentpage - 1;
     }
     i.addClass('page' + page);
-    return t.data('page', page);
+    return i.data('page', page);
   },
   share: function() {
     return FB.ui({

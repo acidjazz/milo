@@ -16,6 +16,9 @@ milo =
 
   picture: ->
     _.on '.zoom', '.fade'
+    image = $(this).find('.image').data 'img'
+
+    $('.zoom .image').css 'background-image', 'url( ' + image + ')'
 
   extra: ->
 
@@ -68,12 +71,12 @@ milo =
 
   nav: ->
     t = $ this
-    currentpage = t.data 'page'
     i = $ '.pictures > .inner'
+    currentpage = i.data 'page'
     pages = 3
 
     for p in [1..3]
-      t.removeClass 'page' + p
+      i.removeClass 'page' + p
 
     if t.hasClass 'next'
       page = if currentpage is 3 then 1 else (currentpage+1)
@@ -82,12 +85,12 @@ milo =
       page = if currentpage is 1 then 3 else (currentpage-1)
 
     i.addClass 'page' + page
-    t.data 'page', page
+    i.data 'page', page
 
   share: ->
     FB.ui(
-      method: 'share',
-      href: 'https://milo.256.sh/',
+      method: 'share'
+      href: 'https://milo.256.sh/'
     , (response) ->
 
       alert(response)
