@@ -825,6 +825,7 @@ body {
   color: #092e6e;
 }
 .modal > .header > .addthisevent-drop {
+  border: none !important;
   font-family: CenturySchoolbookBold;
   color: #092e6e !important;
   font-size: 1em;
@@ -835,6 +836,7 @@ body {
 }
 .modal > .header > .addthisevent-drop:after {
   color: #092e6e !important;
+  border: none !important;
 }
 .modal > .header > .addthisevent-drop > .addthisevent_dropdown {
   background-color: #f4e9d8;
