@@ -1054,7 +1054,7 @@ body {
     width: auto;
     display: block;
   }
-  .container > .recipes > .inner > .recipe > .title {
+  .container > .recipes > .inner > .recipe > a > .title {
     font-size: 1.2em;
     width: 90%;
     text-align: center;
