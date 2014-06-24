@@ -95,7 +95,7 @@ body {
 .container > .wood {
   width: 45em;
   margin: -2em auto 0 auto;
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/wood_20.jpg");
   padding: 3em 0 0 0;
   min-height: 30em;
 }
@@ -312,6 +312,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.container > .wood > .gallery > .nav {
+  padding: 1em 0 0 0;
+}
 .container > .wood > .gallery > .nav > div {
   cursor: pointer;
 }
@@ -345,30 +348,30 @@ body {
   width: 11em;
   height: 11em;
   float: left;
-  background-color: #fff;
   margin: 1em;
   -webkit-box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   cursor: pointer;
-}
-.container > .wood > .extras > .extra:hover > .inner > .copy {
-  background-color: rgba(255,255,255,0.8);
-}
-.container > .wood > .extras > .extra > .inner {
+  border: 0.1em solid #fff;
   position: relative;
+  overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  margin: 0.2em;
-  width: 10.6em;
-  height: 10.6em;
 }
-.container > .wood > .extras > .extra > .inner > img {
-  width: 100%;
-  height: 100%;
+.container > .wood > .extras > .extra:hover > .copy {
+  background-color: rgba(255,255,255,0.95);
 }
-.container > .wood > .extras > .extra > .inner > .copy {
-  font-size: 0.8em;
+.container > .wood > .extras > .extra.experience {
+  background-image: url("../img/extra_experience.jpg");
+}
+.container > .wood > .extras > .extra.recipes {
+  background-image: url("../img/extra_recipes.jpg");
+}
+.container > .wood > .extras > .extra.story {
+  background-image: url("../img/extra_story.jpg");
+}
+.container > .wood > .extras > .extra > .copy {
   position: absolute;
   background-color: rgba(255,255,255,0.5);
   -webkit-transition: background-color 0.2s linear;
@@ -379,9 +382,10 @@ body {
   color: #9a5107;
   padding: 1em;
   text-align: center;
+  font-size: 0.8em;
+  width: 12em;
   bottom: 0;
   left: 0;
-  width: 11.3em;
 }
 .container > .wood > .rsvp2 {
   background-color: #092e6e;
@@ -477,7 +481,7 @@ body {
 }
 .container > .recipes {
   width: 45em;
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/wood_20.jpg");
   margin: 1em auto 2em auto;
   padding: 1em 0;
   -webkit-box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
@@ -662,6 +666,7 @@ body {
 }
 .container > .story > .title {
   padding: 1em 1em 0 1em;
+  font-style: italic;
 }
 .container > .story > .copy {
   font-size: 0.6em;
@@ -747,6 +752,14 @@ body {
   background-color: #f4e9d8;
   color: #092e6e;
 }
+.modal > .body > .input > .button {
+  float: right;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  margin: 0.2em;
+  background-color: #092e6e;
+  color: #f4e9d8;
+}
 .modal.off {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -778,7 +791,7 @@ body {
   transition: opacity 0.2s linear, transform 0.2s ease-out;
 }
 .topbar {
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/wood_20.jpg");
   height: 2em;
   -webkit-box-shadow: 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
   box-shadow: 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
@@ -820,4 +833,135 @@ body {
   -o-transform: rotate(-45deg) translate(0.15em, -0.15em);
   -ms-transform: rotate(-45deg) translate(0.15em, -0.15em);
   transform: rotate(-45deg) translate(0.15em, -0.15em);
+}
+@media all and (min-width: 1px) and (max-width: 640px) {
+  body {
+    font-size: 8pt;
+  }
+  .dots {
+    display: none;
+  }
+  .container > .header {
+    width: 100%;
+  }
+  .container > .header > .truck {
+    display: none;
+  }
+  .container > .header > .logo {
+    float: none;
+    width: 20em;
+    height: 10em;
+    margin: 2em auto;
+  }
+  .container > .wood {
+    border-top: 0.5em solid #9a5107;
+    width: 100%;
+    background-color: #f4e9d8;
+    margin: 2em auto;
+  }
+  .container > .wood > .title {
+    width: 100%;
+    text-align: center;
+  }
+  .container > .wood > .title > .copy {
+    width: 100%;
+  }
+  .container > .wood > .copy {
+    width: 90%;
+  }
+  .container > .wood > ul.list {
+    margin: 0 0 2em 2em;
+  }
+  .container > .wood > .schedule {
+    width: 98%;
+    margin: auto;
+  }
+  .container > .wood > .schedule > .title {
+    font-size: 1em;
+  }
+  .container > .wood > .schedule > .subtitle {
+    text-align: center;
+    width: auto;
+  }
+  .container > .wood > .schedule > .subtitle > .copy {
+    width: auto;
+    margin: 1em 0;
+  }
+  .container > .wood > .schedule > .seeall {
+    float: none;
+    width: 90%;
+    padding: 1em;
+    margin: 1em auto;
+    font-size: 1.3em;
+  }
+  .container > .wood > .schedule > .map {
+    float: none;
+    width: 90%;
+    height: 13em;
+    margin: auto;
+  }
+  .container > .wood > .schedule > .events {
+    float: none;
+    width: 80%;
+    margin: 1em auto;
+    border: 0.1em solid #9a5107;
+    padding: 1em;
+  }
+  .container > .wood > .schedule > .events > .event {
+    font-size: 1em;
+  }
+  .container > .wood > .rsvp {
+    margin: -0.5em auto 2em auto;
+    width: 90%;
+    padding: 1em;
+    font-size: 1.3em;
+    border: none;
+  }
+  .container > .wood > .gallery > .title {
+    width: 90%;
+    text-align: center;
+  }
+  .container > .wood > .gallery > .title > .copy {
+    width: auto;
+  }
+  .container > .wood > .gallery > .description {
+    width: 90%;
+    font-size: 1em;
+  }
+  .container > .wood > .gallery > .pictures {
+    width: 70%;
+    margin: auto;
+  }
+  .container > .wood > .extras {
+    width: 100%;
+  }
+  .container > .wood > .extras > .extra {
+    float: none;
+    margin: 1em auto;
+  }
+  .container > .wood > .rsvp2 {
+    width: 90%;
+    padding: 1em 0;
+    margin: 2em auto 4em auto;
+  }
+  .container > .wood > .rsvp2 > .left {
+    font-size: 0.8em;
+    width: 20em;
+    margin: 0 0 0 1em;
+  }
+  .container > .recipes {
+    width: 100%;
+  }
+  .container > .recipes > .inner > .recipe {
+    float: none;
+    margin: 1em auto;
+    width: auto;
+    display: block;
+  }
+  .container > .recipes.on {
+    height: auto;
+  }
+  .container > .story {
+    width: 100%;
+  }
 }
