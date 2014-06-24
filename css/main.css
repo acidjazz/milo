@@ -849,9 +849,9 @@ body {
   }
   .container > .header > .logo {
     float: none;
-    width: 20em;
-    height: 10em;
-    margin: 2em auto;
+    width: 80%;
+    height: 15em;
+    margin: 1em auto;
   }
   .container > .wood {
     border-top: 0.5em solid #9a5107;
@@ -949,8 +949,26 @@ body {
     width: 20em;
     margin: 0 0 0 1em;
   }
+  .container > .truckevent > .bullets {
+    font-size: 1em;
+    margin: 14em 0 0 2em;
+  }
   .container > .recipes {
     width: 100%;
+  }
+  .container > .recipes > .inner {
+    margin-left: 0;
+  }
+  .container > .recipes > .inner > .close {
+    zoom: 1;
+  }
+  .container > .recipes > .inner > .close:before,
+  .container > .recipes > .inner > .close:after {
+    content: "";
+    display: table;
+  }
+  .container > .recipes > .inner > .close:after {
+    clear: both;
   }
   .container > .recipes > .inner > .recipe {
     float: none;
@@ -958,10 +976,21 @@ body {
     width: auto;
     display: block;
   }
+  .container > .recipes > .inner > .recipe > .title {
+    font-size: 1.2em;
+    width: 90%;
+    text-align: center;
+  }
   .container > .recipes.on {
     height: auto;
   }
   .container > .story {
     width: 100%;
+  }
+  .close {
+    font-size: 1em;
+  }
+  .modal > .header {
+    padding: 1em;
   }
 }

@@ -11,9 +11,9 @@ body
       display none
     > .logo
       float none
-      width 20em
-      height 10em
-      margin 2em auto
+      width 80%
+      height 15em
+      margin 1em auto
   > .wood
     border-top 0.5em solid c_brown
     width 100%
@@ -89,14 +89,32 @@ body
         font-size 0.8em
         width 20em
         margin 0 0 0 1em
+  > .truckevent
+    > .bullets
+      font-size 1em
+      margin 14em 0 0 2em
+
   > .recipes
     width 100%
+    > .inner
+      margin-left 0
+      > .close
+        clearfix()
     > .inner > .recipe
       float none
       margin 1em auto
       width auto
       display block
+      > .title
+        font-size 1.2em
+        width 90%
+        text-align center
     &.on
       height auto
   > .story
     width 100%
+.close
+  font-size 1em
+.modal
+  > .header
+    padding 1em
