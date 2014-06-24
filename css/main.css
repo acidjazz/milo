@@ -938,6 +938,12 @@ body {
   .container > .wood > .extras > .extra {
     float: none;
     margin: 1em auto;
+    width: 15em;
+    height: 15em;
+  }
+  .container > .wood > .extras > .extra > .copy {
+    font-size: 1em;
+    width: 15em;
   }
   .container > .wood > .rsvp2 {
     width: 90%;
@@ -986,6 +992,23 @@ body {
   }
   .container > .story {
     width: 100%;
+  }
+  .container > .story.on {
+    height: auto;
+  }
+  .container > .story > .topbar {
+    display: none;
+  }
+  .container > .story > .title {
+    font-size: 1.5em;
+  }
+  .container > .story > .copy {
+    font-size: 1em;
+    width: 90%;
+    padding: 1em;
+  }
+  .container > .story > .dog {
+    display: none;
   }
   .close {
     font-size: 1em;
