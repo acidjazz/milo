@@ -58,6 +58,9 @@ milo = {
     $('._summary').html(evt.Event);
     $('._description').html(evt.Event + 'in ' + evt.Market);
     $('._location').html(evt.Address + ', ' + evt.City + ' ' + evt.State);
+    if (evt.Facebook) {
+      $('._facebook_event').html('http://www.facebook.com/events/' + evt.Facebook);
+    }
     addthisevent.refresh();
     return _.on('.fade', '.modal');
   },
