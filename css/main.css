@@ -500,6 +500,21 @@ body {
 .container > .recipes.on > .close {
   display: block;
 }
+.container > .recipes.on > .inner > .recipe:nth-child(0) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0s, -webkit-transform 0.2s linear 0s;
+  -moz-transition: 0.2s linear 0s, -moz-transform 0.2s linear 0s;
+  -o-transition: 0.2s linear 0s, -o-transform 0.2s linear 0s;
+  -ms-transition: 0.2s linear 0s, -ms-transform 0.2s linear 0s;
+  transition: 0.2s linear 0s, transform 0.2s linear 0s;
+}
 .container > .recipes.on > .inner > .recipe:nth-child(1) {
   opacity: 1;
   -ms-filter: none;
@@ -605,6 +620,21 @@ body {
   -ms-transition: 0.2s linear 0.7s, -ms-transform 0.2s linear 0.7s;
   transition: 0.2s linear 0.7s, transform 0.2s linear 0.7s;
 }
+.container > .recipes.on > .inner > .recipe:nth-child(8) {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: 0.2s linear 0.8s, -webkit-transform 0.2s linear 0.8s;
+  -moz-transition: 0.2s linear 0.8s, -moz-transform 0.2s linear 0.8s;
+  -o-transition: 0.2s linear 0.8s, -o-transform 0.2s linear 0.8s;
+  -ms-transition: 0.2s linear 0.8s, -ms-transform 0.2s linear 0.8s;
+  transition: 0.2s linear 0.8s, transform 0.2s linear 0.8s;
+}
 .container > .recipes.off {
   height: 0em;
   -webkit-box-shadow: none;
@@ -617,6 +647,7 @@ body {
 }
 .container > .recipes > .inner {
   margin-left: 5em;
+  margin-bottom: 5em;
 }
 .container > .recipes > .inner > .recipe {
   width: 10em;
@@ -633,13 +664,17 @@ body {
   -ms-transform: translate(-1em, 0);
   transform: translate(-1em, 0);
 }
-.container > .recipes > .inner > .recipe > .title {
+.container > .recipes > .inner > .recipe > a {
+  text-decoration: none;
+}
+.container > .recipes > .inner > .recipe > a > .title {
   color: #9a5107;
   border: 0.1em solid #9a5107;
   background-color: #f4e9d8;
   font-size: 0.6em;
   margin: auto;
   padding: 0.5em;
+  text-decoration: none;
 }
 .container > .story {
   width: 45em;
@@ -715,6 +750,43 @@ body {
   -o-transition: opacity 0.2s linear 0s, -o-transform 0s linear 0s;
   -ms-transition: opacity 0.2s linear 0s, -ms-transform 0s linear 0s;
   transition: opacity 0.2s linear 0s, transform 0s linear 0s;
+}
+.zoom {
+  position: fixed;
+  top: 10em;
+  width: 100%;
+  min-height: 20em;
+  background-color: rgba(255,192,203,0.8);
+}
+.zoom.off {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out;
+  -moz-transition: opacity 0.2s linear, -moz-transform 0.2s ease-out;
+  -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out;
+  -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out;
+  transition: opacity 0.2s linear, transform 0.2s ease-out;
+  -webkit-transform: perspective(1000px) rotateX(90deg);
+  -moz-transform: perspective(1000px) rotateX(90deg);
+  -o-transform: perspective(1000px) rotateX(90deg);
+  -ms-transform: perspective(1000px) rotateX(90deg);
+  transform: perspective(1000px) rotateX(90deg);
+}
+.zoom.on {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: perspective(1000px) rotateX(0deg);
+  -moz-transform: perspective(1000px) rotateX(0deg);
+  -o-transform: perspective(1000px) rotateX(0deg);
+  -ms-transform: perspective(1000px) rotateX(0deg);
+  transform: perspective(1000px) rotateX(0deg);
+  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out;
+  -moz-transition: opacity 0.2s linear, -moz-transform 0.2s ease-out;
+  -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out;
+  -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out;
+  transition: opacity 0.2s linear, transform 0.2s ease-out;
 }
 .modal {
   position: fixed;

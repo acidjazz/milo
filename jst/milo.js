@@ -6,10 +6,14 @@ milo = {
   },
   handlers: function() {
     $('.extras > .extra').on('click', milo.extra);
+    $('.pictures > .inner > .picture').on('click', milo.picture);
     $('.close').on('click', milo.close);
     $('.event').on('click', milo.detail);
     $('.fade').on('click', milo.cancel);
     return $('.nav > div').on('click', milo.nav);
+  },
+  picture: function() {
+    return _.on('.zoom', '.fade');
   },
   extra: function() {
     var t;
@@ -32,7 +36,7 @@ milo = {
     return _.off($(this).data('el'), '.fade');
   },
   cancel: function() {
-    return _.off('.modal', '.fade');
+    return _.off('.modal', '.fade', '.zoom');
   },
   scroll: function(el) {
     return setTimeout(function() {

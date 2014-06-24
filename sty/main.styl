@@ -349,7 +349,7 @@ body
       height 30em
       > .close
         display block
-      for i in 1 2 3 4 5 6 7
+      for i in 0 1 2 3 4 5 6 7 8
         > .inner > .recipe:nth-child({i})
           opacity 1
           transform translate(0, 0)
@@ -364,6 +364,7 @@ body
 
     > .inner
       margin-left 5em
+      margin-bottom 5em
       > .recipe
         width 10em
         float left
@@ -372,13 +373,16 @@ body
         text-align center
         opacity 0
         transform translate(-1em, 0)
-        > .title
-          color c_brown
-          border 0.1em solid c_brown
-          background-color c_beige
-          font-size 0.6em
-          margin auto
-          padding 0.5em
+        > a
+          text-decoration none
+          > .title
+            color c_brown
+            border 0.1em solid c_brown
+            background-color c_beige
+            font-size 0.6em
+            margin auto
+            padding 0.5em
+            text-decoration none
   > .story
     width 45em
     margin 1em auto 3em auto
@@ -420,6 +424,21 @@ body
     opacity 1
     transform translate(0, 0)
     transition opacity 0.2s linear 0s, transform 0s linear 0s
+
+.zoom
+  position fixed
+  top 10em
+  width 100%
+  min-height 20em
+  background-color rgba(pink, 0.8)
+  &.off
+    opacity 0
+    transition opacity 0.2s linear, transform 0.2s ease-out
+    transform perspective(1000px) rotateX(90deg)
+  &.on
+    opacity 1
+    transform perspective(1000px) rotateX(0deg)
+    transition opacity 0.2s linear, transform 0.2s ease-out
 
 .modal
   position fixed

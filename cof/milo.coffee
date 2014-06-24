@@ -6,10 +6,14 @@ milo =
 
   handlers: ->
     $('.extras > .extra').on 'click', milo.extra
+    $('.pictures > .inner > .picture').on 'click', milo.picture
     $('.close').on 'click', milo.close
     $('.event').on 'click', milo.detail
     $('.fade').on 'click', milo.cancel
     $('.nav > div').on 'click', milo.nav
+
+  picture: ->
+    _.on '.zoom', '.fade'
 
   extra: ->
 
@@ -33,7 +37,7 @@ milo =
     _.off $(this).data('el'), '.fade'
 
   cancel: ->
-    _.off '.modal', '.fade'
+    _.off '.modal', '.fade', '.zoom'
 
   scroll: (el) ->
     setTimeout ->

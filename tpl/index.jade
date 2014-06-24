@@ -96,9 +96,11 @@ block content
       .clear
       each recipe, index in recipes
         .recipe
-          .image
-            img(src='./img/' + recipe.img)
-          .title !{recipe.name}
+          a(href=recipe.link,target='_new')
+            .image
+              img(src='./img/' + recipe.img)
+            .title !{recipe.name}
+      .clear
     .clear
   .story.off
     .topbar
@@ -137,6 +139,12 @@ block content
       .link
         a(href='http://www.miloskitchen.com',target='_new') www.miloskitchen.com
   .fade.off
+  .zoom.off
+    .close.beige(data-el='.modal')
+      .line.one
+      .line.two
+    .image
+
   .modal.off
     .header
       .close.beige(data-el='.modal')
