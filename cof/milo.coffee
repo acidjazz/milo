@@ -57,14 +57,27 @@ milo =
 
     if evt.Facebook
       $('._facebook_event').html 'http://www.facebook.com/events/' + evt.Facebook
+    else
+      $('._facebook_event').html()
 
     addthisevent.refresh()
     _.on '.fade', '.modal'
 
   nav: ->
     t = $ this
-    p = t.data 'page'
+    currentpage = t.data 'page'
     i = $ '.pictures > .inner'
     pages = 3
 
-    i.removeClass('one').addClass('two')
+    for p in [1..3]
+      t.removeClass 'page' + p
+
+    if t.hasClass 'next'
+      page = if currentpage is 3 then 1 else (currentpage+1)
+
+    if t.hasClass 'prev'
+      page = if currentpage is 1 then 3 else (currentpage-1)
+
+    i.addClass 'page' + page
+    t.data 'page', page
+

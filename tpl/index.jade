@@ -44,15 +44,15 @@ block content
           if event.Market != current_market
             .location #{event.Market}
           - var current_market = event.Market
-          .event(data-event=JSON.stringify(event))
+          .event(data-event=JSON.stringify(event),alt='Click to RSVP and Share', title='Click to RSVP and share')
             //- var parsed = event['Date'].split('/');
             //- var date = new Date(parsed[0], parsed[1], parsed[2])
             span.date #{event.Date}:
             span.title #{event.Event}
-              if event.Type == 'Guerrilla'
+              //if event.Type == 'Guerrilla'
                 |&nbsp;*
       .clear
-      .asterisk * Follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen </a> for real-time updates
+      .asterisk We're on the go, Follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen</a> to keep up
     .rsvp.cta
       .reminder
       .copy SHARE
@@ -62,7 +62,7 @@ block content
         +dots('left')
         +dots('right')
         .copy Treat Truck Family Fun
-      .description See how dog are enjoying the Milo's Kitchen Treat Truck with their parents. Upload your own picture and tag it <span class="hashtag">#MKTreatTruck</span> to get it on the fun!
+      .description See how dog are enjoying the Milo's Kitchen&#8480; Treat Truck with their parents. Upload your own picture and tag it <a href="https://twitter.com/search?f=realtime&q=%23MKTreatTruck&src=typd" target="_new" class="hashtag">#MKTreatTruck</a> to get it on the fun!
       .pictures
         .inner.page1(data-page=1)
           each picture in gallery

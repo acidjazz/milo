@@ -60,16 +60,28 @@ milo = {
     $('._location').html(evt.Address + ', ' + evt.City + ' ' + evt.State);
     if (evt.Facebook) {
       $('._facebook_event').html('http://www.facebook.com/events/' + evt.Facebook);
+    } else {
+      $('._facebook_event').html();
     }
     addthisevent.refresh();
     return _.on('.fade', '.modal');
   },
   nav: function() {
-    var i, p, pages, t;
+    var currentpage, i, p, page, pages, t, _i;
     t = $(this);
-    p = t.data('page');
+    currentpage = t.data('page');
     i = $('.pictures > .inner');
     pages = 3;
-    return i.removeClass('one').addClass('two');
+    for (p = _i = 1; _i <= 3; p = ++_i) {
+      t.removeClass('page' + p);
+    }
+    if (t.hasClass('next')) {
+      page = currentpage === 3 ? 1 : currentpage + 1;
+    }
+    if (t.hasClass('prev')) {
+      page = currentpage === 1 ? 3 : currentpage - 1;
+    }
+    i.addClass('page' + page);
+    return t.data('page', page);
   }
 };

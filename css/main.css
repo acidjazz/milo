@@ -970,6 +970,8 @@ body {
     margin: 1em auto;
   }
   .container > .wood {
+    background: none;
+    background-color: #f4e9d8;
     border-top: 0.5em solid #9a5107;
     width: 100%;
     background-color: #f4e9d8;
@@ -1039,6 +1041,14 @@ body {
     padding: 1em;
     font-size: 1.3em;
     border: none;
+    text-align: center;
+  }
+  .container > .wood > .rsvp > .reminder {
+    margin: 0.5em 0 0 7em;
+  }
+  .container > .wood > .rsvp > .copy {
+    width: 3em;
+    margin: 0.2em 0 0 0.5em;
   }
   .container > .wood > .gallery > .title {
     width: 90%;
@@ -1054,6 +1064,9 @@ body {
   .container > .wood > .gallery > .pictures {
     width: 70%;
     margin: auto;
+  }
+  .container > .wood > .gallery > .nav {
+    font-size: 2em;
   }
   .container > .wood > .extras {
     width: 100%;
@@ -1138,5 +1151,8 @@ body {
   }
   .modal > .header {
     padding: 1em;
+  }
+  .modal > .header > .close {
+    margin: -0.8em 0 0 0;
   }
 }
