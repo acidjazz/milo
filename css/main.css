@@ -810,21 +810,23 @@ sup {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out;
-  -moz-transition: opacity 0.2s linear, -moz-transform 0.2s ease-out;
-  -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out;
-  -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out;
-  transition: opacity 0.2s linear, transform 0.2s ease-out;
+  -webkit-transition: opacity 0.2s linear, -webkit-transform 0.2s ease-out, height 1s linear 0.3s;
+  -moz-transition: opacity 0.2s linear, -moz-transform 0.2s ease-out, height 1s linear 0.3s;
+  -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out, height 1s linear 0.3s;
+  -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out, height 1s linear 0.3s;
+  transition: opacity 0.2s linear, transform 0.2s ease-out, height 1s linear 0.3s;
   -webkit-transform: perspective(1000px) rotateX(90deg);
   -moz-transform: perspective(1000px) rotateX(90deg);
   -o-transform: perspective(1000px) rotateX(90deg);
   -ms-transform: perspective(1000px) rotateX(90deg);
   transform: perspective(1000px) rotateX(90deg);
+  height: 0;
 }
 .zoom.on {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+  height: 15em;
   -webkit-transform: perspective(1000px) rotateX(0deg);
   -moz-transform: perspective(1000px) rotateX(0deg);
   -o-transform: perspective(1000px) rotateX(0deg);
@@ -926,6 +928,7 @@ sup {
   -o-transform: perspective(1000px) rotateX(90deg);
   -ms-transform: perspective(1000px) rotateX(90deg);
   transform: perspective(1000px) rotateX(90deg);
+  height: 0;
 }
 .modal.on {
   opacity: 1;
@@ -941,6 +944,7 @@ sup {
   -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out;
   -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out;
   transition: opacity 0.2s linear, transform 0.2s ease-out;
+  height: auto;
 }
 .topbar {
   background-image: url("../img/wood_20.jpg");
