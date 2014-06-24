@@ -30,11 +30,13 @@ block content
         +dots('left')
         +dots('right')
         .copy 2014 Tour Schedule
-      .seeall.cta
+      .clear
+      //.seeall.cta
         .paw
         .copy SEE ALL UPCOMING DATES
       .clear
       .map
+
       .events
         - var current_market = ''
         - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -47,10 +49,13 @@ block content
             //- var date = new Date(parsed[0], parsed[1], parsed[2])
             span.date #{event.Date}:
             span.title #{event.Event}
+              if event.Type == 'Guerrilla'
+                |&nbsp;*
       .clear
+      .asterisk * Follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen </a> for real-time updates
     .rsvp.cta
       .reminder
-      .copy RSVP &amp; SHARE
+      .copy SHARE
     .clear
     .gallery
       .title
