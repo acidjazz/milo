@@ -11,6 +11,7 @@ milo =
     $('.event').on 'click', milo.detail
     $('.fade').on 'click', milo.cancel
     $('.nav > div').on 'click', milo.nav
+    $('.container').on 'click', '.modal > .button', milo.rsvpshare
 
   picture: ->
     _.on '.zoom', '.fade'
@@ -48,6 +49,7 @@ milo =
   detail: ->
     t = $ this
     evt = t.data 'event'
+    $('.modal > .button').data 'event', evt
     $('#' + key).html value for key, value of evt
     $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 00:00:00'
     $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 23:00:00'

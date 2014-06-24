@@ -10,7 +10,8 @@ milo = {
     $('.close').on('click', milo.close);
     $('.event').on('click', milo.detail);
     $('.fade').on('click', milo.cancel);
-    return $('.nav > div').on('click', milo.nav);
+    $('.nav > div').on('click', milo.nav);
+    return $('.container').on('click', '.modal > .button', milo.rsvpshare);
   },
   picture: function() {
     return _.on('.zoom', '.fade');
@@ -49,6 +50,7 @@ milo = {
     var evt, key, t, value;
     t = $(this);
     evt = t.data('event');
+    $('.modal > .button').data('event', evt);
     for (key in evt) {
       value = evt[key];
       $('#' + key).html(value);
