@@ -95,7 +95,9 @@ milo =
       method: 'feed'
       app_id: milo.facebook.id
       link: 'https://milo.256.sh/'
+      picture: milo.meta.image
       description: milo.facebook.share
+
     , (response) ->
 
     )
