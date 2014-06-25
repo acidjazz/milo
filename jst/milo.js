@@ -96,8 +96,7 @@ milo = {
       method: 'feed',
       app_id: milo.facebook.id,
       link: 'https://milo.256.sh/',
-      caption: 'this is a test',
-      description: 'this is the description'
+      description: milo.facebook.share
     }, function(response) {});
   }
 };

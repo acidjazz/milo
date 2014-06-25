@@ -3,7 +3,9 @@
 
   "facebook": {
     "id": "912577452101337",
-    "appurl": "https://apps.facebook.com/milostreattruck/"
+    "appurl": "https://apps.facebook.com/milostreattruck/",
+    "share": "The Milo's Kitchen Treat Truck for dogs is coming to your town!",
+    "rsvpshare": "I’m going to the Milo's KitchenSM Treat Truck for dogs at {EVENT}!"
   },
 
   "meta": {
