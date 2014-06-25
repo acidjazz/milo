@@ -271,8 +271,9 @@ sup {
 }
 .container > .wood > .gallery > .description {
   color: #9a5107;
-  width: 44em;
+  width: 48em;
   font-size: 0.8em;
+  text-align: center;
   margin: 1em auto;
 }
 .container > .wood > .gallery > .description > .hashtag {
@@ -793,7 +794,7 @@ sup {
   position: fixed;
   top: 5em;
   width: 100%;
-  padding: 1em 0 3em 0;
+  padding: 1em 0;
   background-color: #f4e9d8;
 }
 .zoom > .image {
