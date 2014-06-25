@@ -59,8 +59,10 @@ milo =
     $('#' + key).html value for key, value of evt
 
     $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.StartTime, 'h:mm a').format('H:mm:ss')
-    if evt.EndTime
+    if evt.EndTime isnt 'N/A'
       $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.EndTime, 'h:mm a').format('H:mm:ss')
+    else
+      $('._end').html('')
     $('._summary').html evt.Title + ' at ' + evt.Event
     $('._description').html evt.Description
     $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
