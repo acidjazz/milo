@@ -1,6 +1,7 @@
 var milo;
 
 milo = {
+  facebook: {},
   i: function() {
     return milo.handlers();
   },
@@ -92,9 +93,11 @@ milo = {
   },
   share: function() {
     return FB.ui({
+      app_id: milo.facebook.id,
       method: 'feed',
       href: 'https://milo.256.sh/',
-      caption: 'this is a test'
+      caption: 'this is a test',
+      description: 'this is the description'
     }, function(response) {});
   }
 };
