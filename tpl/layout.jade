@@ -50,6 +50,11 @@ html(lang='en')
       milo.meta = !{JSON.stringify(meta)};
       milo.i();
       Incompatibility()
+
+      if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
+        window.top.location.href = 'http://www.mktreattruck.com/';
+      }
+
     });
 
     // detect we are in a tab and redirect
@@ -57,6 +62,7 @@ html(lang='en')
       window.top.location.href = '#{facebook.appurl}';
       return true;
     }
+
 
     window.fbAsyncInit = function() {
 
