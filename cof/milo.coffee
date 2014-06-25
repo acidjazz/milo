@@ -15,12 +15,12 @@ milo =
     $('.nav > div').on 'click', milo.nav
     $('.container').on 'click', '.button', milo.rsvpshare
     $('.rsvp.cta').on 'click', milo.share
+    $('.rsvp2').on 'click', milo.rsvpup
 
   picture: ->
     _.on '.zoom', '.fade'
     image = $(this).find('.image').data 'img'
-
-    $('.zoom .image').css 'background-image', 'url( ' + image + ')'
+    $('.zoom .image').css 'background-image', 'url(\'./img/gallery/' + image + '\')'
 
   extra: ->
 
@@ -46,11 +46,18 @@ milo =
   cancel: ->
     _.off '.modal', '.fade', '.zoom'
 
-  scroll: (el) ->
+  scroll: (el, add) ->
     setTimeout ->
-      $('html,body').animate
-        scrollTop: $(el).offset().top
+
+      if add isnt undefined
+        $('html,body').animate
+          scrollTop: $(el).offset().top + add
+      else
+        $('html,body').animate
+          scrollTop: $(el).offset().top
     , 300
+  rsvpup: ->
+    milo.scroll '.schedule', 20
 
   detail: ->
     t = $ this

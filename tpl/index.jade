@@ -67,7 +67,7 @@ block content
         .inner.page1(data-page=1)
           each picture in gallery
             .picture
-              .image(style="background-image: url(#{picture.img})", data-img=picture.img)
+              .image(style="background-image: url('./img/gallery/#{picture.img}')", data-img=picture.img)
       .nav
         .prev
           .arrow
@@ -98,7 +98,6 @@ block content
       .close(data-el='.recipes')
         .line.one
         .line.two
-      .clear
       each recipe, index in recipes
         .recipe
           a(href=recipe.link,target='_new')
@@ -164,7 +163,7 @@ block content
     .close(data-el='.zoom')
       .line.one
       .line.two
-    .image(style="background-image: url(./img/gallery/Sam1.jpg)")
+    .image(style="background-image: url('')")
 
   .modal.off
     .header

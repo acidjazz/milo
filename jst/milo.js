@@ -13,13 +13,14 @@ milo = {
     $('.fade').on('click', milo.cancel);
     $('.nav > div').on('click', milo.nav);
     $('.container').on('click', '.button', milo.rsvpshare);
-    return $('.rsvp.cta').on('click', milo.share);
+    $('.rsvp.cta').on('click', milo.share);
+    return $('.rsvp2').on('click', milo.rsvpup);
   },
   picture: function() {
     var image;
     _.on('.zoom', '.fade');
     image = $(this).find('.image').data('img');
-    return $('.zoom .image').css('background-image', 'url( ' + image + ')');
+    return $('.zoom .image').css('background-image', 'url(\'./img/gallery/' + image + '\')');
   },
   extra: function() {
     var t;
@@ -44,12 +45,21 @@ milo = {
   cancel: function() {
     return _.off('.modal', '.fade', '.zoom');
   },
-  scroll: function(el) {
+  scroll: function(el, add) {
     return setTimeout(function() {
-      return $('html,body').animate({
-        scrollTop: $(el).offset().top
-      });
+      if (add !== void 0) {
+        return $('html,body').animate({
+          scrollTop: $(el).offset().top + add
+        });
+      } else {
+        return $('html,body').animate({
+          scrollTop: $(el).offset().top
+        });
+      }
     }, 300);
+  },
+  rsvpup: function() {
+    return milo.scroll('.schedule', 20);
   },
   detail: function() {
     var evt, key, t, value;
