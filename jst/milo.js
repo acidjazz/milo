@@ -12,7 +12,7 @@ milo = {
     $('.event').on('click', milo.detail);
     $('.fade').on('click', milo.cancel);
     $('.nav > div').on('click', milo.nav);
-    $('.container').on('click', '.modal > .button', milo.rsvpshare);
+    $('.container').on('click', '.button', milo.rsvpshare);
     return $('.rsvp.cta').on('click', milo.share);
   },
   picture: function() {
@@ -55,7 +55,7 @@ milo = {
     var evt, key, t, value;
     t = $(this);
     evt = t.data('event');
-    $('.modal > .button').data('event', evt);
+    $('.button').data('event', evt);
     for (key in evt) {
       value = evt[key];
       $('#' + key).html(value);
@@ -96,6 +96,23 @@ milo = {
       method: 'feed',
       app_id: milo.facebook.id,
       link: 'https://milo.256.sh/',
+      picture: milo.meta.image,
+      description: milo.facebook.share
+    }, function(response) {});
+  },
+  rsvpshare: function() {
+    var evt, link, t;
+    t = $(this);
+    evt = t.data('event');
+    if (evt.Facebook) {
+      link = 'http://www.facebook.com/events/' + evt.Facebook;
+    } else {
+      link = 'https://milo.256.sh/';
+    }
+    return FB.ui({
+      method: 'feed',
+      app_id: milo.facebook.id,
+      link: link,
       picture: milo.meta.image,
       description: milo.facebook.share
     }, function(response) {});

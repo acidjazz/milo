@@ -13,7 +13,7 @@ milo =
     $('.event').on 'click', milo.detail
     $('.fade').on 'click', milo.cancel
     $('.nav > div').on 'click', milo.nav
-    $('.container').on 'click', '.modal > .button', milo.rsvpshare
+    $('.container').on 'click', '.button', milo.rsvpshare
     $('.rsvp.cta').on 'click', milo.share
 
   picture: ->
@@ -55,7 +55,7 @@ milo =
   detail: ->
     t = $ this
     evt = t.data 'event'
-    $('.modal > .button').data 'event', evt
+    $('.button').data 'event', evt
     $('#' + key).html value for key, value of evt
     $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 00:00:00'
     $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 23:00:00'
@@ -101,4 +101,23 @@ milo =
     , (response) ->
 
     )
-  
+
+  rsvpshare: ->
+
+    t = $ this
+    evt = t.data 'event'
+
+    if evt.Facebook
+      link = 'http://www.facebook.com/events/' + evt.Facebook
+    else
+      link = 'https://milo.256.sh/'
+
+    FB.ui(
+      method: 'feed'
+      app_id: milo.facebook.id
+      link: link
+      picture: milo.meta.image
+      description: milo.facebook.share
+    , (response) ->
+    )
+   
