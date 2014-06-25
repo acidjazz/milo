@@ -61,7 +61,7 @@ milo =
     if evt.EndTime
       $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + evt.EndTime
     $('._summary').html evt.Event
-    $('._description').html evt.Event + 'in ' + evt.Market
+    $('._description').html evt.Description
     $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
 
     if evt.Facebook
