@@ -82,32 +82,32 @@
 
   "recipes": [
     { 
-      "name": "Milo's Kitchen&reg; Chicken Grillers Recipe",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Chicken Grillers Recipe",
       "link": "http://miloskitchen.com/treats/chicken-grillers/",
       "img": "chicken-grillers-recipe.png"
     },
     { 
-      "name": "Milo's Kitchen&reg; Grilled Burger Bites",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Grilled Burger Bites",
       "link": "http://miloskitchen.com/treats/grilled-burger-bites/",
       "img": "grilled-burger-bites.png"
     },
     { 
-      "name": "Milo's Kitchen&reg; Steak Grillers Recipe",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Steak Grillers Recipe",
       "link": "http://miloskitchen.com/treats/steak-grillers/",
       "img": "steak-grillers-recipe.png"
     },
     { 
-      "name": "Milo's Kitchen&reg; Chicken Jerky Strips",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Chicken Jerky Strips",
       "link": "http://miloskitchen.com/treats/chicken-jerky-strips/",
       "img": "chicken-jerky-strips.png"
     },
     { 
-      "name": "Milo's Kitchen&reg; Chicken Meatballs",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Chicken Meatballs",
       "link": "http://miloskitchen.com/treats/chicken-meatballs/",
       "img": "chicken-meatballs.png"
     },
     { 
-      "name": "Milo's Kitchen&reg; Beef Sausage Slices",
+      "name": "Milo's Kitchen<sup>&reg;</sup> Beef Sausage Slices",
       "link": "http://miloskitchen.com/treats/beef-sausage-slices/",
       "img": "beef-sausage-slices.png"
     }

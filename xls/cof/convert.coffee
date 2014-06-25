@@ -1,25 +1,26 @@
 
 xls = require('xlsjs')
-workbook = xls.readFile('mktt_events.xls')
+workbook = xls.readFile('0624_schedule.xls')
 
 labels =
-  Market: 'B'
-  Day: 'C'
-  Date: 'D'
-  Event: 'E'
-  Type: 'F'
-  Time: 'G'
+  Market: 'A'
+  Day: 'B'
+  'Date': 'C'
+  StartTime: 'D'
+  EndTime: 'E'
+  Title: 'F'
+  Event: 'G'
   Address: 'H'
   City: 'I'
   State: 'J'
   Zip: 'K'
+  Type: 'L'
+  Description: 'M'
 
 sheet = workbook.Sheets['Routing Schedule']
-console.log workbook.Sheets['Routing Schedule']['B21'].v
-console.log workbook.Sheets['Routing Schedule']['B22'].v
 
 datas = []
-for i in [9..41]
+for i in [2..29]
   data = {}
   for k, v of labels
     if sheet[v + i]
