@@ -521,11 +521,11 @@ sup {
 .container > .recipes {
   width: 45em;
   background-image: url("../img/wood.jpg");
-  margin: 1em auto 2em auto;
-  padding: 1em 0;
+  margin: 0em auto 2em auto;
+  padding: 1em 0 5em 0;
   -webkit-box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
   box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
-  padding: 1em 0;
+  padding: 1em 0 8em 0;
   overflow: hidden;
   -webkit-transition: height 0.2s;
   -moz-transition: height 0.2s;
@@ -685,7 +685,7 @@ sup {
   display: none;
 }
 .container > .recipes > .inner {
-  margin-left: 5em;
+  margin-left: 3em;
   margin-bottom: 5em;
 }
 .container > .recipes > .inner > .recipe {
@@ -714,6 +714,20 @@ sup {
   margin: auto;
   padding: 0.5em;
   text-decoration: none;
+}
+.container > .recipes > .more {
+  float: right;
+  margin: -2em 1em 1em 0;
+  font-size: 1.2em;
+}
+.container > .recipes > .more > a {
+  color: #092e6e;
+  text-decoration: none;
+}
+.container > .recipes > .more > a > .arrow {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
 }
 .container > .story {
   width: 45em;
