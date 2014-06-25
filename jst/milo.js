@@ -108,7 +108,7 @@ milo = {
     return FB.ui({
       method: 'feed',
       app_id: milo.facebook.id,
-      link: 'https://milo.256.sh/',
+      link: 'https://www.mktreattruck.com/',
       description: milo.facebook.share
     }, function(response) {});
   },
@@ -119,7 +119,7 @@ milo = {
     if (evt.Facebook) {
       link = 'http://www.facebook.com/events/' + evt.Facebook;
     } else {
-      link = 'https://milo.256.sh/';
+      link = 'https://www.mktreattruck.com/';
     }
     return FB.ui({
       method: 'feed',

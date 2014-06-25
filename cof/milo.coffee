@@ -107,7 +107,7 @@ milo =
     FB.ui(
       method: 'feed'
       app_id: milo.facebook.id
-      link: 'https://milo.256.sh/'
+      link: 'https://www.mktreattruck.com/'
       #picture: milo.meta.image
       description: milo.facebook.share
 
@@ -123,7 +123,7 @@ milo =
     if evt.Facebook
       link = 'http://www.facebook.com/events/' + evt.Facebook
     else
-      link = 'https://milo.256.sh/'
+      link = 'https://www.mktreattruck.com/'
 
     FB.ui(
       method: 'feed'
