@@ -546,6 +546,7 @@ sup {
 }
 .container > .recipes.on > .close {
   display: block;
+  margin: 0 0 -1em 0;
 }
 .container > .recipes.on > .inner > .recipe:nth-child(0) {
   opacity: 1;
@@ -695,11 +696,12 @@ sup {
 .container > .recipes > .inner {
   margin-left: 4em;
   margin-bottom: 5em;
+  margin-top: -1em;
 }
 .container > .recipes > .inner > .recipe {
   width: 10em;
   float: left;
-  margin: 1em;
+  margin: 0.2em 1em;
   text-align: center;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
