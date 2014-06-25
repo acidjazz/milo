@@ -114,7 +114,7 @@ milo = {
       app_id: milo.facebook.id,
       link: link,
       picture: milo.meta.image,
-      description: milo.facebook.share
+      description: milo.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     }, function(response) {});
   }
 };
