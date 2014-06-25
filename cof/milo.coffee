@@ -57,9 +57,9 @@ milo =
     evt = t.data 'event'
     $('.button').data 'event', evt
     $('#' + key).html value for key, value of evt
-    $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + evt.StartTime
+    $('._start').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014'
     if evt.EndTime
-      $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + evt.EndTime
+      $('._end').html evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014'
     $('._summary').html evt.Event
     $('._description').html evt.Description
     $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
