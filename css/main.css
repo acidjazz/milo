@@ -1038,17 +1038,23 @@ sup {
     background-color: #f4e9d8;
     margin: 2em auto;
   }
-  .container > .wood > .title {
+  .container > .wood > .inner {
+    width: 98%;
+    margin: auto;
+    font-size: 1.2em;
+    margin: 0 0 1em 0;
+  }
+  .container > .wood > .inner > .title {
     width: 100%;
     text-align: center;
   }
-  .container > .wood > .title > .copy {
+  .container > .wood > .inner > .title > .copy {
     width: 100%;
   }
-  .container > .wood > .copy {
+  .container > .wood > .inner > .copy {
     width: 90%;
   }
-  .container > .wood > ul.list {
+  .container > .wood > .inner > ul.list {
     margin: 0 0 2em 2em;
   }
   .container > .wood > .schedule {
