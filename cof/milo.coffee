@@ -90,10 +90,11 @@ milo =
     i.data 'page', page
 
   share: ->
+
     FB.ui(
-      app_id: milo.facebook.id
       method: 'feed'
-      href: 'https://milo.256.sh/'
+      app_id: milo.facebook.id
+      link: 'https://milo.256.sh/'
       caption: 'this is a test'
       description: 'this is the description'
     , (response) ->
