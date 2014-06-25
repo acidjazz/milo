@@ -102,40 +102,47 @@ sup {
   padding: 3em 0 0 0;
   min-height: 30em;
 }
-.container > .wood > .title {
+.container > .wood > .inner {
+  width: 40em;
+  margin: auto;
+  background-color: #f4e9d8;
+  border: 0.1em solid #9a5107;
+  padding: 1em 0 0 0;
+}
+.container > .wood > .inner > .title {
   text-align: center;
   font-size: 1.2em;
-  width: 36em;
+  width: 33.5em;
   margin: auto;
 }
-.container > .wood > .title > .copy {
-  width: 17em;
+.container > .wood > .inner > .title > .copy {
+  width: 16em;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
   white-space: nowrap;
 }
-.container > .wood > .copy {
+.container > .wood > .inner > .copy {
   font-size: 1em;
   margin: 1em auto;
   width: 90%;
 }
-.container > .wood > ul.list {
-  margin: 0 0 2em 9em;
+.container > .wood > .inner > ul.list {
+  margin: 0 0 2em 6em;
   font-size: 1em;
 }
-.container > .wood > ul.list > li {
+.container > .wood > .inner > ul.list > li {
   float: left;
   width: 16em;
   padding: 0.2em 0;
 }
 .container > .wood > .schedule {
   background-color: #f4e9d8;
+  border: 0.1em solid #9a5107;
   width: 40em;
   margin: auto;
   padding: 1em 0;
   margin: 1em auto;
-  border: 0.1em solid #9a5107;
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
 }
@@ -533,7 +540,7 @@ sup {
   transition: height 0.2s;
 }
 .container > .recipes.on {
-  height: 35em;
+  height: 34em;
 }
 .container > .recipes.on > .close {
   display: block;
@@ -684,13 +691,12 @@ sup {
   display: none;
 }
 .container > .recipes > .inner {
-  margin-left: 3em;
+  margin-left: 4em;
   margin-bottom: 5em;
 }
 .container > .recipes > .inner > .recipe {
   width: 10em;
   float: left;
-  display: inline-block;
   margin: 1em;
   text-align: center;
   opacity: 0;
@@ -716,7 +722,7 @@ sup {
 }
 .container > .recipes > .more {
   float: right;
-  margin: -3em 1em 1em 0;
+  margin: -4em 1em 1em 0;
   font-size: 1.2em;
 }
 .container > .recipes > .more > a {

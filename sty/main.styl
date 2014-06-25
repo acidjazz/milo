@@ -65,37 +65,44 @@ sup
     background-image url('../img/wood.jpg')
     padding 3em 0 0 0
     min-height 30em
-    > .title
-      text-align center
-      font-size 1.2em
-      width 36em
+    > .inner
+      width 40em
       margin auto
-      > .copy
-        width 17em
-        margin auto
+      background-color c_beige
+      border 0.1em solid c_brown
+      padding 1em 0 0 0
+      > .title
         text-align center
         font-size 1.2em
-        white-space nowrap
+        width 33.5em
+        margin auto
+        > .copy
+          width 16em
+          margin auto
+          text-align center
+          font-size 1.2em
+          white-space nowrap
 
-    > .copy
-      font-size 1.0em
-      margin 1em auto
-      width 90%
+      > .copy
+        font-size 1.0em
+        margin 1em auto
+        width 90%
 
-    > ul.list
-      margin 0 0 2em 9em
-      font-size 1.0em
-      > li
-        float left
-        width 16em
-        padding 0.2em 0
+      > ul.list
+        margin 0 0 2em 6em
+        font-size 1.0em
+        > li
+          float left
+          width 16em
+          padding 0.2em 0
+
     > .schedule
       background-color c_beige
+      border 0.1em solid c_brown
       width 40em
       margin auto
       padding 1em 0
       margin 1em auto
-      border 0.1em solid c_brown
       box-shadow 0.2em 0.2em 1em rgba(black, 0.5)
       > .title
         color c_brown
@@ -377,7 +384,7 @@ sup
     overflow hidden
     transition height 0.2s 
     &.on 
-      height 35em
+      height 34em
       > .close
         display block
       for i in 0 1 2 3 4 5 6 7 8
@@ -394,12 +401,11 @@ sup
         display none
 
     > .inner
-      margin-left 3em
+      margin-left 4em
       margin-bottom 5em
       > .recipe
         width 10em
         float left
-        display inline-block
         margin 1em
         text-align center
         opacity 0
@@ -416,7 +422,7 @@ sup
             text-decoration none
     > .more
       float right
-      margin -3em 1em 1em 0
+      margin -4em 1em 1em 0
       font-size 1.2em
       > a
         color c_blue
