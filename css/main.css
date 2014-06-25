@@ -108,6 +108,8 @@ sup {
   background-color: #f4e9d8;
   border: 0.1em solid #9a5107;
   padding: 1em 0 0 0;
+  -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
+  box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
 }
 .container > .wood > .inner > .title {
   text-align: center;
