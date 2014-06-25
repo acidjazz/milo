@@ -72,7 +72,7 @@ milo = {
     }
     $('._start').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.StartTime, 'h:mm a').format('H:mm:ss'));
     if (evt.EndTime === 'N/A') {
-      evt.EndTime = moment.evt(evt.StartTime, 'h:mm a').add(1, 'hours').format('h:mm a');
+      evt.EndTime = moment(evt.StartTime, 'h:mm a').add(1, 'hours').format('h:mm a');
     }
     $('._end').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.EndTime, 'h:mm a').format('H:mm:ss'));
     $('._summary').html(evt.Title + ' at ' + evt.Event);
