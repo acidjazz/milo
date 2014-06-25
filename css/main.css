@@ -1043,10 +1043,11 @@ sup {
   .container > .wood > .inner {
     width: 98%;
     margin: auto;
-    margin: 0 0 1em 0;
+    margin: 0 0 1em 0.1em;
+    font-size: 1.2em;
   }
   .container > .wood > .inner > .title {
-    width: 100%;
+    width: 98%;
     text-align: center;
   }
   .container > .wood > .inner > .title > .copy {
