@@ -24,7 +24,13 @@ for i in [2..29]
   data = {}
   for k, v of labels
     if sheet[v + i]
-      data[k] =  if k is 'Date' then sheet[v + i].w else sheet[v + i].v
+      if k is 'Date'
+        data[k] = sheet[v + i].w
+      else if k is 'StartTime' or k is 'EndTime'
+        data[k] = sheet[v + i].w
+      else
+        data[k] = sheet[v + i].v
+
   datas[i] = data if data isnt null
 
 console.log JSON.stringify datas

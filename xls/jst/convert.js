@@ -29,7 +29,13 @@ for (i = _i = 2; _i <= 29; i = ++_i) {
   for (k in labels) {
     v = labels[k];
     if (sheet[v + i]) {
-      data[k] = k === 'Date' ? sheet[v + i].w : sheet[v + i].v;
+      if (k === 'Date') {
+        data[k] = sheet[v + i].w;
+      } else if (k === 'StartTime' || k === 'EndTime') {
+        data[k] = sheet[v + i].w;
+      } else {
+        data[k] = sheet[v + i].v;
+      }
     }
   }
   if (data !== null) {
