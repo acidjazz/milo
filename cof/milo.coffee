@@ -106,7 +106,7 @@ milo =
       method: 'feed'
       app_id: milo.facebook.id
       link: 'https://milo.256.sh/'
-      picture: milo.meta.image
+      #picture: milo.meta.image
       description: milo.facebook.share
 
     , (response) ->
@@ -127,7 +127,7 @@ milo =
       method: 'feed'
       app_id: milo.facebook.id
       link: link
-      picture: milo.meta.image
+      #picture: milo.meta.image
       description: milo.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     , (response) ->
     )
