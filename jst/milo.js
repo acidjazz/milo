@@ -60,9 +60,9 @@ milo = {
       value = evt[key];
       $('#' + key).html(value);
     }
-    $('._start').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014');
+    $('._start').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.StartTime, 'h:mm a').format('H:mm:ss'));
     if (evt.EndTime) {
-      $('._end').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014');
+      $('._end').html(evt.Date.split('/')[1] + '-' + evt.Date.split('/')[0] + '-2014 ' + moment(evt.EndTime, 'h:mm a').format('H:mm:ss'));
     }
     $('._summary').html(evt.Title + ' at ' + evt.Event);
     $('._description').html(evt.Description);
