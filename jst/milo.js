@@ -92,10 +92,9 @@ milo = {
   },
   share: function() {
     return FB.ui({
-      method: 'share',
-      href: 'https://milo.256.sh/'
-    }, function(response) {
-      return alert(response);
-    });
+      method: 'feed',
+      href: 'https://milo.256.sh/',
+      caption: 'this is a test'
+    }, function(response) {});
   }
 };

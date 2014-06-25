@@ -89,11 +89,10 @@ milo =
 
   share: ->
     FB.ui(
-      method: 'share'
-      href: 'https://milo.256.sh/'
+      method: 'feed'
+      href: 'https://milo.256.sh/',
+      caption: 'this is a test'
     , (response) ->
-
-      alert(response)
 
     )
   
