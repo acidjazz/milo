@@ -459,8 +459,14 @@
       milo.i();
       Incompatibility()
       
+      // mobile facebook app goes to mobile site
       if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
         window.top.location.href = 'http://www.mktreattruck.com/';
+      }
+      
+      // desktop goes to facebook app
+      if (window.name == "" && !BrowserDetect.mobile) {
+        location.href = 'http://apps.facebook.com/milostreattruck.com/';
       }
       
     });
