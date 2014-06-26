@@ -194,10 +194,11 @@ sup {
   width: 23em;
   height: 12em;
   background-image: url("../img/map.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   margin: 1em 0 0 0;
 }
 .container > .wood > .schedule > .asterisk {
@@ -1086,7 +1087,7 @@ sup {
   .container > .wood > .schedule > .map {
     float: none;
     width: 90%;
-    height: 13em;
+    height: 28em;
     margin: auto;
   }
   .container > .wood > .schedule > .asterisk {
