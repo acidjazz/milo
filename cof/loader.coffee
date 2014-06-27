@@ -75,6 +75,8 @@ loader =
 
   config: (complete) ->
     loader.xmlhttp './cfg/config.json', 'GET', '', (result) ->
+
+      console.log result
       json = window.JSON.parse(result.response.replace(/\\'/g, "'"))
       if json.cfg
         window.cfg = json.cfg
