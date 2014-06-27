@@ -810,6 +810,7 @@ sup {
   width: 100%;
   padding: 1em 0;
   background-color: #f4e9d8;
+  height: 15em;
 }
 .zoom > .image {
   width: 20em;
@@ -835,13 +836,11 @@ sup {
   -o-transform: perspective(1000px) rotateX(90deg);
   -ms-transform: perspective(1000px) rotateX(90deg);
   transform: perspective(1000px) rotateX(90deg);
-  height: 0;
 }
 .zoom.on {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-  height: 15em;
   -webkit-transform: perspective(1000px) rotateX(0deg);
   -moz-transform: perspective(1000px) rotateX(0deg);
   -o-transform: perspective(1000px) rotateX(0deg);
@@ -943,7 +942,6 @@ sup {
   -o-transform: perspective(1000px) rotateX(90deg);
   -ms-transform: perspective(1000px) rotateX(90deg);
   transform: perspective(1000px) rotateX(90deg);
-  height: 0;
 }
 .modal.on {
   opacity: 1;
@@ -959,7 +957,6 @@ sup {
   -o-transition: opacity 0.2s linear, -o-transform 0.2s ease-out;
   -ms-transition: opacity 0.2s linear, -ms-transform 0.2s ease-out;
   transition: opacity 0.2s linear, transform 0.2s ease-out;
-  height: auto;
 }
 .topbar {
   background-image: url("../img/wood.jpg");

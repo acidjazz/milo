@@ -473,6 +473,7 @@ sup
   width 100%
   padding 1em 0
   background-color rgba(c_beige, 1)
+  height 15em
   > .image
     width 20em
     height 15em
@@ -484,10 +485,8 @@ sup
     opacity 0
     transition opacity 0.2s linear, transform 0.2s ease-out, height 1s linear 0.3s
     transform perspective(1000px) rotateX(90deg)
-    height 0
   &.on
     opacity 1
-    height 15em
     transform perspective(1000px) rotateX(0deg)
     transition opacity 0.2s linear, transform 0.2s ease-out
 
@@ -563,12 +562,10 @@ sup
     opacity 0
     transition opacity 0.2s linear, transform 0.2s ease-out
     transform perspective(1000px) rotateX(90deg)
-    height 0
   &.on
     opacity 1
     transform perspective(1000px) rotateX(0deg)
     transition opacity 0.2s linear, transform 0.2s ease-out
-    height auto
 
 .topbar
   background-image url('../img/wood.jpg')
