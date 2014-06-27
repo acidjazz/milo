@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Milo's Kitchen &reg; | Home-Style Dog Treats</title> 
-     
-    <!--[if lt IE 9]>
-     We are sorry but we cannot support IE8
-    <![endif]-->
+    <title>Milo's Kitchen &reg; | Home-Style Dog Treats</title>
     <!-- google-->
     <meta name="title" content="Milo's Kitchen &amp;reg; | Home-Style Dog Treats">
     <meta name="description">
@@ -24,13 +20,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-    <script type="text/javascript" src="./jst/lib/atemay.js"></script>
     <link rel="stylesheet" href="./css/main.css" type="text/css" media="all">
-    <script type="text/javascript" src="./jst/browser.js"></script>
-    <script type="text/javascript" src="./jst/lib/jquery.min.js"></script>
-    <script type="text/javascript" src="./jst/lib/moment.js"></script>
-    <script type="text/javascript" src="./jst/main.js"></script>
-    <script type="text/javascript" src="./jst/milo.js"></script>
+    <script type="text/javascript" src="./jst/loader.js"></script>
   </head>
   <body>
     <div class="container">
@@ -439,12 +430,6 @@
           <p><span id="Event"></span></p>
           <p><span id="Address"></span><span>, </span><span id="City"></span><span>&nbsp;</span><span id="State"></span></p>
           <p><span id="Date"></span><span>, </span><span id="Day"></span><span>&nbsp;</span>at&nbsp;<span id="StartTime"></span></p>
-          <!--.input
-          input(type='text',placeholder='Email Address')
-          input(type='checkbox',checked=true)
-          .button SIGN UP
-          span Opt In
-          -->
         </div>
         <div class="header"><a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">RSVP<span class="_start">10-05-2014 11:38:46</span><span class="_end">11-05-2014 11:38:46</span><span class="_zonecode">6</span><span class="_summary">Summary of the event</span><span class="_description">Description of the event</span><span class="_location">Location of the event</span>
             <!--span._organizer Organier-->
@@ -456,31 +441,22 @@
     </div>
     <div id="fb-root"></div>
   </body>
-  <script>
-    BrowserDetect.init( function() {
-      milo.facebook = {"id":"912577452101337","appurl":"https://apps.facebook.com/milostreattruck/","share":"The Milo's Kitchen Treat Truck for dogs is coming to your town!","rsvpshare":"I’m going to the Milo's Kitchen Treat Truck for dogs at {EVENT}!"};
-      milo.meta = {"title":"Milo's Kitchen &reg; | Home-Style Dog Treats","description":"Milo's Kitchen Treat Truck is especially designed to give your dog a Milo's Kitchen treat.","keywords":"milo's, kitchen, treat, truck, dogs","image":"https://www.mktreattruck.com/img/share.png"};
-      milo.i();
-      Incompatibility()
+  <script type="text/javascript">
+    loader.i( function(result) {
+      if (result) {
       
-      // mobile facebook app goes to mobile site
-      if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
-        window.top.location.href = 'http://www.mktreattruck.com/';
+        if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
+          window.top.location.href = 'http://www.mktreattruck.com/';
+        }
+        
+        milo.i();
       }
-      
-      /* desktop goes to facebook app
-      if (window.name == "" && !BrowserDetect.mobile) {
-        location.href = 'https://apps.facebook.com/milostreattruck';
-      }
-      */
-      
     });
     
     // detect we are in a tab and redirect
     if (document.location.hash == '#tab') {
       window.top.location.href = 'https://apps.facebook.com/milostreattruck/';
     }
-    
     
     window.fbAsyncInit = function() {
     
@@ -502,7 +478,6 @@
        }
        fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    
     
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';

@@ -1,15 +1,16 @@
-var BrowserDetect, Incompatibility;
+var agent;
 
-BrowserDetect = {
-  init: function(callback) {
-    this.browser = this.searchString(this.dataBrowser) || "Other";
+agent = {
+  i: function(callback) {
+    this.agent = this.searchString(this.dataBrowser) || "Other";
     this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
     this.mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     this.iPad = /iPad/i.test(navigator.userAgent);
     this.iPhone = /iPhone/i.test(navigator.userAgent);
     this.Chrome = /Chrome/i.test(navigator.userAgent);
-    this.Safari = /Safari/i.test(navigator.userAgent) && !BrowserDetect.Chrome;
+    this.Safari = /Safari/i.test(navigator.userAgent) && !agent.Chrome;
     return callback();
+    return callback(compatible());
   },
   searchString: function(data) {
     var dataString, i;
@@ -53,26 +54,30 @@ BrowserDetect = {
       subString: "Opera",
       identity: "Opera"
     }
-  ]
-};
-
-Incompatibility = function() {
-  if (BrowserDetect.browser === 'Chrome' && BrowserDetect.version < 17) {
+  ],
+  compatible: function() {
+    if (agent.browser === 'Chrome' && agent.version < 17) {
+      return agent.redirect();
+    }
+    if (agent.browser === 'MSIE' && agent.version < 10) {
+      return agent.redirect();
+    }
+    if (agent.browser === 'Explorer' && agent.version < 10) {
+      return agent.redirect();
+    }
+    if (agent.browser === 'FireFox' && agent.version < 20) {
+      return agent.redirect();
+    }
+    if (agent.browser === 'Safari' && agent.version < 6) {
+      return agent.redirect();
+    }
+    if (!agent.browser.indexOf(['Chrome', 'MSIE', 'FireFox', 'Safari'])) {
+      return agent.redirect();
+    }
+    return true;
+  },
+  redirect: function() {
     location.href = './compat.html';
-  }
-  if (BrowserDetect.browser === 'MSIE' && BrowserDetect.version < 10) {
-    location.href = './compat.html';
-  }
-  if (BrowserDetect.browser === 'Explorer' && BrowserDetect.version < 10) {
-    location.href = './compat.html';
-  }
-  if (BrowserDetect.browser === 'FireFox' && BrowserDetect.version < 20) {
-    location.href = './compat.html';
-  }
-  if (BrowserDetect.browser === 'Safari' && BrowserDetect.version < 6) {
-    location.href = './compat.html';
-  }
-  if (!BrowserDetect.browser.indexOf(['Chrome', 'MSIE', 'FireFox', 'Safari'])) {
-    return location.href = './compat.html';
+    return false;
   }
 };

@@ -1,32 +1,28 @@
+
 include _mixins
+
 doctype
 
 html(lang='en')
   head
-    title !{meta.title}
-    |  
-    |  
-
-    | <!--[if lt IE 9]>
-    |  We are sorry but we cannot support IE8
-    | <![endif]-->
+    title !{cfg.meta.title}
 
     // google
-    meta(name='title' content=meta.title)
-    meta(name='description' content=meta.desc)
-    meta(name='keywords' content=meta.keywords)
+    meta(name='title' content=cfg.meta.title)
+    meta(name='description' content=cfg.meta.desc)
+    meta(name='keywords' content=cfg.meta.keywords)
 
     // facebook
-    meta(property='og:title' content=meta.title)
+    meta(property='og:title' content=cfg.meta.title)
     meta(property='og:type' content='website')
-    meta(property='og:image' content=meta.image)
-    meta(property='og:description' content=meta.desc)
+    meta(property='og:image' content=cfg.meta.image)
+    meta(property='og:description' content=cfg.meta.desc)
 
     // twitter
     meta(name='twitter:card' content='summary')
-    meta(name='twitter:title' content=meta.title)
-    meta(name='twitter:description' content=meta.desc)
-    meta(name='twitter:image' content=meta.image)
+    meta(name='twitter:title' content=cfg.meta.title)
+    meta(name='twitter:description' content=cfg.meta.desc)
+    meta(name='twitter:image' content=cfg.meta.image)
 
     meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
     meta(http-equiv="X-UA-Compatible",content="IE=Edge")
@@ -34,52 +30,38 @@ html(lang='en')
     meta(name='format-detection', content='telephone=no')
     meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
 
-    script(type="text/javascript",src="./jst/lib/atemay.js")
-
     link(rel='stylesheet',href='./css/main.css',type='text/css',media='all')
 
-    script(type='text/javascript', src='./jst/browser.js')
-    script(type='text/javascript', src='./jst/lib/jquery.min.js')
-    script(type='text/javascript', src='./jst/lib/moment.js')
-
-    each script in ['main','milo']
-      script(type='text/javascript', src='./jst/' + script + '.js')
+    script(type='text/javascript', src='./jst/loader.js')
 
   body
     .container
       block content
     #fb-root
-  script.
 
-    BrowserDetect.init( function() {
-      milo.facebook = !{JSON.stringify(facebook)};
-      milo.meta = !{JSON.stringify(meta)};
-      milo.i();
-      Incompatibility()
+  script(type='text/javascript').
+    
+    loader.i( function(result) {
 
-      // mobile facebook app goes to mobile site
-      if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
-        window.top.location.href = 'http://www.mktreattruck.com/';
+      if (result) {
+
+        if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
+          window.top.location.href = 'http://www.mktreattruck.com/';
+        }
+
+        milo.i();
       }
-
-      /* desktop goes to facebook app
-      if (window.name == "" && !BrowserDetect.mobile) {
-        location.href = 'https://apps.facebook.com/milostreattruck';
-      }
-      */
-
     });
 
     // detect we are in a tab and redirect
     if (document.location.hash == '#tab') {
-      window.top.location.href = '#{facebook.appurl}';
+      window.top.location.href = '#{cfg.facebook.appurl}';
     }
-
 
     window.fbAsyncInit = function() {
 
       FB.init({
-        appId      : '#{facebook.id}',
+        appId      : '#{cfg.facebook.id}',
         xfbml      : false,
         version    : 'v2.0'
       });
@@ -96,7 +78,6 @@ html(lang='en')
        }
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
-
 
     var _gaq = _gaq || [];
     var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
