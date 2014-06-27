@@ -1,6 +1,7 @@
 var loader;
 
 loader = {
+  scripts: {},
   i: function(callback) {
     this.browser = this.searchString(this.dataBrowser) || "Other";
     this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "Unknown";
@@ -10,8 +11,8 @@ loader = {
     this.Chrome = /Chrome/i.test(navigator.userAgent);
     this.Safari = /Safari/i.test(navigator.userAgent) && !loader.Chrome;
     if (loader.compatible()) {
-      return loader.config(function() {
-        return loader.scripts(cfg.scripts, function() {
+      return loader.loadscripts(loader.scripts, function() {
+        return loader.config(function() {
           return callback(true);
         });
       });
@@ -87,7 +88,7 @@ loader = {
     location.href = './compat.html';
     return false;
   },
-  scripts: function(list, complete) {
+  loadscripts: function(list, complete) {
     var folder, i, path, paths, script, scripts, _i, _j, _len, _len1, _results;
     paths = [];
     i = 0;
@@ -109,6 +110,12 @@ loader = {
     }
     return _results;
   },
+  config: function(complete) {
+    return $.getJSON('./cfg/config.json', function(result) {
+      window.cfg = result.cfg;
+      return complete();
+    });
+  },
   load: function(script, complete) {
     var g, s;
     g = document.createElement('script');
@@ -118,63 +125,5 @@ loader = {
       return complete();
     }, false);
     return s.parentNode.insertBefore(g, s);
-  },
-  config: function(complete) {
-    return loader.xmlhttp('./cfg/escaped.json', 'GET', '', function(result) {
-      var json;
-      json = JSON.parse(result.responseText).cfg;
-      return complete();
-    });
-  },
-  xmlhttp: function(sURL, sMethod, sVars, fnDone) {
-    var bComplete, e, xmlhttp, z;
-    xmlhttp = void 0;
-    bComplete = false;
-    try {
-      xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-    } catch (_error) {
-      e = _error;
-      try {
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-      } catch (_error) {
-        e = _error;
-        try {
-          xmlhttp = new XMLHttpRequest();
-        } catch (_error) {
-          e = _error;
-          xmlhttp = false;
-        }
-      }
-    }
-    if (!xmlhttp) {
-      return null;
-    }
-    if (!xmlhttp) {
-      return false;
-    }
-    bComplete = false;
-    sMethod = sMethod.toUpperCase();
-    try {
-      if (sMethod === "GET") {
-        xmlhttp.open(sMethod, sURL + "?" + sVars, true);
-        sVars = "";
-      } else {
-        xmlhttp.open(sMethod, sURL, true);
-        xmlhttp.setRequestHeader("Method", "POST " + sURL + " HTTP/1.1");
-        xmlhttp.setRequestHeader("Content-Type", "application/json");
-      }
-      xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState === 4 && !bComplete) {
-          bComplete = true;
-          fnDone(xmlhttp);
-        }
-      };
-      xmlhttp.send(sVars);
-    } catch (_error) {
-      z = _error;
-      return false;
-    }
-    true;
-    return this;
   }
 };

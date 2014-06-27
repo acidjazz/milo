@@ -1,6 +1,8 @@
 
 loader =
 
+  scripts: {}
+
   i: (callback) ->
 
     @browser = @searchString(@dataBrowser) or "Other"
@@ -12,8 +14,8 @@ loader =
     @Safari = /Safari/i.test(navigator.userAgent) && !loader.Chrome
 
     if loader.compatible()
-      loader.config ->
-        loader.scripts cfg.scripts, ->
+      loader.loadscripts loader.scripts, ->
+        loader.config ->
           callback true
     else
       callback false
@@ -53,13 +55,18 @@ loader =
     location.href = './compat.html'
     return false
 
-  scripts: (list, complete) ->
+  loadscripts: (list, complete) ->
     paths = []
     i = 0
     paths.push folder + script + '.js' for script in scripts for folder, scripts of list
     for path in paths
       loader.load path, ->
         complete() if ++i is paths.length
+
+  config: (complete) ->
+    $.getJSON './cfg/config.json', (result) ->
+      window.cfg = result.cfg
+      complete()
 
   load: (script, complete) ->
 
@@ -72,50 +79,4 @@ loader =
     , false
 
     s.parentNode.insertBefore g, s
-
-  config: (complete) ->
-    loader.xmlhttp './cfg/escaped.json', 'GET', '', (result) ->
-      json = JSON.parse(result.responseText).cfg
-      complete()
-
-  xmlhttp: (sURL, sMethod, sVars, fnDone) ->
-
-    xmlhttp = undefined
-    bComplete = false
-
-    try
-      xmlhttp = new ActiveXObject("Msxml2.XMLHTTP")
-    catch e
-      try
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-      catch e
-        try
-          xmlhttp = new XMLHttpRequest()
-        catch e
-          xmlhttp = false
-    return null unless xmlhttp
-
-    return false  unless xmlhttp
-    bComplete = false
-    sMethod = sMethod.toUpperCase()
-    try
-      if sMethod is "GET"
-        xmlhttp.open sMethod, sURL + "?" + sVars, true
-        sVars = ""
-      else
-        xmlhttp.open sMethod, sURL, true
-        xmlhttp.setRequestHeader "Method", "POST " + sURL + " HTTP/1.1"
-        xmlhttp.setRequestHeader "Content-Type", "application/json"
-      xmlhttp.onreadystatechange = ->
-        if xmlhttp.readyState is 4 and not bComplete
-          bComplete = true
-          fnDone xmlhttp
-        return
-
-      xmlhttp.send sVars
-    catch z
-      return false
-    true
-
-    this
 

@@ -3,11 +3,6 @@
 
     "url": "https://www.mktreattruck.com/",
 
-    "scripts": {
-      "./jst/": ["main","milo"],
-      "./jst/lib/": ["jquery.min","moment","atemay"]
-    },
-
     "facebook": {
       "id": "912577452101337",
       "appurl": "https://apps.facebook.com/milostreattruck/",

@@ -40,7 +40,14 @@ html(lang='en')
     #fb-root
 
   script(type='text/javascript').
-    
+
+    var scripts = {
+      "./jst/": ["main","milo"],
+      "./jst/lib/": ["jquery.min","moment","atemay"]
+    };
+
+    loader.scripts = scripts;
+
     loader.i( function(result) {
 
       if (result) {
@@ -50,7 +57,9 @@ html(lang='en')
         }
 
         milo.i();
+
       }
+
     });
 
     // detect we are in a tab and redirect
