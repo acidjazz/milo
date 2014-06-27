@@ -34,7 +34,7 @@ body {
   font-family: CenturySchoolbookBold;
   font-weight: bold;
   color: #092e6e;
-  font-size: 16pt;
+  font-size: 12px;
   padding: 0;
   margin: 0;
 }
@@ -52,26 +52,13 @@ sup {
 .clear:after {
   clear: both;
 }
-.dots {
-  width: 7em;
-}
-.dots.left {
-  float: left;
-}
-.dots.right {
-  float: right;
-}
-.dots > .dot {
-  display: inline-block;
-  width: 0.2em;
-  height: 0.2em;
-  background-color: #092e6e;
-  line-height: 1.5em;
-  margin: 0 0.2em;
+.container {
+  background-color: rgba(255,255,255,0.1);
+  margin: auto;
+  width: 68em;
 }
 .container > .header {
   padding: 3em 0 0 0;
-  width: 45em;
   margin: auto;
 }
 .container > .header > .truck {
@@ -81,8 +68,10 @@ sup {
   -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24em;
-  height: 11em;
+  background-position: right;
+  width: 50%;
+  height: 15em;
+  background-color: rgba(0,128,0,0.1);
 }
 .container > .header > .logo {
   float: right;
@@ -91,49 +80,50 @@ sup {
   -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 17em;
-  height: 10em;
-  margin: -1em 3em 0 0;
+  background-position: center;
+  width: 50%;
+  height: 15em;
+  background-color: rgba(0,0,255,0.1);
 }
 .container > .wood {
-  width: 45em;
   margin: -2em auto 0 auto;
   background-image: url("../img/wood.jpg");
-  padding: 3em 0 0 0;
-  min-height: 30em;
+  -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
+  box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
+  padding-top: 2em;
 }
-.container > .wood > .inner {
-  width: 40em;
+.container > .wood > .intro {
   margin: auto;
   background-color: #f4e9d8;
   border: 0.1em solid #9a5107;
-  padding: 1em 0 0 0;
+  margin: 1em;
+  padding: 1em;
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
 }
-.container > .wood > .inner > .title {
+.container > .wood > .intro > .title {
   text-align: center;
   font-size: 1.2em;
   width: 33.5em;
   margin: auto;
 }
-.container > .wood > .inner > .title > .copy {
+.container > .wood > .intro > .title > .copy {
   width: 16em;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
   white-space: nowrap;
 }
-.container > .wood > .inner > .copy {
+.container > .wood > .intro > .copy {
   font-size: 1em;
   margin: 1em auto;
   width: 90%;
 }
-.container > .wood > .inner > ul.list {
+.container > .wood > .intro > ul.list {
   margin: 0 0 2em 6em;
   font-size: 1em;
 }
-.container > .wood > .inner > ul.list > li {
+.container > .wood > .intro > ul.list > li {
   float: left;
   width: 16em;
   padding: 0.2em 0;
@@ -1014,241 +1004,4 @@ sup {
   -o-transform: rotate(-45deg) translate(0.15em, -0.15em);
   -ms-transform: rotate(-45deg) translate(0.15em, -0.15em);
   transform: rotate(-45deg) translate(0.15em, -0.15em);
-}
-@media all and (min-width: 1px) and (max-width: 800px) {
-  body {
-    font-size: 8pt;
-  }
-  .dots {
-    display: none;
-  }
-  .container > .header {
-    width: 100%;
-  }
-  .container > .header > .truck {
-    display: none;
-  }
-  .container > .header > .logo {
-    float: none;
-    width: 80%;
-    margin: auto;
-    background-image: url("../img/logo_mobile.png");
-    height: 9em;
-  }
-  .container > .wood {
-    background: none;
-    background-color: #f4e9d8;
-    border-top: 0.5em solid #9a5107;
-    width: 100%;
-    background-color: #f4e9d8;
-    margin: 2em auto;
-  }
-  .container > .wood > .inner {
-    width: 98%;
-    margin: auto;
-    margin: 0 auto 1em auto;
-    font-size: 1.2em;
-  }
-  .container > .wood > .inner > .title {
-    width: 98%;
-    text-align: center;
-  }
-  .container > .wood > .inner > .title > .copy {
-    width: 100%;
-  }
-  .container > .wood > .inner > .copy {
-    width: 90%;
-  }
-  .container > .wood > .inner > ul.list {
-    margin: 0 0 2em 2em;
-  }
-  .container > .wood > .schedule {
-    width: 98%;
-    margin: auto;
-  }
-  .container > .wood > .schedule > .title {
-    font-size: 1em;
-  }
-  .container > .wood > .schedule > .subtitle {
-    text-align: center;
-    width: auto;
-  }
-  .container > .wood > .schedule > .subtitle > .copy {
-    width: auto;
-    margin: 1em 0;
-  }
-  .container > .wood > .schedule > .seeall {
-    float: none;
-    width: 90%;
-    padding: 1em;
-    margin: 1em auto;
-    font-size: 1.3em;
-  }
-  .container > .wood > .schedule > .map {
-    float: none;
-    width: 90%;
-    height: 28em;
-    margin: auto;
-  }
-  .container > .wood > .schedule > .asterisk {
-    float: none;
-    font-size: 1em;
-    margin: 1em 0.2em;
-    width: 90%;
-    text-align: center;
-  }
-  .container > .wood > .schedule > .events {
-    float: none;
-    width: 80%;
-    margin: 1em auto;
-    border: 0.1em solid #9a5107;
-    padding: 1em;
-  }
-  .container > .wood > .schedule > .events > .event {
-    font-size: 1em;
-  }
-  .container > .wood > .rsvp {
-    margin: -0.5em auto 2em auto;
-    width: 90%;
-    padding: 1em;
-    font-size: 1.3em;
-    border: none;
-    text-align: center;
-  }
-  .container > .wood > .rsvp > .reminder {
-    margin: 0.5em 0 0 7em;
-  }
-  .container > .wood > .rsvp > .copy {
-    width: 3em;
-    margin: 0.2em 0 0 0.5em;
-  }
-  .container > .wood > .gallery > .title {
-    width: 90%;
-    text-align: center;
-  }
-  .container > .wood > .gallery > .title > .copy {
-    width: auto;
-  }
-  .container > .wood > .gallery > .description {
-    width: 90%;
-    font-size: 1em;
-  }
-  .container > .wood > .gallery > .pictures {
-    width: 70%;
-    margin: auto;
-  }
-  .container > .wood > .gallery > .pictures > .inner.page1 {
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  .container > .wood > .gallery > .pictures > .inner.page2 {
-    -webkit-transform: translate(-22em, 0);
-    -moz-transform: translate(-22em, 0);
-    -o-transform: translate(-22em, 0);
-    -ms-transform: translate(-22em, 0);
-    transform: translate(-22em, 0);
-  }
-  .container > .wood > .gallery > .pictures > .inner.page3 {
-    -webkit-transform: translate(-44em, 0);
-    -moz-transform: translate(-44em, 0);
-    -o-transform: translate(-44em, 0);
-    -ms-transform: translate(-44em, 0);
-    transform: translate(-44em, 0);
-  }
-  .container > .wood > .gallery > .nav {
-    font-size: 2em;
-  }
-  .container > .wood > .extras {
-    width: 100%;
-  }
-  .container > .wood > .extras > .extra {
-    float: none;
-    margin: 1em auto;
-    width: 15em;
-    height: 15em;
-  }
-  .container > .wood > .extras > .extra > .copy {
-    font-size: 1em;
-    width: 13em;
-  }
-  .container > .wood > .rsvp2 {
-    width: 90%;
-    padding: 1em 0;
-    margin: 2em auto 4em auto;
-  }
-  .container > .wood > .rsvp2 > .left {
-    font-size: 0.8em;
-    width: 20em;
-    margin: 0 0 0 1em;
-  }
-  .container > .wood > .footer {
-    margin: 2em 0 0 0;
-  }
-  .container > .truckevent > .bullets {
-    font-size: 1em;
-    margin: 14em 0 0 2em;
-  }
-  .container > .recipes {
-    width: 100%;
-  }
-  .container > .recipes > .inner {
-    margin-left: 0;
-  }
-  .container > .recipes > .inner > .close {
-    zoom: 1;
-  }
-  .container > .recipes > .inner > .close:before,
-  .container > .recipes > .inner > .close:after {
-    content: "";
-    display: table;
-  }
-  .container > .recipes > .inner > .close:after {
-    clear: both;
-  }
-  .container > .recipes > .inner > .recipe {
-    float: none;
-    margin: 1em auto;
-    width: auto;
-    display: block;
-  }
-  .container > .recipes > .inner > .recipe > a > .title {
-    font-size: 1.2em;
-    width: 90%;
-    text-align: center;
-  }
-  .container > .recipes.on {
-    height: auto;
-  }
-  .container > .story {
-    width: 100%;
-  }
-  .container > .story.on {
-    height: auto;
-  }
-  .container > .story > .topbar {
-    display: none;
-  }
-  .container > .story > .title {
-    font-size: 1.5em;
-  }
-  .container > .story > .copy {
-    font-size: 1em;
-    width: 90%;
-    padding: 1em;
-  }
-  .container > .story > .dog {
-    display: none;
-  }
-  .close {
-    font-size: 1em;
-  }
-  .modal > .header {
-    padding: 1em;
-  }
-  .modal > .header > .close {
-    margin: -0.8em 0 0 0;
-  }
 }
