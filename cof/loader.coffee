@@ -74,13 +74,8 @@ loader =
     s.parentNode.insertBefore g, s
 
   config: (complete) ->
-    loader.xmlhttp './cfg/config.json', 'GET', '', (result) ->
-
-      json = JSON.parse('[' + result.responseText + ']')[0]
-      console.log result
-      console.log json
-      if json.cfg
-        window.cfg = json.cfg
+    loader.xmlhttp './cfg/test.json', 'GET', '', (result) ->
+      json = JSON.parse(result.responseText).cfg
       complete()
 
   xmlhttp: (sURL, sMethod, sVars, fnDone) ->
