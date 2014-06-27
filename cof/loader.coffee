@@ -74,7 +74,7 @@ loader =
     s.parentNode.insertBefore g, s
 
   config: (complete) ->
-    loader.xmlhttp './cfg/test.json', 'GET', '', (result) ->
+    loader.xmlhttp './cfg/escaped.json', 'GET', '', (result) ->
       json = JSON.parse(result.responseText).cfg
       complete()
 

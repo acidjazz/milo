@@ -120,7 +120,7 @@ loader = {
     return s.parentNode.insertBefore(g, s);
   },
   config: function(complete) {
-    return loader.xmlhttp('./cfg/test.json', 'GET', '', function(result) {
+    return loader.xmlhttp('./cfg/escaped.json', 'GET', '', function(result) {
       var json;
       json = JSON.parse(result.responseText).cfg;
       return complete();
