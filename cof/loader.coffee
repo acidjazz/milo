@@ -78,10 +78,10 @@ loader =
 
       console.log result
 
-      #json = window.JSON.parse(result.response)
-      #if json.cfg
-      #  window.cfg = json.cfg
-      #complete()
+      json = JSON.parse('[' + result.response + ']')[0]
+      if json.cfg
+        window.cfg = json.cfg
+      complete()
 
   xmlhttp: (sURL, sMethod, sVars, fnDone) ->
 
