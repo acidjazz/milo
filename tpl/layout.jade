@@ -4,10 +4,12 @@ doctype
 html(lang='en')
   head
     title !{meta.title}
-    // [if lt IE 9]
-    script(type="text/javascript").
-      alert('ie is less than 9');
-    // [endif]
+
+    | <!--[if lt IE 9]>
+    |  <script type="text/javascript">
+    |    alert('ie is less than 9');
+    |  </script>
+    | <![endif]-->
 
     // google
     meta(name='title' content=meta.title)
