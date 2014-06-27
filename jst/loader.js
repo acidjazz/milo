@@ -120,8 +120,12 @@ loader = {
     return s.parentNode.insertBefore(g, s);
   },
   config: function(complete) {
-    return loader.xmlhttp('./cfg/config.json', 'GET', '', function(response) {
-      window.cfg = JSON.parse(response.response).cfg;
+    return loader.xmlhttp('./cfg/config.json', 'GET', '', function(result) {
+      var json;
+      json = JSON.parse(result.response);
+      if (json.cfg) {
+        window.cfg = json.cfg;
+      }
       return complete();
     });
   },
