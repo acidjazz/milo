@@ -121,12 +121,7 @@ loader = {
   },
   config: function(complete) {
     return loader.xmlhttp('./cfg/config.json', 'GET', '', function(result) {
-      var json;
-      json = window.JSON.parse(result.response);
-      if (json.cfg) {
-        window.cfg = json.cfg;
-      }
-      return complete();
+      return console.log(result);
     });
   },
   xmlhttp: function(sURL, sMethod, sVars, fnDone) {

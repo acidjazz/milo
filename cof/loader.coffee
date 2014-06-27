@@ -76,11 +76,12 @@ loader =
   config: (complete) ->
     loader.xmlhttp './cfg/config.json', 'GET', '', (result) ->
 
-      json = window.JSON.parse(result.response)
+      console.log result
 
-      if json.cfg
-        window.cfg = json.cfg
-      complete()
+      #json = window.JSON.parse(result.response)
+      #if json.cfg
+      #  window.cfg = json.cfg
+      #complete()
 
   xmlhttp: (sURL, sMethod, sVars, fnDone) ->
 
