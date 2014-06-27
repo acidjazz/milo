@@ -122,7 +122,7 @@ loader = {
   config: function(complete) {
     return loader.xmlhttp('./cfg/config.json', 'GET', '', function(result) {
       var json;
-      json = JSON.parse(result.response);
+      json = window.JSON.parse(result.response);
       if (json.cfg) {
         window.cfg = json.cfg;
       }
