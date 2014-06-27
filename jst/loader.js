@@ -122,7 +122,7 @@ loader = {
   config: function(complete) {
     return loader.xmlhttp('./cfg/config.json', 'GET', '', function(result) {
       var json;
-      json = window.JSON.parse(result.response.replace(/\\'/g, "'"));
+      json = window.JSON.parse(result.response);
       if (json.cfg) {
         window.cfg = json.cfg;
       }
@@ -164,7 +164,7 @@ loader = {
       } else {
         xmlhttp.open(sMethod, sURL, true);
         xmlhttp.setRequestHeader("Method", "POST " + sURL + " HTTP/1.1");
-        xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
       }
       xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState === 4 && !bComplete) {
