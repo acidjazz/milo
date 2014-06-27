@@ -2,7 +2,7 @@ var data, datas, i, k, labels, sheet, v, workbook, xls, _i;
 
 xls = require('xlsjs');
 
-workbook = xls.readFile('0624_schedule.xls');
+workbook = xls.readFile('schedule.xls');
 
 labels = {
   Market: 'A',
