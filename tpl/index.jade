@@ -29,7 +29,7 @@ block content
     .schedule
       .title COME SEE US WHEN WE'RE IN YOUR TOWN!
       .subtitle 2014 Tour Schedule
-
+      .asterisk We're on the go, follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen</a> to keep up
       .map
       .events
         - var current_market = ''
@@ -41,8 +41,6 @@ block content
           .event(data-event=JSON.stringify(event),alt='Click to RSVP and Share', title='Click to RSVP and share')
             span.date #{event.Date}:
             span.title #{event.Event}
-      .clear
-      .asterisk We're on the go, follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen</a> to keep up
     .rsvp.cta
       .reminder
       .copy SHARE
