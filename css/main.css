@@ -55,7 +55,7 @@ sup {
 .container {
   background-color: rgba(255,255,255,0.1);
   margin: auto;
-  width: 68em;
+  width: 80em;
 }
 .container > .header {
   padding: 3em 0 0 0;
@@ -69,9 +69,8 @@ sup {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  width: 50%;
-  height: 15em;
-  background-color: rgba(0,128,0,0.1);
+  width: 55%;
+  height: 20em;
 }
 .container > .header > .logo {
   float: right;
@@ -81,9 +80,8 @@ sup {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 50%;
-  height: 15em;
-  background-color: rgba(0,0,255,0.1);
+  width: 45%;
+  height: 18em;
 }
 .container > .wood {
   margin: -2em auto 0 auto;
@@ -103,38 +101,33 @@ sup {
 }
 .container > .wood > .intro > .title {
   text-align: center;
-  font-size: 1.2em;
-  width: 33.5em;
-  margin: auto;
-}
-.container > .wood > .intro > .title > .copy {
-  width: 16em;
-  margin: auto;
-  text-align: center;
-  font-size: 1.2em;
-  white-space: nowrap;
+  font-size: 1.5em;
 }
 .container > .wood > .intro > .copy {
-  font-size: 1em;
   margin: 1em auto;
   width: 90%;
+  font-size: 1.2em;
 }
-.container > .wood > .intro > ul.list {
-  margin: 0 0 2em 6em;
-  font-size: 1em;
+.container > .wood > .intro > .lists {
+  margin: 0 auto;
+  text-align: center;
 }
-.container > .wood > .intro > ul.list > li {
-  float: left;
-  width: 16em;
-  padding: 0.2em 0;
+.container > .wood > .intro > .lists > ul.list {
+  font-size: 1.2em;
+  list-style-type: square;
+  display: inline-block;
+}
+.container > .wood > .intro > .lists > ul.list > li {
+  text-align: left;
+  margin: auto;
+  padding: 0.5em 0;
 }
 .container > .wood > .schedule {
   background-color: #f4e9d8;
   border: 0.1em solid #9a5107;
-  width: 40em;
   margin: auto;
-  padding: 1em 0;
-  margin: 1em auto;
+  padding: 1em;
+  margin: 1em;
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
 }
@@ -146,55 +139,24 @@ sup {
 }
 .container > .wood > .schedule > .subtitle {
   color: #9a5107;
-  width: 36em;
-  margin: auto;
-}
-.container > .wood > .schedule > .subtitle > .copy {
   font-size: 1.3em;
-  width: 11em;
-  margin: auto;
-}
-.container > .wood > .schedule > .subtitle > .dots > .dot {
-  background-color: #9a5107;
-}
-.container > .wood > .schedule > .seeall {
-  float: left;
-  width: 19em;
-  height: 2em;
-  font-size: 0.8em;
-  margin: 1em 0 0.2em 6em;
-}
-.container > .wood > .schedule > .seeall > .paw {
-  background-image: url("../img/paw.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 1em;
-  height: 1em;
-  float: left;
-  margin: 0.5em;
-}
-.container > .wood > .schedule > .seeall > .copy {
-  float: left;
-  margin: 0.4em 0;
+  text-align: center;
 }
 .container > .wood > .schedule > .map {
   float: left;
-  width: 23em;
-  height: 12em;
+  width: 45%;
+  height: 20em;
   background-image: url("../img/map.png");
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 1em 0 0 0;
+  background-color: rgba(0,0,255,0.2);
 }
 .container > .wood > .schedule > .asterisk {
   float: left;
-  font-size: 0.6em;
-  margin: -2em 0.2em 0em 1em;
+  font-size: 1.1em;
   width: 24em;
 }
 .container > .wood > .schedule > .asterisk > a {
@@ -202,9 +164,9 @@ sup {
 }
 .container > .wood > .schedule > .events {
   float: right;
-  width: 16em;
-  height: 13em;
-  margin: 0.5em 0 1em 0;
+  width: 45%;
+  background-color: rgba(255,0,0,0.2);
+  height: 20em;
   padding: 0 0 0 1em;
   overflow-y: scroll;
 }

@@ -12,33 +12,25 @@ block content
     .clear
   .wood
     .intro 
-      .title
-        +dots('left')
-        +dots('right')
-        .copy A Treat Truck Just For Dogs!
+      .title A Treat Truck Just For Dogs!
 
       .copy This summer, we're taking our kitchen on the road and bringing our 100% real, home-style treats to dogs across America. We think all dogs deserve the same goodness as the rest of the family; that's why every one of our wholesome treats is made in the USA. Come visit the treat truck for:
 
-      ul.list
-        li Free samples
-        li Family portraits
-        li Personalized giveaways
-        li Enjoy our lounge
+      .lists
+        ul.list
+          li Free samples
+          li Family portraits
+
+        ul.list
+          li Personalized giveaways
+          li Enjoy our lounge
         .clear
 
     .schedule
       .title COME SEE US WHEN WE'RE IN YOUR TOWN!
-      .subtitle
-        +dots('left')
-        +dots('right')
-        .copy 2014 Tour Schedule
-      .clear
-      //.seeall.cta
-        .paw
-        .copy SEE ALL UPCOMING DATES
-      .clear
-      .map
+      .subtitle 2014 Tour Schedule
 
+      .map
       .events
         - var current_market = ''
         - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -47,12 +39,8 @@ block content
             .location #{event.Market}
           - var current_market = event.Market
           .event(data-event=JSON.stringify(event),alt='Click to RSVP and Share', title='Click to RSVP and share')
-            //- var parsed = event['Date'].split('/');
-            //- var date = new Date(parsed[0], parsed[1], parsed[2])
             span.date #{event.Date}:
             span.title #{event.Event}
-              //if event.Type == 'Guerrilla'
-                |&nbsp;*
       .clear
       .asterisk We're on the go, follow us on twitter <a href="http://www.twitter.com/miloskitchen" target="_new"> @miloskitchen</a> to keep up
     .rsvp.cta
