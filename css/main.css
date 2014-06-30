@@ -204,6 +204,7 @@ sup {
 .container > .wood > .schedule > .asterisk {
   font-size: 1em;
   text-align: center;
+  margin: 0.5em auto;
 }
 .container > .wood > .schedule > .asterisk > a {
   color: #092e6e;
