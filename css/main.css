@@ -191,7 +191,7 @@ sup {
 }
 .container > .wood > .schedule > .map {
   float: left;
-  width: 23em;
+  width: 20em;
   height: 12em;
   background-image: url("../img/map.png");
   -webkit-background-size: contain;
@@ -199,13 +199,11 @@ sup {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 1em 0 0 0;
+  margin: 0.2em 0 0 0;
 }
 .container > .wood > .schedule > .asterisk {
-  float: left;
-  font-size: 0.6em;
-  margin: -2em 0.2em 0em 1em;
-  width: 24em;
+  font-size: 1em;
+  text-align: center;
 }
 .container > .wood > .schedule > .asterisk > a {
   color: #092e6e;
@@ -215,7 +213,7 @@ sup {
   width: 16em;
   height: 13em;
   margin: 0.5em 0 1em 0;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 0.5em;
   overflow-y: scroll;
 }
 .container > .wood > .schedule > .events > .location {
