@@ -1,6 +1,7 @@
 
-xls = require('xlsjs')
-workbook = xls.readFile('schedule.xls')
+xls = require 'xlsjs'
+workbook = xls.readFile 'schedule.xls'
+fs = require 'fs'
 
 labels =
   Market: 'A'
@@ -33,4 +34,7 @@ for i in [2..29]
 
   datas[i] = data if data isnt null
 
-console.log JSON.stringify datas
+fs.writeFile('./schedule.json', JSON.stringify(datas), (error) ->
+  console.log if error then error else 'write successful'
+)
+

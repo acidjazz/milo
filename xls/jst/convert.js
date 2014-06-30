@@ -1,8 +1,10 @@
-var data, datas, i, k, labels, sheet, v, workbook, xls, _i;
+var data, datas, fs, i, k, labels, sheet, v, workbook, xls, _i;
 
 xls = require('xlsjs');
 
 workbook = xls.readFile('schedule.xls');
+
+fs = require('fs');
 
 labels = {
   Market: 'A',
@@ -43,4 +45,6 @@ for (i = _i = 2; _i <= 29; i = ++_i) {
   }
 }
 
-console.log(JSON.stringify(datas));
+fs.writeFile('./schedule.json', JSON.stringify(datas), function(error) {
+  return console.log(error ? error : 'write successful');
+});
