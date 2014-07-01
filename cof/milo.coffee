@@ -112,10 +112,10 @@ milo =
 
     FB.ui(
       method: 'feed'
-      app_id: milo.facebook.id
+      app_id: cfg.facebook.id
       link: 'https://www.mktreattruck.com/'
       #picture: milo.meta.image
-      description: milo.facebook.share
+      description: cfg.facebook.share
 
     , (response) ->
 
@@ -133,10 +133,10 @@ milo =
 
     FB.ui(
       method: 'feed'
-      app_id: milo.facebook.id
+      app_id: cfg.facebook.id
       link: link
       #picture: milo.meta.image
-      description: milo.facebook.rsvpshare.replace('{EVENT}', evt.Event)
+      description: cfg.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     , (response) ->
     )
    

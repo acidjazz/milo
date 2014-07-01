@@ -111,9 +111,9 @@ milo = {
   share: function() {
     return FB.ui({
       method: 'feed',
-      app_id: milo.facebook.id,
+      app_id: cfg.facebook.id,
       link: 'https://www.mktreattruck.com/',
-      description: milo.facebook.share
+      description: cfg.facebook.share
     }, function(response) {});
   },
   rsvpshare: function() {
@@ -127,9 +127,9 @@ milo = {
     }
     return FB.ui({
       method: 'feed',
-      app_id: milo.facebook.id,
+      app_id: cfg.facebook.id,
       link: link,
-      description: milo.facebook.rsvpshare.replace('{EVENT}', evt.Event)
+      description: cfg.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     }, function(response) {});
   }
 };
