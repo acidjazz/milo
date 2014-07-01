@@ -15,6 +15,7 @@ milo =
       click: milo.detail
     , '.infocta'
     $('.event').on 'mouseover', map.delayzoom
+    $('.event').on 'mouseleave', map.cancelzoom
     #$('.events').on 'mouseout', map.center
     $('.fade').on 'click', milo.cancel
     $('.nav > div').on 'click', milo.nav

@@ -8,6 +8,11 @@ map = {
   infos: [],
   gmap: {},
   timer: false,
+  cancelzoom: function() {
+    if (map.timer !== false) {
+      return clearTimeout(map.timer);
+    }
+  },
   delayzoom: function() {
     var index;
     index = $(this).data('index');
@@ -16,7 +21,7 @@ map = {
     }
     return map.timer = setTimeout(function() {
       return map.zoom(index);
-    }, 250);
+    }, 500);
   },
   zoom: function(index) {
     if (!map.markers[index] || isNaN(map.markers[index].position.A)) {

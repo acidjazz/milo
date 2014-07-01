@@ -8,6 +8,9 @@ map =
   gmap: {}
   timer: false
 
+  cancelzoom: ->
+    clearTimeout map.timer if map.timer isnt false
+
   delayzoom: ->
 
     index = $(this).data 'index'
@@ -16,7 +19,7 @@ map =
 
     map.timer = setTimeout ->
       map.zoom index
-    , 250
+    , 500
 
   zoom: (index) ->
     return false if !map.markers[index] or isNaN map.markers[index].position.A

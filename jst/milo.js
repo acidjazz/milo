@@ -14,6 +14,7 @@ milo = {
       click: milo.detail
     }, '.infocta');
     $('.event').on('mouseover', map.delayzoom);
+    $('.event').on('mouseleave', map.cancelzoom);
     $('.fade').on('click', milo.cancel);
     $('.nav > div').on('click', milo.nav);
     $('.container').on('click', '.button', milo.rsvpshare);
