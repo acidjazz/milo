@@ -1389,7 +1389,6 @@ sup {
   float: left;
   font-size: 1.2em;
   width: 18em;
-  margin: 0 0 0 0;
 }
 .container > .wood > .rsvp2 > .right {
   float: right;
@@ -1403,8 +1402,12 @@ sup {
   background-repeat: no-repeat;
   width: 1.8em;
   height: 1.5em;
-  float: left;
-  margin: 0.6em 0.6em 0 0.6em;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.container > .wood > .rsvp2 > .right > .copy {
+  display: inline-block;
+  width: 6em;
 }
 .container > .wood > .visit {
   font-size: 1.2em;
