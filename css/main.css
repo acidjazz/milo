@@ -1189,7 +1189,7 @@ sup {
 }
 .container > .wood > .schedule > .events > .inner > .event {
   cursor: pointer;
-  padding: 0.5em 0.3em;
+  padding: 1em 0.3em;
   -webkit-transition: background-color 0.1s linear, color 0.1s linear;
   -moz-transition: background-color 0.1s linear, color 0.1s linear;
   -o-transition: background-color 0.1s linear, color 0.1s linear;
