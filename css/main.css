@@ -1024,6 +1024,29 @@ sup {
 .clear:after {
   clear: both;
 }
+.outerinfo {
+  background-color: #f4e9d8;
+  border: 1px solid #f00;
+}
+.info {
+  padding: 1em;
+  color: #092e6e;
+  font-family: CenturySchoolbookBold;
+  text-align: center;
+}
+.info > .infocta {
+  padding: 1em 2em;
+  margin: 2em auto 0em auto;
+  background-color: #092e6e;
+  color: #f4e9d8;
+  text-align: center;
+  cursor: pointer;
+  width: 10em;
+  font-family: CenturySchoolbookBold;
+}
+.info > .infocta:hover {
+  background-color: #26ace2;
+}
 .container {
   background-color: rgba(255,255,255,0.1);
   margin: auto;
@@ -1116,14 +1139,15 @@ sup {
 }
 .container > .wood > .schedule > .map {
   float: left;
-  width: 62%;
-  height: 20em;
+  width: 63%;
+  height: 30em;
   position: relative;
+  border: 0.1em solid #9a5107;
 }
 .container > .wood > .schedule > .asterisk {
   text-align: center;
   font-size: 1.2em;
-  margin: 0.5em auto;
+  padding: 1em;
 }
 .container > .wood > .schedule > .asterisk > a {
   color: #092e6e;
@@ -1131,22 +1155,43 @@ sup {
 .container > .wood > .schedule > .events {
   float: right;
   width: 35%;
-  height: 20em;
   padding: 0 0 0 1em;
-  overflow-y: scroll;
   font-size: 1.2em;
 }
-.container > .wood > .schedule > .events > .location {
-  padding: 0.3em 0;
+.container > .wood > .schedule > .events > .toparrow,
+.container > .wood > .schedule > .events > .bottomarrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.container > .wood > .schedule > .events > .toparrow {
+  border-width: 0 2em 2em 2em;
+  margin: 0em auto 0.1em auto;
+  border-color: transparent transparent #092e6e transparent;
+}
+.container > .wood > .schedule > .events > .bottomarrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2em 2em 0 2em;
+  margin: 0.1em auto 0em auto;
+  border-color: #092e6e transparent transparent transparent;
+}
+.container > .wood > .schedule > .events > .inner {
+  overflow-y: scroll;
+  height: 20em;
+}
+.container > .wood > .schedule > .events > .inner > .location {
+  padding: 0.5em 0;
   text-transform: uppercase;
   text-align: center;
   background-color: #26ace2;
   color: #f4e9d8;
   margin-bottom: 0.1em;
 }
-.container > .wood > .schedule > .events > .event {
+.container > .wood > .schedule > .events > .inner > .event {
   cursor: pointer;
-  padding: 0.2em 0.3em;
+  padding: 0.5em 0.3em;
   -webkit-transition: background-color 0.1s linear, color 0.1s linear;
   -moz-transition: background-color 0.1s linear, color 0.1s linear;
   -o-transition: background-color 0.1s linear, color 0.1s linear;
@@ -1156,11 +1201,11 @@ sup {
   color: #f4e9d8;
   margin-bottom: 0.1em;
 }
-.container > .wood > .schedule > .events > .event:hover {
+.container > .wood > .schedule > .events > .inner > .event:hover {
   background-color: rgba(9,46,110,0.1);
   color: #092e6e;
 }
-.container > .wood > .schedule > .events > .event > span.title {
+.container > .wood > .schedule > .events > .inner > .event > span.title {
   font-weight: normal;
   padding-left: 0.5em;
 }

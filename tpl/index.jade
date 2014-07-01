@@ -38,15 +38,18 @@ block content
           .dot.two
           .dot.one
       .events
-        - var current_market = ''
-        - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        each event, index in cfg.events
-          if event.Market != current_market
-            .location #{event.Market}
-          - var current_market = event.Market
-          .event(data-index=index,alt='Click to RSVP and Share',title='Click to RSVP and share')
-            span.date #{event.Date}:
-            span.title #{event.Event}
+        .toparrow
+        .inner
+          - var current_market = ''
+          - var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          each event, index in cfg.events
+            if event.Market != current_market
+              .location #{event.Market}
+            - var current_market = event.Market
+            .event(data-index=index,alt='Click to RSVP and Share',title='Click to RSVP and share')
+              span.date #{event.Date}:
+              span.title #{event.Event}
+        .bottomarrow
       .clear
     .rsvp.cta
       .reminder

@@ -1,15 +1,37 @@
 map =
 
-  lng: '38.6233905'
-  lat: '-98.3149553'
+  lat: '39.9755172'
+  long: '-98.8407857'
+  centerpos: {}
   markers: []
   infos: []
   gmap: {}
+  timer: false
 
+  delayzoom: ->
+
+    index = $(this).data 'index'
+
+    clearTimeout map.timer if map.timer isnt false
+
+    map.timer = setTimeout ->
+      map.zoom index
+    , 250
+
+  zoom: (index) ->
+    return false if !map.markers[index] or isNaN map.markers[index].position.A
+    map.gmap.setZoom 10
+    map.gmap.panTo map.markers[index].position
+    map.openinfo index
+
+  center: ->
+    clearTimeout map.timer if map.timer isnt false
+    map.gmap.setZoom 4
+    map.gmap.panTo map.centerpos
+    map.openinfo false
 
 
   i: ->
-
 
     styles =
       [
@@ -24,7 +46,7 @@ map =
               color: "#9a5107"
             }
             {
-              weight: 3.4
+              weight: 1.5
             }
           ]
         }
@@ -41,38 +63,25 @@ map =
     styledMap = new google.maps.StyledMapType styles,
       name: 'Styled Map'
 
+    map.centerpos = new google.maps.LatLng map.lat, map.long
     mapOptions =
-      center: new google.maps.LatLng map.lng, map.lat
-      zoom: 3
-      mapTypeControlOptions:
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+      center: map.centerpos 
+      zoom: 4
+      mapTypeControl: false
+      navigationControl: false
+      streetViewControl: false
+      mapTypeId: google.maps.MapTypeId.ROADMAP
 
     map.gmap = new google.maps.Map(document.getElementById("map"), mapOptions)
     map.gmap.mapTypes.set 'map_style', styledMap
     map.gmap.setMapTypeId 'map_style'
 
-    latlng = new google.maps.LatLng '37.7965073', '-122.3811079'
+    #map.mevent(evt, index) for index, evt in cfg.events
 
-    truck =
-      url: 'img/truckicon.svg'
-      scaledSize: new google.maps.Size(25, 15)
-
-    marker = new google.maps.Marker
-      position: latlng
-      map: map.gmap
-      title: 'hello world'
-      animation: google.maps.Animation.DROP
-      icon: truck
-
-
-    content = '<div> this is an info window for an event</div>'
-    infowindow = new google.maps.InfoWindow
-      content: content
-
-    google.maps.event.addListener marker, 'click', ->
-      infowindow.open map, marker
-
-    map.mevent(evt, index) for index, evt in cfg.events
+    $.each cfg.events, (index, evt) ->
+      setTimeout ->
+        map.mevent index, evt
+      , 100*index
 
   mevent: (index, evt) ->
 
@@ -90,8 +99,15 @@ map =
       icon: paw
 
     map.infos[index] = new google.maps.InfoWindow
-      content: "<div> #{evt.Title} </div>"
+      content: "<div class='clear'></div><div class='info'> #{evt.Date}: #{evt.Event} <div class='infocta' data-index='#{index}'>RSVP / Share</div></div>"
 
     google.maps.event.addListener map.markers[index], 'click', ->
-      map.infos[index].open map.gmap, map.markers[index]
+      map.openinfo index
+
+  openinfo: (index) ->
+
+    info.close() for info, i in map.infos
+    map.infos[index].open map.gmap, map.markers[index] if index isnt false
+
+  
 
