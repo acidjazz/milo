@@ -26,22 +26,18 @@ sup
 .clear
   clearfix()
 
-.outerinfo
-  background-color c_beige
-  border 1px solid red
 .info
-  padding 1em
+  padding 0.5em
   color c_blue
   font-family CenturySchoolbookBold
   text-align center
   > .infocta
     padding 1em 2em
-    margin 2em auto 0em auto
+    margin 1em 0 0 0.75em
     background-color c_blue
     color c_beige
     text-align center
     cursor pointer
-    width 10em
     font-family CenturySchoolbookBold
     &:hover
       background-color c_lblue
@@ -506,11 +502,14 @@ sup
 
 .modal
   position fixed
-  top 5em
+  top 50%
   width 25em
+  height 15.5em
   left 50%
   margin-left -12.5em
+  margin-top -7.75em
   background-color c_beige
+  font-size 1.5em
   > .header
     background-color c_blue
     color c_beige

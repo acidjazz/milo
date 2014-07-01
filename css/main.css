@@ -1024,24 +1024,19 @@ sup {
 .clear:after {
   clear: both;
 }
-.outerinfo {
-  background-color: #f4e9d8;
-  border: 1px solid #f00;
-}
 .info {
-  padding: 1em;
+  padding: 0.5em;
   color: #092e6e;
   font-family: CenturySchoolbookBold;
   text-align: center;
 }
 .info > .infocta {
   padding: 1em 2em;
-  margin: 2em auto 0em auto;
+  margin: 1em 0 0 0.75em;
   background-color: #092e6e;
   color: #f4e9d8;
   text-align: center;
   cursor: pointer;
-  width: 10em;
   font-family: CenturySchoolbookBold;
 }
 .info > .infocta:hover {
@@ -1833,11 +1828,14 @@ sup {
 }
 .modal {
   position: fixed;
-  top: 5em;
+  top: 50%;
   width: 25em;
+  height: 15.5em;
   left: 50%;
   margin-left: -12.5em;
+  margin-top: -7.75em;
   background-color: #f4e9d8;
+  font-size: 1.5em;
 }
 .modal > .header {
   background-color: #092e6e;

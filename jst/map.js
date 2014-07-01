@@ -24,7 +24,8 @@ map = {
     }
     map.gmap.setZoom(10);
     map.gmap.panTo(map.markers[index].position);
-    return map.openinfo(index);
+    map.openinfo(index);
+    return map.bounce(index);
   },
   center: function() {
     if (map.timer !== false) {
@@ -87,7 +88,7 @@ map = {
     return $.each(cfg.events, function(index, evt) {
       return setTimeout(function() {
         return map.mevent(index, evt);
-      }, 100 * index);
+      }, 50 * index);
     });
   },
   mevent: function(index, evt) {
@@ -120,6 +121,17 @@ map = {
     }
     if (index !== false) {
       return map.infos[index].open(map.gmap, map.markers[index]);
+    }
+  },
+  bounce: function(index) {
+    var i, marker, _i, _len, _ref;
+    _ref = map.markers;
+    for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+      marker = _ref[i];
+      marker.setAnimation(null);
+    }
+    if (index !== false) {
+      return map.markers[index].setAnimation(google.maps.Animation.BOUNCE);
     }
   }
 };

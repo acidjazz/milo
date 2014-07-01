@@ -23,6 +23,8 @@ map =
     map.gmap.setZoom 10
     map.gmap.panTo map.markers[index].position
     map.openinfo index
+    map.bounce index
+    
 
   center: ->
     clearTimeout map.timer if map.timer isnt false
@@ -81,7 +83,7 @@ map =
     $.each cfg.events, (index, evt) ->
       setTimeout ->
         map.mevent index, evt
-      , 100*index
+      , 50*index
 
   mevent: (index, evt) ->
 
@@ -109,5 +111,8 @@ map =
     info.close() for info, i in map.infos
     map.infos[index].open map.gmap, map.markers[index] if index isnt false
 
+  bounce: (index) ->
+    marker.setAnimation null for marker, i in map.markers
+    map.markers[index].setAnimation google.maps.Animation.BOUNCE if index isnt false
   
 
