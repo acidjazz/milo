@@ -1240,10 +1240,10 @@ sup {
 }
 .container > .wood > .gallery > .description {
   color: #9a5107;
-  width: 48em;
   font-size: 1.2em;
   text-align: center;
   margin: 1em auto;
+  width: 80%;
 }
 .container > .wood > .gallery > .description > .hashtag {
   color: #092e6e;
