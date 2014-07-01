@@ -1,8 +1,10 @@
-var data, datas, i, k, labels, sheet, v, workbook, xls, _i;
+var data, datas, fs, i, k, labels, sheet, v, workbook, xls, _i;
 
 xls = require('xlsjs');
 
 workbook = xls.readFile('schedule.xls');
+
+fs = require('fs');
 
 labels = {
   Market: 'A',
@@ -17,14 +19,15 @@ labels = {
   State: 'J',
   Zip: 'K',
   Type: 'L',
-  Description: 'M'
+  Description: 'M',
+  LatLong: 'N'
 };
 
 sheet = workbook.Sheets['Routing Schedule'];
 
 datas = [];
 
-for (i = _i = 2; _i <= 29; i = ++_i) {
+for (i = _i = 6; _i <= 33; i = ++_i) {
   data = {};
   for (k in labels) {
     v = labels[k];
@@ -43,4 +46,6 @@ for (i = _i = 2; _i <= 29; i = ++_i) {
   }
 }
 
-console.log(JSON.stringify(datas));
+fs.writeFile('./schedule.json', JSON.stringify(datas), function(error) {
+  return console.log(error ? error : 'write successful');
+});

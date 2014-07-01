@@ -70,13 +70,12 @@ loader =
 
   load: (script, complete) ->
 
-    g = document.createElement 'script'
-    s = document.getElementsByTagName('script')[0]
-
-    g.src = script
-    g.addEventListener 'load' , (e) ->
+    el = document.createElement 'script'
+    el.type = 'text/javascript'
+    el.src = script
+    el.addEventListener 'load' , (e) ->
       complete()
     , false
 
-    s.parentNode.insertBefore g, s
+    document.body.appendChild(el)
 

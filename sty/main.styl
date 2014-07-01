@@ -4,10 +4,12 @@ stylus -w main.styl -o ../css/.
 
 vendor-prefixes ?= webkit moz o ms official
 
+@import vendor
+
 @import _vars
 @import _fonts
 @import _mixins
-@import vendor
+@import _loader
 
 body
   background-color c_beige
@@ -60,13 +62,16 @@ sup
       margin 1em
       padding 1em
       box-shadow 0.2em 0.2em 1em rgba(black, 0.5)
+
       > .title
         text-align center
         font-size 1.5em
+
       > .copy
         margin 1em auto
         width 90%
         font-size 1.2em
+
       > .lists
         margin 0 auto
         text-align center
@@ -75,6 +80,7 @@ sup
           font-size 1.2em
           list-style-type square
           display inline-block
+
           > li
             text-align left
             margin auto
@@ -98,37 +104,39 @@ sup
         text-align center
       > .map
         float left
-        width 45%
+        width 62%
         height 20em
-        background-image url('../img/map.png')
-        background-size contain
-        background-repeat no-repeat
-        background-position center
-        background-color rgba(blue, 0.2)
+        position relative
       > .asterisk
         text-align center
-        font-size 1.1em
+        font-size 1.2em
         margin 0.5em auto
         > a
           color c_blue
       > .events
         float right
-        width 45%
-        background-color rgba(red, 0.2)
+        width 35%
         height 20em
         padding 0 0 0 1em
         overflow-y scroll
+        font-size 1.2em
         > .location
           padding 0.3em 0
           text-transform uppercase
+          text-align center
+          background-color c_lblue
+          color c_beige
+          margin-bottom 0.1em
         > .event
-          font-size 0.8em
           cursor pointer
           padding 0.2em 0.3em
           transition background-color 0.1s linear, color 0.1s linear
+          background-color c_blue
+          color c_beige
+          margin-bottom 0.1em
           &:hover
-            background-color c_blue
-            color c_beige
+            background-color rgba(c_blue, 0.1)
+            color c_blue
           > span.title
             font-weight normal
             padding-left 0.5em

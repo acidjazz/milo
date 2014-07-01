@@ -117,13 +117,13 @@ loader = {
     });
   },
   load: function(script, complete) {
-    var g, s;
-    g = document.createElement('script');
-    s = document.getElementsByTagName('script')[0];
-    g.src = script;
-    g.addEventListener('load', function(e) {
+    var el;
+    el = document.createElement('script');
+    el.type = 'text/javascript';
+    el.src = script;
+    el.addEventListener('load', function(e) {
       return complete();
     }, false);
-    return s.parentNode.insertBefore(g, s);
+    return document.body.appendChild(el);
   }
 };
