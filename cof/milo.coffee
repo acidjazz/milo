@@ -2,6 +2,7 @@
 milo =
 
   facebook: {}
+  scrolling: false
 
   i: ->
     milo.handlers()
@@ -9,6 +10,7 @@ milo =
   handlers: ->
     $('.extras > .extra').on 'click', milo.extra
     $('.pictures > .inner > .picture').on 'click', milo.picture
+    $('.zoom').on 'click', milo.close
     $('.close').on 'click', milo.close
     $('.event').on 'click', milo.detail
     $('.map').on
@@ -23,7 +25,11 @@ milo =
     $('.rsvp.cta').on 'click', milo.share
     $('.rsvp2').on 'click', milo.rsvpup
 
+    $('.toparrow, .bottomarrow').on 'mousedown', milo.startscroll
+    $('.toparrow, .bottomarrow').on 'mouseup', milo.stopscroll
+
   picture: ->
+    $('.zoom').css('height', ($(window).height()-100) + 'px')
     _.on '.zoom', '.fade'
     image = $(this).find('.image').data 'img'
     $('.zoom .image').css 'background-image', 'url(\'./img/gallery/' + image + '\')'
@@ -63,7 +69,7 @@ milo =
           scrollTop: $(el).offset().top
     , 300
   rsvpup: ->
-    milo.scroll '.schedule', 20
+    milo.scroll '.schedule', -50
 
  
   detail: ->
@@ -141,3 +147,18 @@ milo =
     , (response) ->
     )
    
+  startscroll: ->
+    milo.scrolling = true
+    action = if $(this).hasClass 'bottomarrow' then '+=40em' else '-=40em'
+    milo.scroller $('.events .inner'), action
+
+  stopscroll: ->
+    milo.scrolling = false
+
+  scroller: (obj, param) ->
+    obj.animate
+      scrollTop: param
+    , 'linear', ->
+      milo.scroller obj, param if milo.scrolling
+
+

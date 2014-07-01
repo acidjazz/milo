@@ -141,6 +141,7 @@ sup
           width 0
           height 0
           border-style solid
+          cursor pointer
         > .toparrow
           border-width 0 2em 2em 2em
           margin 0em auto 0.1em auto
@@ -155,7 +156,7 @@ sup
           
         > .inner
           overflow-y scroll
-          height 20em
+          height 23em
           > .location
             padding 0.5em 0
             text-transform uppercase
@@ -180,7 +181,7 @@ sup
       margin -1.4em auto 2em auto
       width 8em
       height 2em
-      font-size 1.2em
+      font-size 1.5em
       border 0.1em solid c_beige
       > .reminder
         background-image url('../img/reminder.png')
@@ -198,43 +199,35 @@ sup
       background-color c_beige
       > .title
         color c_brown
-        width 36em
-        margin auto
-        > .copy
-          font-size 1.3em
-          width 13.5em
-          margin auto
-        > .dots > .dot
-          background-color c_brown
+        font-size 1.5em
+        text-align center
       > .description
         color c_brown
         width 48em
-        font-size 0.8em
+        font-size 1.2em
         text-align center
         margin 1em auto
         > .hashtag
           color c_blue
       > .pictures
-        width 45em
-        height 16em
+        height 23em
         overflow hidden
         > .inner
-          width 100em
+          width 200%
           transition transform 0.5s ease-in-out
           &.page1
             transform translate(0, 0)
           &.page2
-            transform translate(-44em, 0)
+            transform translate(-50%, 0)
           &.page3
-            transform translate(-88em, 0)
+            transform translate(-100%, 0)
           > .picture
             cursor pointer
             display inline-block
-            width 8.5em
-            height 5.5em
-            margin 1em
-            background-color white
-            padding 0.1em
+            width 13.75em
+            height 10em
+            margin 0.5em 1em
+            background-color c_beige
             box-shadow 0.1em 0.1em 0.1em rgba(black, 0.5)
             > .image
               width 100%
@@ -243,7 +236,8 @@ sup
               background-repeat no-repeat
               background-position 50% 50%
       > .nav
-        padding 1em 0 0 0
+        padding 1em 0 1em 0
+        font-size 1.2em
         > div
           cursor pointer
         > .prev
@@ -263,19 +257,19 @@ sup
             float left
             margin 0 0.5em 0 0
     > .extras
-      width 40em
-      margin auto
+      text-align center
       > .extra
-        width 11em
-        height 11em
-        float left
-        margin 1em
+        width 17em
+        height 15em
+        display inline-block
+        margin 1em 3em
         box-shadow 0.2em 0.2em 0.2em rgba(black, 0.5)
         cursor pointer
         border 0.1em solid white
         position relative
         overflow hidden
         background-size cover
+        background-position 50% 50%
         &:hover > .copy
           background-color rgba(white, 0.95)
         &.experience
@@ -291,25 +285,26 @@ sup
           color c_brown
           padding 1em 
           text-align center
-          font-size 0.8em
-          width 12em
+          font-size 1.2em
           bottom 0
           left 0
+          right 0
     > .rsvp2
       background-color c_blue
       border 0.2em solid c_beige
-      width 23em
+      width 38em
       margin 2em auto
       color c_beige
-      padding 0.5em 1em
+      padding 1em 1em
       cursor pointer
       > .left
         float left
-        font-size 0.7em
+        font-size 1.2em
         width 20em
         margin 0.5em 0 0 0
       > .right
         float right
+        font-size 1.5em
         > .reminder
           background-image url('../img/reminder.png')
           background-size cover
@@ -380,7 +375,6 @@ sup
         display none
 
   > .recipes
-    width 45em
     background-image url('../img/wood.jpg')
     margin auto
     padding 1em 0
@@ -388,7 +382,7 @@ sup
     overflow hidden
     transition height 0.2s 
     &.on 
-      height 34em
+      height 48em
       > .close
         display block
         margin 0 0 -1em 0
@@ -406,37 +400,38 @@ sup
         display none
 
     > .inner
-      margin-left 4em
-      margin-bottom 5em
-      margin-top -1em
+      text-align center
       > .recipe
-        width 10em
-        float left
-        margin 0.2em 1em
-        text-align center
+        width 18em
+        padding 0 2em
+        display inline-block
         opacity 0
         transform translate(-1em, 0)
         > a
           text-decoration none
+          > .image
+            background-size contain
+            background-repeat no-repeat
+            height 16em
+            background-position 50% 50%
           > .title
             color c_brown
             border 0.1em solid c_brown
             background-color c_beige
-            font-size 0.6em
-            margin -3em auto 0 auto
-            padding 0.5em
+            font-size 1em
+            height 3em
             text-decoration none
+            margin -2em 0 2em 0
+            padding 0em 1em
     > .more
       float right
-      margin -4em 1em 1em 0
+      margin 1em 1em 1em 0
       font-size 1.2em
       > a
-        color c_blue
+        color c_beige
         text-decoration none
-        > .arrow
-          width 1em
-          height 1em
-          display inline-block
+        background-color c_blue
+        padding 1em
 
   > .story
     width 45em
@@ -481,16 +476,16 @@ sup
     transition opacity 0.2s linear 0s, transform 0s linear 0s
 .zoom
   position fixed
-  top 5em
+  top 2em
+  left 0em
   width 100%
   padding 1em 0
   background-color rgba(c_beige, 1)
-  height 15em
   > .image
-    width 20em
-    height 15em
+    width 90%
+    height 100%
     margin auto
-    background-size contain
+    background-size inherit
     background-repeat no-repeat
     background-position 50% 50%
   &.off

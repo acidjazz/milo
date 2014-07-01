@@ -1160,6 +1160,7 @@ sup {
   width: 0;
   height: 0;
   border-style: solid;
+  cursor: pointer;
 }
 .container > .wood > .schedule > .events > .toparrow {
   border-width: 0 2em 2em 2em;
@@ -1176,7 +1177,7 @@ sup {
 }
 .container > .wood > .schedule > .events > .inner {
   overflow-y: scroll;
-  height: 20em;
+  height: 23em;
 }
 .container > .wood > .schedule > .events > .inner > .location {
   padding: 0.5em 0;
@@ -1210,7 +1211,7 @@ sup {
   margin: -1.4em auto 2em auto;
   width: 8em;
   height: 2em;
-  font-size: 1.2em;
+  font-size: 1.5em;
   border: 0.1em solid #f4e9d8;
 }
 .container > .wood > .rsvp > .reminder {
@@ -1234,21 +1235,13 @@ sup {
 }
 .container > .wood > .gallery > .title {
   color: #9a5107;
-  width: 36em;
-  margin: auto;
-}
-.container > .wood > .gallery > .title > .copy {
-  font-size: 1.3em;
-  width: 13.5em;
-  margin: auto;
-}
-.container > .wood > .gallery > .title > .dots > .dot {
-  background-color: #9a5107;
+  font-size: 1.5em;
+  text-align: center;
 }
 .container > .wood > .gallery > .description {
   color: #9a5107;
   width: 48em;
-  font-size: 0.8em;
+  font-size: 1.2em;
   text-align: center;
   margin: 1em auto;
 }
@@ -1256,12 +1249,11 @@ sup {
   color: #092e6e;
 }
 .container > .wood > .gallery > .pictures {
-  width: 45em;
-  height: 16em;
+  height: 23em;
   overflow: hidden;
 }
 .container > .wood > .gallery > .pictures > .inner {
-  width: 100em;
+  width: 200%;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   -o-transition: -o-transform 0.5s ease-in-out;
@@ -1276,27 +1268,26 @@ sup {
   transform: translate(0, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page2 {
-  -webkit-transform: translate(-44em, 0);
-  -moz-transform: translate(-44em, 0);
-  -o-transform: translate(-44em, 0);
-  -ms-transform: translate(-44em, 0);
-  transform: translate(-44em, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page3 {
-  -webkit-transform: translate(-88em, 0);
-  -moz-transform: translate(-88em, 0);
-  -o-transform: translate(-88em, 0);
-  -ms-transform: translate(-88em, 0);
-  transform: translate(-88em, 0);
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner > .picture {
   cursor: pointer;
   display: inline-block;
-  width: 8.5em;
-  height: 5.5em;
-  margin: 1em;
-  background-color: #fff;
-  padding: 0.1em;
+  width: 13.75em;
+  height: 10em;
+  margin: 0.5em 1em;
+  background-color: #f4e9d8;
   -webkit-box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
 }
@@ -1310,7 +1301,8 @@ sup {
   background-position: 50% 50%;
 }
 .container > .wood > .gallery > .nav {
-  padding: 1em 0 0 0;
+  padding: 1em 0 1em 0;
+  font-size: 1.2em;
 }
 .container > .wood > .gallery > .nav > div {
   cursor: pointer;
@@ -1338,14 +1330,13 @@ sup {
   margin: 0 0.5em 0 0;
 }
 .container > .wood > .extras {
-  width: 40em;
-  margin: auto;
+  text-align: center;
 }
 .container > .wood > .extras > .extra {
-  width: 11em;
-  height: 11em;
-  float: left;
-  margin: 1em;
+  width: 17em;
+  height: 15em;
+  display: inline-block;
+  margin: 1em 3em;
   -webkit-box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   cursor: pointer;
@@ -1355,6 +1346,7 @@ sup {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  background-position: 50% 50%;
 }
 .container > .wood > .extras > .extra:hover > .copy {
   background-color: rgba(255,255,255,0.95);
@@ -1379,28 +1371,29 @@ sup {
   color: #9a5107;
   padding: 1em;
   text-align: center;
-  font-size: 0.8em;
-  width: 12em;
+  font-size: 1.2em;
   bottom: 0;
   left: 0;
+  right: 0;
 }
 .container > .wood > .rsvp2 {
   background-color: #092e6e;
   border: 0.2em solid #f4e9d8;
-  width: 23em;
+  width: 38em;
   margin: 2em auto;
   color: #f4e9d8;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   cursor: pointer;
 }
 .container > .wood > .rsvp2 > .left {
   float: left;
-  font-size: 0.7em;
+  font-size: 1.2em;
   width: 20em;
   margin: 0.5em 0 0 0;
 }
 .container > .wood > .rsvp2 > .right {
   float: right;
+  font-size: 1.5em;
 }
 .container > .wood > .rsvp2 > .right > .reminder {
   background-image: url("../img/reminder.png");
@@ -1495,7 +1488,6 @@ sup {
   display: none;
 }
 .container > .recipes {
-  width: 45em;
   background-image: url("../img/wood.jpg");
   margin: auto;
   padding: 1em 0;
@@ -1509,7 +1501,7 @@ sup {
   transition: height 0.2s;
 }
 .container > .recipes.on {
-  height: 34em;
+  height: 48em;
 }
 .container > .recipes.on > .close {
   display: block;
@@ -1661,15 +1653,12 @@ sup {
   display: none;
 }
 .container > .recipes > .inner {
-  margin-left: 4em;
-  margin-bottom: 5em;
-  margin-top: -1em;
+  text-align: center;
 }
 .container > .recipes > .inner > .recipe {
-  width: 10em;
-  float: left;
-  margin: 0.2em 1em;
-  text-align: center;
+  width: 18em;
+  padding: 0 2em;
+  display: inline-block;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -1682,28 +1671,34 @@ sup {
 .container > .recipes > .inner > .recipe > a {
   text-decoration: none;
 }
+.container > .recipes > .inner > .recipe > a > .image {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 16em;
+  background-position: 50% 50%;
+}
 .container > .recipes > .inner > .recipe > a > .title {
   color: #9a5107;
   border: 0.1em solid #9a5107;
   background-color: #f4e9d8;
-  font-size: 0.6em;
-  margin: -3em auto 0 auto;
-  padding: 0.5em;
+  font-size: 1em;
+  height: 3em;
   text-decoration: none;
+  margin: -2em 0 2em 0;
+  padding: 0em 1em;
 }
 .container > .recipes > .more {
   float: right;
-  margin: -4em 1em 1em 0;
+  margin: 1em 1em 1em 0;
   font-size: 1.2em;
 }
 .container > .recipes > .more > a {
-  color: #092e6e;
+  color: #f4e9d8;
   text-decoration: none;
-}
-.container > .recipes > .more > a > .arrow {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
+  background-color: #092e6e;
+  padding: 1em;
 }
 .container > .story {
   width: 45em;
@@ -1782,19 +1777,19 @@ sup {
 }
 .zoom {
   position: fixed;
-  top: 5em;
+  top: 2em;
+  left: 0em;
   width: 100%;
   padding: 1em 0;
   background-color: #f4e9d8;
-  height: 15em;
 }
 .zoom > .image {
-  width: 20em;
-  height: 15em;
+  width: 90%;
+  height: 100%;
   margin: auto;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: inherit;
+  -moz-background-size: inherit;
+  background-size: inherit;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

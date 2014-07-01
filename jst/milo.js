@@ -2,12 +2,14 @@ var milo;
 
 milo = {
   facebook: {},
+  scrolling: false,
   i: function() {
     return milo.handlers();
   },
   handlers: function() {
     $('.extras > .extra').on('click', milo.extra);
     $('.pictures > .inner > .picture').on('click', milo.picture);
+    $('.zoom').on('click', milo.close);
     $('.close').on('click', milo.close);
     $('.event').on('click', milo.detail);
     $('.map').on({
@@ -19,10 +21,13 @@ milo = {
     $('.nav > div').on('click', milo.nav);
     $('.container').on('click', '.button', milo.rsvpshare);
     $('.rsvp.cta').on('click', milo.share);
-    return $('.rsvp2').on('click', milo.rsvpup);
+    $('.rsvp2').on('click', milo.rsvpup);
+    $('.toparrow, .bottomarrow').on('mousedown', milo.startscroll);
+    return $('.toparrow, .bottomarrow').on('mouseup', milo.stopscroll);
   },
   picture: function() {
     var image;
+    $('.zoom').css('height', ($(window).height() - 100) + 'px');
     _.on('.zoom', '.fade');
     image = $(this).find('.image').data('img');
     return $('.zoom .image').css('background-image', 'url(\'./img/gallery/' + image + '\')');
@@ -64,7 +69,7 @@ milo = {
     }, 300);
   },
   rsvpup: function() {
-    return milo.scroll('.schedule', 20);
+    return milo.scroll('.schedule', -50);
   },
   detail: function() {
     var evt, key, t, value;
@@ -132,5 +137,23 @@ milo = {
       link: link,
       description: cfg.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     }, function(response) {});
+  },
+  startscroll: function() {
+    var action;
+    milo.scrolling = true;
+    action = $(this).hasClass('bottomarrow') ? '+=40em' : '-=40em';
+    return milo.scroller($('.events .inner'), action);
+  },
+  stopscroll: function() {
+    return milo.scrolling = false;
+  },
+  scroller: function(obj, param) {
+    return obj.animate({
+      scrollTop: param
+    }, 'linear', function() {
+      if (milo.scrolling) {
+        return milo.scroller(obj, param);
+      }
+    });
   }
 };
