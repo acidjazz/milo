@@ -1077,7 +1077,7 @@ sup {
 }
 .container > .wood {
   margin: -2em auto 0 auto;
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/woodlow.jpg");
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   padding-top: 2em;
@@ -1492,7 +1492,7 @@ sup {
   display: none;
 }
 .container > .recipes {
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/woodlow.jpg");
   margin: auto;
   padding: 1em 0;
   -webkit-box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
@@ -1936,7 +1936,7 @@ sup {
   transition: opacity 0.2s linear, transform 0.2s ease-out;
 }
 .topbar {
-  background-image: url("../img/wood.jpg");
+  background-image: url("../img/woodlow.jpg");
   height: 2em;
   -webkit-box-shadow: 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
   box-shadow: 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
