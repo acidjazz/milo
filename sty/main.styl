@@ -314,6 +314,7 @@ sup
           float left
           margin 0.6em 0.6em 0 0.6em
     > .visit
+      font-size 1.2em
       background-color c_beige
       border-top 0.2em solid c_brown
       border-bottom 0.2em solid c_brown
@@ -332,12 +333,12 @@ sup
          color c_brown
          display inline-block
          padding 0.5em
-         font-size 0.8em
+         font-size 1em
        > .copyright
          padding 0.5em 0 1em 0
          text-align center
          color c_blue
-         font-size 0.8em
+         font-size 1em
 
   > .truckevent
     width 100%
@@ -352,8 +353,8 @@ sup
       width 30em
       margin auto
       color c_brown
-      font-size 0.8em
-      margin-top 23em
+      font-size 1em
+      margin-top 24em
       > ul.list 
         padding 0
         margin 0 0 0 1.5em
@@ -363,7 +364,7 @@ sup
         float left
         width 14em
     &.on
-      height 29em
+      height 37em
       > .close
         display block
     &.off
@@ -434,13 +435,12 @@ sup
         padding 1em
 
   > .story
-    width 45em
-    margin 1em auto 0.7em auto
+    margin 1em auto
     color c_brown
     padding 1em
     transition height 0.2s 
     &.on 
-      height 20em
+      height 38em
       > .close
         display block
     &.off
@@ -451,8 +451,9 @@ sup
     > .title
       padding 1em 1em 0 1em
       font-style italic
+      font-size 1.5em
     > .copy
-      font-size 0.6em
+      font-size 1.2em
       padding 1em 25em 1em 2em
     > .dog
       float right
@@ -590,7 +591,7 @@ sup
 .close
   cursor pointer
   float right
-  font-size 0.5em
+  font-size 1.0em
   margin 1em 2em
   width 3em
   height 2.5em
@@ -607,3 +608,5 @@ sup
       transform rotate(-45deg) translate(0.15em, -0.15em)
 
 
+@media all and (min-width: 1px) and (max-width: 800px)
+  @import _mobile

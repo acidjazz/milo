@@ -1,154 +1,46 @@
-body
-  font-size 8pt
-.dots
-  display none
-
 
 .container
+  width 100%
   > .header
     width 100%
     > .truck
       display none
     > .logo
+      width 90%
+      height 14em
       float none
-      width 80%
-      margin auto
+      margin -2em auto 1em auto
       background-image url('../img/logo_mobile.png')
-      height 9em
   > .wood
-    background none
-    background-color c_beige
-    border-top 0.5em solid c_brown
-    width 100%
-    background-color c_beige
-    margin 2em auto
-    > .inner
-      width 98%
-      margin auto
-      margin 0 auto 1em auto
-      font-size 1.2em
-      > .title
-        width 98%
-        text-align center
-        > .copy
-          width 100%
-      > .copy
-        width 90%
-      > ul.list
-        margin 0 0 2em 2em
+    > .intro
+      > .lists
+        text-align left
+        > ul.list
+          padding 0 0 0 2em
+          margin 0
     > .schedule
-      width 98%
-      margin auto
-      > .title
-        font-size 1em
-      > .subtitle
-        text-align center
-        width auto
-        > .copy
-          width auto
-          margin 1em 0
-      > .seeall
-        float none
-        width 90%
-        padding 1em
-        margin 1em auto
-        font-size 1.3em
       > .map
         float none
-        width 90%
-        height 28em
-        margin auto
-      > .asterisk
-        float none
-        font-size 1.0em
-        margin 1em 0.2em
-        width 90%
-        text-align center
+        width 100%
+        height 20em
       > .events
         float none
-        width 80%
-        margin 1em auto
-        border 0.1em solid c_brown
-        padding 1em 
-        > .event
-          font-size 1em
-    > .rsvp
-      margin -0.5em auto 2em auto
-      width 90%
-      padding 1em
-      font-size 1.3em
-      border none
-      text-align center
-      > .reminder
-        margin 0.5em 0 0 7em
-      > .copy
-        width 3em
-        margin 0.2em 0 0 0.5em
+        width 100%
+        padding 0
 
-    > .gallery
-      > .title
-        width 90%
-        text-align center
-        > .copy
-          width auto
-      > .description
-        width 90%
-        font-size 1em
-      > .pictures
-        width 70%
-        margin auto
-        > .inner.page1
-          transform translate(0, 0)
-        > .inner.page2
-          transform translate(-22em, 0)
-        > .inner.page3
-          transform translate(-44em, 0)
-          
-      > .nav
-        font-size 2em
-    > .extras
-      width 100%
-      > .extra
-        float none
-        margin 1em auto
-        width 15em
-        height 15em
-        > .copy
-          font-size 1em
-          width 13em
     > .rsvp2
       width 90%
-      padding 1em 0
-      margin 2em auto 4em auto
       > .left
         font-size 0.8em
-        width 20em
-        margin 0 0 0 1em
-
-    > .footer
-      margin 2em 0 0 0
-  > .truckevent
-    > .bullets
-      font-size 1em
-      margin 14em 0 0 2em
+        width 50%
+        margin 0
+      > .right
+        font-size 1em
 
   > .recipes
-    width 100%
-    > .inner
-      margin-left 0
-      > .close
-        clearfix()
-    > .inner > .recipe
-      float none
-      margin 1em auto
-      width auto
-      display block
-      > a > .title
-        font-size 1.2em
-        width 90%
-        text-align center
     &.on
       height auto
+
   > .story
     width 100%
     &.on
@@ -164,10 +56,4 @@ body
     > .dog
       display none
 
-.close
-  font-size 1em
-.modal
-  > .header
-    padding 1em
-    > .close
-      margin -0.8em 0 0 0
+
