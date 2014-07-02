@@ -7,6 +7,17 @@ milo =
   i: ->
     milo.handlers()
 
+    next = false
+    now = moment().format 'X'
+
+    # find and scroll to our next date
+    for index, evt of cfg.events
+      if (now < moment(evt.Date, 'M/D').format('X'))
+        milo.divscroll $('.events > .inner'), $('.event_' + index), 0
+        break
+
+#moment(cfg.events[0].Date, 'M/D').format('X');
+
   handlers: ->
     $('.extras > .extra').on 'click', milo.extra
     $('.pictures > .inner > .picture').on 'click', milo.picture
@@ -58,19 +69,28 @@ milo =
   cancel: ->
     _.off '.modal', '.fade', '.zoom'
 
-  scroll: (el, add) ->
+  scroll: (el, add, parent) ->
+
+    parent = $('html,body') if parent is undefined
+
     setTimeout ->
 
       if add isnt undefined
-        $('html,body').animate
+        parent.animate
           scrollTop: $(el).offset().top + add
       else
-        $('html,body').animate
+       parent.animate
           scrollTop: $(el).offset().top
     , 300
+
+  divscroll: (parent, el, add) ->
+
+    parent.animate
+      scrollTop: el.position().top + add
+    , 300
+
   rsvpup: ->
     milo.scroll '.schedule', -50
-
  
   detail: ->
     t = $ this

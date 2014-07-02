@@ -4,7 +4,22 @@ milo = {
   facebook: {},
   scrolling: false,
   i: function() {
-    return milo.handlers();
+    var evt, index, next, now, _ref, _results;
+    milo.handlers();
+    next = false;
+    now = moment().format('X');
+    _ref = cfg.events;
+    _results = [];
+    for (index in _ref) {
+      evt = _ref[index];
+      if (now < moment(evt.Date, 'M/D').format('X')) {
+        milo.divscroll($('.events > .inner'), $('.event_' + index), 0);
+        break;
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
   },
   handlers: function() {
     $('.extras > .extra').on('click', milo.extra);
@@ -55,17 +70,25 @@ milo = {
   cancel: function() {
     return _.off('.modal', '.fade', '.zoom');
   },
-  scroll: function(el, add) {
+  scroll: function(el, add, parent) {
+    if (parent === void 0) {
+      parent = $('html,body');
+    }
     return setTimeout(function() {
       if (add !== void 0) {
-        return $('html,body').animate({
+        return parent.animate({
           scrollTop: $(el).offset().top + add
         });
       } else {
-        return $('html,body').animate({
+        return parent.animate({
           scrollTop: $(el).offset().top
         });
       }
+    }, 300);
+  },
+  divscroll: function(parent, el, add) {
+    return parent.animate({
+      scrollTop: el.position().top + add
     }, 300);
   },
   rsvpup: function() {
