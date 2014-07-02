@@ -22,7 +22,7 @@ map =
     , 500
 
   zoom: (index) ->
-    return false if !map.markers[index] or isNaN map.markers[index].position.A
+    return false if !map.markers[index] or isNaN map.markers[index].position.B
     map.gmap.setZoom 10
     map.gmap.panTo map.markers[index].position
     map.openinfo index

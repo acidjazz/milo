@@ -24,7 +24,7 @@ map = {
     }, 500);
   },
   zoom: function(index) {
-    if (!map.markers[index] || isNaN(map.markers[index].position.A)) {
+    if (!map.markers[index] || isNaN(map.markers[index].position.B)) {
       return false;
     }
     map.gmap.setZoom(10);
