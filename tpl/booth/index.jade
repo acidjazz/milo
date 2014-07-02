@@ -8,12 +8,44 @@ html(lang='en')
   head
     title !{cfg.meta.title}
 
-
     script(type="text/javascript").
-      var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
+
+      window.fbAsyncInit = function() {
+
+        FB.init({
+          appId      : '#{cfg.facebook.id}',
+          xfbml      : false,
+          version    : 'v2.0'
+        });
+
+        FB.login( function(response) {
+          if (response.authResponse) {
+            alert('yay');
+          }
+        } , {scope: 'email'});
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         if (document.location.protocol == 'file:') {
+          js.src = "http://connect.facebook.net/en_US/sdk.js";
+         }
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+
+
+
+      /*var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
       oauth_url += '?scope=email';
       oauth_url += '&client_id=#{cfg.facebook.id}';
       oauth_url += '&redirect_uri=' + encodeURIComponent('#{cfg.facebook.appurl}');
       window.location = oauth_url;
+      */
 
   body
+    #fb-root

@@ -7,11 +7,42 @@ jade -w booth.jade -P  -o ../booth/index.html
   <head>
     <title>Milo's Kitchen | Home-Style Dog Treats</title>
     <script type="text/javascript">
-      var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
+      window.fbAsyncInit = function() {
+      
+        FB.init({
+          appId      : '912577452101337',
+          xfbml      : false,
+          version    : 'v2.0'
+        });
+        
+        FB.login( function(response) {
+          if (response.authResponse) {
+            alert('yay');
+          }
+        } , {scope: 'email'});
+        
+      };
+      
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         if (document.location.protocol == 'file:') {
+          js.src = "http://connect.facebook.net/en_US/sdk.js";
+         }
+         fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+      
+      
+      
+      /*var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
       oauth_url += '?scope=email';
       oauth_url += '&client_id=912577452101337';
       oauth_url += '&redirect_uri=' + encodeURIComponent('https://apps.facebook.com/milostreattruck/');
       window.location = oauth_url;
+      */
       
     </script>
   </head>
