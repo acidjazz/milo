@@ -1,5 +1,6 @@
 
 //
+  https://m.facebook.com/v2.0/dialog/oauth?redirect_uri=https%3A%2F%2Fapps.facebook.com%2Fmilostreattruck%2F&scope=email&client_id=912577452101337
   jade -w booth.jade -P  -o ../booth/index.html
 doctype
 
@@ -9,7 +10,7 @@ html(lang='en')
 
 
     script(type="text/javascript").
-      var oauth_url = 'https://www.facebook.com/dialog/oauth/';
+      var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
       oauth_url += '?scope=email';
       oauth_url += '&client_id=#{cfg.facebook.id}';
       oauth_url += '&redirect_uri=' + encodeURIComponent('#{cfg.facebook.appurl}');
