@@ -18,11 +18,12 @@ html(lang='en')
           version    : 'v2.0'
         });
 
-        FB.login( function(response) {
+        /*FB.login( function(response) {
           if (response.authResponse) {
             alert('yay');
           }
         } , {scope: 'email'});
+        */
 
       };
 
@@ -40,12 +41,11 @@ html(lang='en')
 
 
 
-      /*var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
+      var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
       oauth_url += '?scope=email';
       oauth_url += '&client_id=#{cfg.facebook.id}';
       oauth_url += '&redirect_uri=' + encodeURIComponent('#{cfg.facebook.appurl}');
       window.location = oauth_url;
-      */
 
   body
     #fb-root

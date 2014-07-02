@@ -15,11 +15,12 @@ jade -w booth.jade -P  -o ../booth/index.html
           version    : 'v2.0'
         });
         
-        FB.login( function(response) {
+        /*FB.login( function(response) {
           if (response.authResponse) {
             alert('yay');
           }
         } , {scope: 'email'});
+        */
         
       };
       
@@ -37,14 +38,15 @@ jade -w booth.jade -P  -o ../booth/index.html
       
       
       
-      /*var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
+      var oauth_url = 'https://m.facebook.com/v2.0/dialog/oauth';
       oauth_url += '?scope=email';
       oauth_url += '&client_id=912577452101337';
       oauth_url += '&redirect_uri=' + encodeURIComponent('https://apps.facebook.com/milostreattruck/');
       window.location = oauth_url;
-      */
       
     </script>
   </head>
-  <body></body>
+  <body>
+    <div id="fb-root"></div>
+  </body>
 </html>
