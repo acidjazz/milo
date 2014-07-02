@@ -1845,6 +1845,7 @@ sup {
 }
 .modal > .header > .close {
   margin: 0;
+  font-size: 0.5em;
 }
 .modal > .header > .button {
   float: left;
