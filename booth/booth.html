@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Milo's Kitchen | Home-Style Dog Treats</title>
+    <!-- google-->
+    <meta name="title" content="Milo's Kitchen | Home-Style Dog Treats">
+    <meta name="description">
+    <meta name="keywords" content="milo's, kitchen, treat, truck, dogs">
+    <!-- facebook-->
+    <meta property="og:title" content="Milo's Kitchen | Home-Style Dog Treats">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.mktreattruck.com/img/share.png">
+    <meta property="og:description">
+    <!-- twitter-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Milo's Kitchen | Home-Style Dog Treats">
+    <meta name="twitter:description">
+    <meta name="twitter:image" content="https://www.mktreattruck.com/img/share.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <link rel="stylesheet" href="./css/main.css" type="text/css" media="all">
+    <script type="text/javascript" src="./jst/loader.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="truck"></div>
+        <div class="logo"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="fb-root"></div>
+  </body>
+  <script type="text/javascript">
+    var scripts = {
+      "./jst/": ["main","map", "milo"],
+      "./jst/lib/": ["jquery.min","moment","atemay"],
+    };
+    
+    loader.scripts = scripts;
+    
+    loader.i( function(result) {
+    
+      if (result) {
+      
+        if (window.name == "iframe_canvas_fb_http" && BrowserDetect.mobile) { 
+          window.top.location.href = 'http://www.mktreattruck.com/';
+        }
+        
+        milo.i();
+        
+        function loadMaps() {
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' + 'callback=map.i&key=' + 'AIzaSyDFe86zvdhdmxXifqyjzj7iBtvGofW26tw';
+          document.body.appendChild(script);
+        }
+        
+        loadMaps()
+        
+      }
+      
+    });
+    
+    // detect we are in a tab and redirect
+    if (document.location.hash == '#tab') {
+      window.top.location.href = 'https://apps.facebook.com/milostreattruck/';
+    }
+    
+    window.fbAsyncInit = function() {
+    
+      FB.init({
+        appId      : '912577452101337',
+        xfbml      : false,
+        version    : 'v2.0'
+      });
+      
+    };
+    
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       if (document.location.protocol == 'file:') {
+        js.src = "http://connect.facebook.net/en_US/sdk.js";
+       }
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    var _gaq = _gaq || [];
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-52309201-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+  </script>
+</html>

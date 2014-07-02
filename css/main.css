@@ -1249,11 +1249,11 @@ sup {
   color: #092e6e;
 }
 .container > .wood > .gallery > .pictures {
-  height: 23em;
+  max-height: 29em;
   overflow: hidden;
 }
 .container > .wood > .gallery > .pictures > .inner {
-  width: 200%;
+  width: 300%;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   -o-transition: -o-transform 0.5s ease-in-out;
@@ -1284,12 +1284,13 @@ sup {
 .container > .wood > .gallery > .pictures > .inner > .picture {
   cursor: pointer;
   display: inline-block;
-  width: 13.75em;
-  height: 10em;
+  width: 16.6em;
+  height: 11em;
   margin: 0.5em 1em;
   background-color: #f4e9d8;
   -webkit-box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
   box-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.5);
+  border: 0.5em solid #fff;
 }
 .container > .wood > .gallery > .pictures > .inner > .picture > .image {
   width: 100%;
@@ -1340,7 +1341,7 @@ sup {
   -webkit-box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 0.2em rgba(0,0,0,0.5);
   cursor: pointer;
-  border: 0.1em solid #fff;
+  border: 0.5em solid #fff;
   position: relative;
   overflow: hidden;
   -webkit-background-size: cover;
@@ -1495,8 +1496,11 @@ sup {
   background-image: url("../img/woodlow.jpg");
   margin: auto;
   padding: 1em 0;
+  border-top: 0.1em solid #9a5107;
+  border-bottom: 0.1em solid #9a5107;
   -webkit-box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
   box-shadow: inset 0 0.5em 0.5em -0.5em rgba(0,0,0,0.5), inset 0 -0.5em 0.5em -0.5em rgba(0,0,0,0.5);
+  text-align: center;
   overflow: hidden;
   -webkit-transition: height 0.2s;
   -moz-transition: height 0.2s;
@@ -1505,7 +1509,7 @@ sup {
   transition: height 0.2s;
 }
 .container > .recipes.on {
-  height: 48em;
+  height: auto;
 }
 .container > .recipes.on > .close {
   display: block;
@@ -1694,8 +1698,9 @@ sup {
   padding: 0em 1em;
 }
 .container > .recipes > .more {
-  float: right;
-  margin: 1em 1em 1em 0;
+  margin: 1em auto 3em auto;
+  display: inline-block;
+  text-align: center;
   font-size: 1.2em;
 }
 .container > .recipes > .more > a {
@@ -2021,6 +2026,17 @@ sup {
     width: 80%;
     margin: 1em auto;
     padding: 0;
+  }
+  .container > .wood > .gallery > .pictures {
+    height: 23em;
+  }
+  .container > .wood > .gallery > .pictures > .inner {
+    width: 100em;
+  }
+  .container > .wood > .gallery > .pictures > .inner > .picture {
+    width: 11.1em;
+    height: 9em;
+    margin: 0.5em;
   }
   .container > .wood > .rsvp2 {
     width: 90%;

@@ -1,0 +1,18 @@
+
+//
+  jade -w booth.jade -P  -o ../booth/index.html
+doctype
+
+html(lang='en')
+  head
+    title !{cfg.meta.title}
+
+
+    script(type="text/javascript").
+      var oauth_url = 'https://www.facebook.com/dialog/oauth/';
+      oauth_url += '?scope=email';
+      oauth_url += '&client_id=#{cfg.facebook.id}';
+      oauth_url += '&redirect_uri=' + encodeURIComponent('#{cfg.facebook.appurl}');
+      window.location = oauth_url;
+
+  body
