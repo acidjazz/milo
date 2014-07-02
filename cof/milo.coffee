@@ -13,7 +13,7 @@ milo =
     # find and scroll to our next date
     for index, evt of cfg.events
       if (now < moment(evt.Date, 'M/D').format('X'))
-        milo.divscroll $('.events > .inner'), $('.event_' + index), 0
+        milo.divscroll $('.events > .inner'), $('.event_' + index), -30
         break
 
 #moment(cfg.events[0].Date, 'M/D').format('X');
