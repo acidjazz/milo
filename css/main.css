@@ -1253,7 +1253,7 @@ sup {
   overflow: hidden;
 }
 .container > .wood > .gallery > .pictures > .inner {
-  width: 300%;
+  width: 600%;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   -o-transition: -o-transform 0.5s ease-in-out;
