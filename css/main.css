@@ -1309,9 +1309,9 @@ sup {
 .container > .wood > .gallery > .pictures > .inner > .picture > .image {
   width: 100%;
   height: 100%;
-  -webkit-background-size: inherit;
-  -moz-background-size: inherit;
-  background-size: inherit;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -1810,9 +1810,9 @@ sup {
   width: 90%;
   height: 100%;
   margin: auto;
-  -webkit-background-size: inherit;
-  -moz-background-size: inherit;
-  background-size: inherit;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
