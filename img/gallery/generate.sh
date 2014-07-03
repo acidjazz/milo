@@ -1,3 +1,3 @@
 #!/bin/bash
-mogrify  -format gif -path thumbs -thumbnail 211x144 *.jpg
+mogrify  -format jpg -path thumbs -thumbnail 211x144 *.jpg
 
