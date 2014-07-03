@@ -107,7 +107,15 @@ milo =
 
     $('._summary').html evt.Title + ' at ' + evt.Event
     $('._description').html evt.Description
-    $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
+
+    $('._location').html 'Follow Us on Twitter for Details!'
+    $('.addressLine').hide()
+    $('.followLine').show()
+
+    if evt.Type isnt 'Guerilla'
+      $('._location').html evt.Address + ', ' + evt.City + ' ' + evt.State
+      $('.addressLine').show()
+      $('.followLine').hide()
 
     if evt.Facebook
       $('._facebook_event').html 'http://www.facebook.com/events/' + evt.Facebook
