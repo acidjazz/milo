@@ -1363,9 +1363,6 @@ sup {
   background-size: cover;
   background-position: 50% 50%;
 }
-.container > .wood > .extras > .extra:hover > .copy {
-  background-color: rgba(255,255,255,0.95);
-}
 .container > .wood > .extras > .extra.experience {
   background-image: url("../img/extra_experience.jpg");
 }
@@ -1390,6 +1387,9 @@ sup {
   bottom: 0;
   left: 0;
   right: 0;
+}
+.container > .wood > .extras > .extra > .copy:hover {
+  background-color: rgba(255,255,255,0.95);
 }
 .container > .wood > .rsvp2 {
   background-color: #092e6e;
