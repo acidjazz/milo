@@ -1394,22 +1394,18 @@ sup {
 .container > .wood > .rsvp2 {
   background-color: #092e6e;
   border: 0.2em solid #f4e9d8;
-  width: 38em;
+  width: 20em;
   margin: 2em auto;
   color: #f4e9d8;
   padding: 1em 1em;
   cursor: pointer;
 }
-.container > .wood > .rsvp2 > .left {
-  float: left;
-  font-size: 1.2em;
-  width: 18em;
-}
-.container > .wood > .rsvp2 > .right {
-  float: right;
+.container > .wood > .rsvp2 > .middle {
+  width: 12em;
+  margin: auto;
   font-size: 1.5em;
 }
-.container > .wood > .rsvp2 > .right > .reminder {
+.container > .wood > .rsvp2 > .middle > .reminder {
   background-image: url("../img/reminder.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1419,10 +1415,11 @@ sup {
   height: 1.5em;
   display: inline-block;
   margin-right: 0.5em;
+  float: left;
 }
-.container > .wood > .rsvp2 > .right > .copy {
-  display: inline-block;
-  width: 6em;
+.container > .wood > .rsvp2 > .middle > .copy {
+  line-height: 1.5em;
+  float: left;
 }
 .container > .wood > .visit {
   font-size: 1.2em;
