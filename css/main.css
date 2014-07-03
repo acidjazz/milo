@@ -1268,18 +1268,32 @@ sup {
   transform: translate(0, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page2 {
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-16.5%, 0);
+  -moz-transform: translate(-16.5%, 0);
+  -o-transform: translate(-16.5%, 0);
+  -ms-transform: translate(-16.5%, 0);
+  transform: translate(-16.5%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page3 {
-  -webkit-transform: translate(-100%, 0);
-  -moz-transform: translate(-100%, 0);
-  -o-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
+  -webkit-transform: translate(-33%, 0);
+  -moz-transform: translate(-33%, 0);
+  -o-transform: translate(-33%, 0);
+  -ms-transform: translate(-33%, 0);
+  transform: translate(-33%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page4 {
+  -webkit-transform: translate(-49.5%, 0);
+  -moz-transform: translate(-49.5%, 0);
+  -o-transform: translate(-49.5%, 0);
+  -ms-transform: translate(-49.5%, 0);
+  transform: translate(-49.5%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page5 {
+  -webkit-transform: translate(-66%, 0);
+  -moz-transform: translate(-66%, 0);
+  -o-transform: translate(-66%, 0);
+  -ms-transform: translate(-66%, 0);
+  transform: translate(-66%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner > .picture {
   cursor: pointer;

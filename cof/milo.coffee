@@ -121,16 +121,16 @@ milo =
     t = $ this
     i = $ '.pictures > .inner'
     currentpage = i.data 'page'
-    pages = 3
+    pages = 5
 
-    for p in [1..3]
+    for p in [1..pages]
       i.removeClass 'page' + p
 
     if t.hasClass 'next'
-      page = if currentpage is 3 then 1 else (currentpage+1)
+      page = if currentpage is pages then 1 else (currentpage+1)
 
     if t.hasClass 'prev'
-      page = if currentpage is 1 then 3 else (currentpage-1)
+      page = if currentpage is 1 then pages else (currentpage-1)
 
     i.addClass 'page' + page
     i.data 'page', page

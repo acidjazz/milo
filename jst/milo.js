@@ -124,15 +124,15 @@ milo = {
     t = $(this);
     i = $('.pictures > .inner');
     currentpage = i.data('page');
-    pages = 3;
-    for (p = _i = 1; _i <= 3; p = ++_i) {
+    pages = 5;
+    for (p = _i = 1; 1 <= pages ? _i <= pages : _i >= pages; p = 1 <= pages ? ++_i : --_i) {
       i.removeClass('page' + p);
     }
     if (t.hasClass('next')) {
-      page = currentpage === 3 ? 1 : currentpage + 1;
+      page = currentpage === pages ? 1 : currentpage + 1;
     }
     if (t.hasClass('prev')) {
-      page = currentpage === 1 ? 3 : currentpage - 1;
+      page = currentpage === 1 ? pages : currentpage - 1;
     }
     i.addClass('page' + page);
     return i.data('page', page);
