@@ -12,7 +12,7 @@ milo = {
     _results = [];
     for (index in _ref) {
       evt = _ref[index];
-      if (now < moment(evt.Date, 'M/D').format('X')) {
+      if (now < moment(evt.Date, 'M/D').add('days', 1).format('X')) {
         milo.divscroll($('.events > .inner'), $('.event_' + index), -30);
         break;
       } else {
