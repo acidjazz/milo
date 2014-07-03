@@ -1309,9 +1309,9 @@ sup {
 .container > .wood > .gallery > .pictures > .inner > .picture > .image {
   width: 100%;
   height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: inherit;
+  -moz-background-size: inherit;
+  background-size: inherit;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

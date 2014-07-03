@@ -117,5 +117,8 @@ map =
   bounce: (index) ->
     marker.setAnimation null for marker, i in map.markers
     map.markers[index].setAnimation google.maps.Animation.BOUNCE if index isnt false
+    setTimeout ->
+      map.markers[index].setAnimation null
+    , 2100
   
 

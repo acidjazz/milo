@@ -136,7 +136,10 @@ map = {
       marker.setAnimation(null);
     }
     if (index !== false) {
-      return map.markers[index].setAnimation(google.maps.Animation.BOUNCE);
+      map.markers[index].setAnimation(google.maps.Animation.BOUNCE);
     }
+    return setTimeout(function() {
+      return map.markers[index].setAnimation(null);
+    }, 2100);
   }
 };
