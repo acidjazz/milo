@@ -1080,13 +1080,13 @@ sup {
   background-image: url("../img/wood.jpg");
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
-  padding-top: 2em;
+  padding: 2em 0 0 0;
 }
 .container > .wood > .intro {
-  margin: auto;
+  color: #092e6e;
   background-color: #f4e9d8;
   border: 0.1em solid #9a5107;
-  margin: 1em;
+  margin: 3em 1em 5em 1em;
   padding: 1em;
   -webkit-box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
   box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.5);
@@ -1143,7 +1143,7 @@ sup {
 }
 .container > .wood > .schedule > .asterisk {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   padding: 1em;
 }
 .container > .wood > .schedule > .asterisk > a {
