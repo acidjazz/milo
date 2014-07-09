@@ -1108,6 +1108,7 @@ sup {
   font-size: 1.2em;
   list-style-type: square;
   display: inline-block;
+  margin: 0;
 }
 .container > .wood > .intro > .lists > ul.list > li {
   text-align: left;
@@ -1133,6 +1134,7 @@ sup {
   color: #9a5107;
   font-size: 1.3em;
   text-align: center;
+  padding: 0.5em 0;
 }
 .container > .wood > .schedule > .map {
   float: left;
@@ -1144,7 +1146,7 @@ sup {
 .container > .wood > .schedule > .asterisk {
   text-align: center;
   font-size: 1.4em;
-  padding: 1em;
+  padding: 0.5em 0 1.5em 0;
 }
 .container > .wood > .schedule > .asterisk > a {
   color: #092e6e;
