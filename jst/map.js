@@ -103,6 +103,12 @@ map = {
       url: 'img/paw_dark.png',
       scaledSize: new google.maps.Size(25, 25)
     };
+    if (evt.next === true) {
+      paw = {
+        url: 'img/truckicon.svg',
+        scaledSize: new google.maps.Size(40, 25)
+      };
+    }
     map.markers[index] = new google.maps.Marker({
       position: new google.maps.LatLng(latlong[0], latlong[1]),
       map: map.gmap,

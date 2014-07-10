@@ -35,7 +35,6 @@ map =
     map.gmap.panTo map.centerpos
     map.openinfo false
 
-
   i: ->
 
     styles =
@@ -93,10 +92,15 @@ map =
     latlong = evt.LatLong.split(/,\s*/)
 
     paw =
-      url: 'img/paw_dark.png',
+      url: 'img/paw_dark.png'
       scaledSize: new google.maps.Size(25, 25)
 
-    map.markers[index] = new google.maps.Marker
+    if evt.next is true
+      paw =
+        url: 'img/truckicon.svg'
+        scaledSize: new google.maps.Size(40, 25)
+
+     map.markers[index] = new google.maps.Marker
       position: new google.maps.LatLng latlong[0], latlong[1]
       map: map.gmap
       title: evt.Description
