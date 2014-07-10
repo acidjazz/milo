@@ -17,8 +17,6 @@ milo =
         milo.divscroll $('.events > .inner'), $('.event_' + index), -30
         break
 
-#moment(cfg.events[0].Date, 'M/D').format('X');
-
   handlers: ->
     $('.extras > .extra').on 'click', milo.extra
     $('.pictures > .inner > .picture').on 'click', milo.picture
@@ -45,6 +43,7 @@ milo =
     _.on '.zoom', '.fade'
     image = $(this).find('.image').data 'img'
     $('.zoom .image').css 'background-image', 'url(\'./img/gallery/' + image + '\')'
+    _.t 'clickPicture', image
 
   extra: ->
 
@@ -55,14 +54,17 @@ milo =
     if t.hasClass 'experience'
       _.swap '.truckevent'
       milo.scroll '.truckevent'
+      _.t 'clickExtra', 'experience'
 
     if t.hasClass 'recipes'
       _.swap '.recipes'
       milo.scroll '.recipes'
+      _.t 'clickExtra', 'recipes'
 
     if t.hasClass 'story'
       _.swap '.story'
       milo.scroll '.story'
+      _.t 'clickExtra', 'story'
 
   close: ->
     _.off $(this).data('el'), '.fade'
@@ -92,10 +94,12 @@ milo =
 
   rsvpup: ->
     milo.scroll '.schedule', -50
+    _.t 'clickRsvp', 'scrollUp'
  
   detail: ->
     t = $ this
     evt = cfg.events[t.data 'index']
+    _.t 'clickEvent', evt.Event
     $('.button').data 'event', evt
     $('#' + key).html value for key, value of evt
 
@@ -144,7 +148,11 @@ milo =
     i.addClass 'page' + page
     i.data 'page', page
 
+    _.t 'clickGallery', page
+
   share: ->
+
+    _.t 'fbGeneralShare', 'clicked'
 
     FB.ui(
       method: 'feed'
@@ -154,6 +162,11 @@ milo =
       description: cfg.facebook.share
 
     , (response) ->
+
+      if response
+        _.t 'fbGeneralShare', 'success', response.post_id
+      else
+        _.t 'fbGeneralShare', 'failure'
 
     )
 
@@ -167,6 +180,8 @@ milo =
     else
       link = 'https://www.mktreattruck.com/'
 
+     _.t 'fbEventShare', 'clicked', evt.Event
+
     FB.ui(
       method: 'feed'
       app_id: cfg.facebook.id
@@ -174,6 +189,12 @@ milo =
       #picture: milo.meta.image
       description: cfg.facebook.rsvpshare.replace('{EVENT}', evt.Event)
     , (response) ->
+
+      if response
+        _.t 'fbEventShare', 'success', evt.Event + '(' + response.post_id + ')'
+      else
+        _.t 'fbEventShare', 'failure'
+
     )
    
   startscroll: ->

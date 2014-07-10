@@ -46,7 +46,8 @@ milo = {
     $('.zoom').css('height', ($(window).height() - 100) + 'px');
     _.on('.zoom', '.fade');
     image = $(this).find('.image').data('img');
-    return $('.zoom .image').css('background-image', 'url(\'./img/gallery/' + image + '\')');
+    $('.zoom .image').css('background-image', 'url(\'./img/gallery/' + image + '\')');
+    return _.t('clickPicture', image);
   },
   extra: function() {
     var t;
@@ -55,14 +56,17 @@ milo = {
     if (t.hasClass('experience')) {
       _.swap('.truckevent');
       milo.scroll('.truckevent');
+      _.t('clickExtra', 'experience');
     }
     if (t.hasClass('recipes')) {
       _.swap('.recipes');
       milo.scroll('.recipes');
+      _.t('clickExtra', 'recipes');
     }
     if (t.hasClass('story')) {
       _.swap('.story');
-      return milo.scroll('.story');
+      milo.scroll('.story');
+      return _.t('clickExtra', 'story');
     }
   },
   close: function() {
@@ -93,12 +97,14 @@ milo = {
     }, 300);
   },
   rsvpup: function() {
-    return milo.scroll('.schedule', -50);
+    milo.scroll('.schedule', -50);
+    return _.t('clickRsvp', 'scrollUp');
   },
   detail: function() {
     var evt, key, t, value;
     t = $(this);
     evt = cfg.events[t.data('index')];
+    _.t('clickEvent', evt.Event);
     $('.button').data('event', evt);
     for (key in evt) {
       value = evt[key];
@@ -143,15 +149,23 @@ milo = {
       page = currentpage === 1 ? pages : currentpage - 1;
     }
     i.addClass('page' + page);
-    return i.data('page', page);
+    i.data('page', page);
+    return _.t('clickGallery', page);
   },
   share: function() {
+    _.t('fbGeneralShare', 'clicked');
     return FB.ui({
       method: 'feed',
       app_id: cfg.facebook.id,
       link: 'https://www.mktreattruck.com/',
       description: cfg.facebook.share
-    }, function(response) {});
+    }, function(response) {
+      if (response) {
+        return _.t('fbGeneralShare', 'success', response.post_id);
+      } else {
+        return _.t('fbGeneralShare', 'failure');
+      }
+    });
   },
   rsvpshare: function() {
     var evt, link, t;
@@ -161,6 +175,7 @@ milo = {
       link = 'http://www.facebook.com/events/' + evt.Facebook;
     } else {
       link = 'https://www.mktreattruck.com/';
+      _.t('fbEventShare', 'clicked');
     }
     return FB.ui({
       method: 'feed',
