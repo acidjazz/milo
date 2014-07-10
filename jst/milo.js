@@ -131,7 +131,7 @@ milo = {
     t = $(this);
     i = $('.pictures > .inner');
     currentpage = i.data('page');
-    pages = 5;
+    pages = 8;
     for (p = _i = 1; 1 <= pages ? _i <= pages : _i >= pages; p = 1 <= pages ? ++_i : --_i) {
       i.removeClass('page' + p);
     }

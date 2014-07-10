@@ -1255,47 +1255,118 @@ sup {
   overflow: hidden;
 }
 .container > .wood > .gallery > .pictures > .inner {
-  width: 650%;
+  width: 700%;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s ease-in-out;
   -o-transition: -o-transform 0.5s ease-in-out;
   -ms-transition: -ms-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
+  max-height: 27em;
 }
 .container > .wood > .gallery > .pictures > .inner.page1 {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: translate(0%, 0);
+  -moz-transform: translate(0%, 0);
+  -o-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
+  transform: translate(0%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page2 {
-  -webkit-transform: translate(-16.5%, 0);
-  -moz-transform: translate(-16.5%, 0);
-  -o-transform: translate(-16.5%, 0);
-  -ms-transform: translate(-16.5%, 0);
-  transform: translate(-16.5%, 0);
+  -webkit-transform: translate(-14%, 0);
+  -moz-transform: translate(-14%, 0);
+  -o-transform: translate(-14%, 0);
+  -ms-transform: translate(-14%, 0);
+  transform: translate(-14%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page3 {
-  -webkit-transform: translate(-33%, 0);
-  -moz-transform: translate(-33%, 0);
-  -o-transform: translate(-33%, 0);
-  -ms-transform: translate(-33%, 0);
-  transform: translate(-33%, 0);
+  -webkit-transform: translate(-28%, 0);
+  -moz-transform: translate(-28%, 0);
+  -o-transform: translate(-28%, 0);
+  -ms-transform: translate(-28%, 0);
+  transform: translate(-28%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page4 {
-  -webkit-transform: translate(-49.5%, 0);
-  -moz-transform: translate(-49.5%, 0);
-  -o-transform: translate(-49.5%, 0);
-  -ms-transform: translate(-49.5%, 0);
-  transform: translate(-49.5%, 0);
+  -webkit-transform: translate(-42%, 0);
+  -moz-transform: translate(-42%, 0);
+  -o-transform: translate(-42%, 0);
+  -ms-transform: translate(-42%, 0);
+  transform: translate(-42%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner.page5 {
-  -webkit-transform: translate(-66%, 0);
-  -moz-transform: translate(-66%, 0);
-  -o-transform: translate(-66%, 0);
-  -ms-transform: translate(-66%, 0);
-  transform: translate(-66%, 0);
+  -webkit-transform: translate(-56%, 0);
+  -moz-transform: translate(-56%, 0);
+  -o-transform: translate(-56%, 0);
+  -ms-transform: translate(-56%, 0);
+  transform: translate(-56%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page6 {
+  -webkit-transform: translate(-70%, 0);
+  -moz-transform: translate(-70%, 0);
+  -o-transform: translate(-70%, 0);
+  -ms-transform: translate(-70%, 0);
+  transform: translate(-70%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page7 {
+  -webkit-transform: translate(-84%, 0);
+  -moz-transform: translate(-84%, 0);
+  -o-transform: translate(-84%, 0);
+  -ms-transform: translate(-84%, 0);
+  transform: translate(-84%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page8 {
+  -webkit-transform: translate(-98%, 0);
+  -moz-transform: translate(-98%, 0);
+  -o-transform: translate(-98%, 0);
+  -ms-transform: translate(-98%, 0);
+  transform: translate(-98%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page9 {
+  -webkit-transform: translate(-112%, 0);
+  -moz-transform: translate(-112%, 0);
+  -o-transform: translate(-112%, 0);
+  -ms-transform: translate(-112%, 0);
+  transform: translate(-112%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page10 {
+  -webkit-transform: translate(-126%, 0);
+  -moz-transform: translate(-126%, 0);
+  -o-transform: translate(-126%, 0);
+  -ms-transform: translate(-126%, 0);
+  transform: translate(-126%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page11 {
+  -webkit-transform: translate(-140%, 0);
+  -moz-transform: translate(-140%, 0);
+  -o-transform: translate(-140%, 0);
+  -ms-transform: translate(-140%, 0);
+  transform: translate(-140%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page12 {
+  -webkit-transform: translate(-154%, 0);
+  -moz-transform: translate(-154%, 0);
+  -o-transform: translate(-154%, 0);
+  -ms-transform: translate(-154%, 0);
+  transform: translate(-154%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page13 {
+  -webkit-transform: translate(-168%, 0);
+  -moz-transform: translate(-168%, 0);
+  -o-transform: translate(-168%, 0);
+  -ms-transform: translate(-168%, 0);
+  transform: translate(-168%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page14 {
+  -webkit-transform: translate(-182%, 0);
+  -moz-transform: translate(-182%, 0);
+  -o-transform: translate(-182%, 0);
+  -ms-transform: translate(-182%, 0);
+  transform: translate(-182%, 0);
+}
+.container > .wood > .gallery > .pictures > .inner.page15 {
+  -webkit-transform: translate(-196%, 0);
+  -moz-transform: translate(-196%, 0);
+  -o-transform: translate(-196%, 0);
+  -ms-transform: translate(-196%, 0);
+  transform: translate(-196%, 0);
 }
 .container > .wood > .gallery > .pictures > .inner > .picture {
   cursor: pointer;

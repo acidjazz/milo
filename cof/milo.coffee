@@ -129,7 +129,7 @@ milo =
     t = $ this
     i = $ '.pictures > .inner'
     currentpage = i.data 'page'
-    pages = 5
+    pages = 8
 
     for p in [1..pages]
       i.removeClass 'page' + p

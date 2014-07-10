@@ -217,18 +217,12 @@ sup
         max-height 29em
         overflow hidden
         > .inner
-          width 650%
+          width 700%
           transition transform 0.5s ease-in-out
-          &.page1
-            transform translate(0, 0)
-          &.page2
-            transform translate(-16.5%, 0)
-          &.page3
-            transform translate(-33%, 0)
-          &.page4
-            transform translate(-49.5%, 0)
-          &.page5
-            transform translate(-66%, 0)
+          max-height 27em
+          for i in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+            &.page{i+1}
+              transform translate(- unit(i*14, '%'), 0)
           > .picture
             cursor pointer
             display inline-block
