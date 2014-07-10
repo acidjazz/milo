@@ -50,7 +50,7 @@ while (false !== ($entry = readdir($handle))) {
 
 }
 
-ksort($files);
+krsort($files);
 
 // update config file
 $cfg = json_decode(file_get_contents('../../cfg/config.json'), true);
