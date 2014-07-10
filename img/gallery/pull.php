@@ -34,16 +34,18 @@ $files = [];
 
 while (false !== ($entry = readdir($handle))) {
 
+  $uniq = rand(1000,9999);
+
   if (strpos($entry, '.jpg') !== false) {
-    $files[filemtime($entry)] = $entry;
+    $files[filemtime($entry).$uniq] = $entry;
   }
 
   if (strpos($entry, '.png') !== false) {
-    $files[filemtime($entry)] = $entry;
+    $files[filemtime($entry).$uniq] = $entry;
   }
 
   if (strpos($entry, '.jpeg') !== false) {
-    $files[filemtime($entry)] = $entry;
+    $files[filemtime($entry).$uniq] = $entry;
   }
 
 }
