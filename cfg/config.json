@@ -246,17 +246,17 @@
                 "Market": "North Carolina",
                 "Day": "Sunday",
                 "Date": "8/3",
-                "StartTime": "7:30 AM",
+                "StartTime": "2:00 AM",
                 "EndTime": "4:00 PM",
                 "Title": "Milo's Kitchen Treat Truck",
                 "Event": "Mecklenburg County Dog Parks",
-                "Address": "19607 Statesville Rd",
-                "City": "Cornelius",
+                "Address": "9400 Belhaven Blvd",
+                "City": "Charlotte",
                 "State": "NC",
-                "Zip": 28031,
+                "Zip": 28214,
                 "Type": "Guerilla",
                 "Description": "The Milo\u2019s Kitchen Treat Truck \u2013 A Treat Truck just for dogs!\nThis summer, we\u2019re taking our kitchen on the road and bringing our 100% real, home-style treats to dogs across America. We think all dogs deserve the same goodness as the rest of the family; that\u2019s why every one of our wholesome treats is made in the USA. Come visit the Treat Truck for free samples, family portraits, personalized giveaways, and our lounge.",
-                "LatLong": "35.481901,-80.87365"
+                "LatLong": "35.3149209,-80.9434233"
             },
             {
                 "Market": "Pittsburgh",
