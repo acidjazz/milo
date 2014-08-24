@@ -452,22 +452,6 @@
             },
             {
                 "Market": "New York City",
-                "Day": "Saturday",
-                "Date": "9/6",
-                "StartTime": "7:30 AM",
-                "EndTime": "4:00 PM",
-                "Title": "Milo's Kitchen Treat Truck",
-                "Event": "New York Area Dog Parks ",
-                "Address": "7 East 8th St",
-                "City": "New York",
-                "State": "NY",
-                "Zip": 10003,
-                "Type": "Guerilla",
-                "Description": "The Milo\u2019s Kitchen Treat Truck \u2013 A Treat Truck just for dogs!\nThis summer, we\u2019re taking our kitchen on the road and bringing our 100% real, home-style treats to dogs across America. We think all dogs deserve the same goodness as the rest of the family; that\u2019s why every one of our wholesome treats is made in the USA. Come visit the Treat Truck for free samples, family portraits, personalized giveaways, and our lounge.",
-                "LatLong": "40.7323687,-73.995766"
-            },
-            {
-                "Market": "New York City",
                 "Day": "Sunday",
                 "Date": "9/7",
                 "StartTime": "7:00 PM",
